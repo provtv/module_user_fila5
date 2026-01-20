@@ -10,7 +10,7 @@ use Illuminate\Support\ServiceProvider;
 class SocialiteServiceProvider extends ServiceProvider
 {
     // Temporarily disabled until SocialiteProviders package is installed
-    
+
     /**
      * Check if provider is deferred.
      */
@@ -18,7 +18,7 @@ class SocialiteServiceProvider extends ServiceProvider
     {
         return false;
     }
-    
+
     /**
      * Register services.
      */
