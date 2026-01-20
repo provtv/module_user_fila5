@@ -27,7 +27,7 @@ class RetrieveOauthUserAction
         try {
             return Socialite::driver($provider)->user();
 
-            // SocialiteProviders\Manager\OAuth2\User
+            // SocialiteProviders\Manager\OAuth2\User - Commented out temporarily
         } catch (InvalidStateException $invalidStateException) {
             InvalidState::dispatch($invalidStateException);
         }
