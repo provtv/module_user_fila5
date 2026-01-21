@@ -124,20 +124,5 @@ class UserResource extends XotBaseResource
         return $xot->getUserClass();
     }
 
-    /**
-     * Get the relations available for the resource.
-     *
-     * @return array<int, class-string<RelationManager>>
-     */
-    #[\Override]
-    public static function getRelations(): array
-    {
-        return [
-            AuthenticationLogsRelationManager::class,
-            OauthTokensRelationManager::class,
-            SocialiteUsersRelationManager::class,
-            ClientsRelationManager::class,
-            TenantsRelationManager::class,
-        ];
-    }
+    
 }
