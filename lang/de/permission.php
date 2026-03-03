@@ -17,41 +17,58 @@ return [
     'fields' => [
         'name' => [
             'label' => 'Nome Permesso',
-            'tooltip' => 'Inserisci il nome del permesso, ad esempio \"Accesso Admin\".',
+            'tooltip' => 'Inserisci il nome del permesso, ad esempio \\"Accesso Admin\\".',
             'placeholder' => 'Nome del permesso',
+            'helper_text' => '',
+            'description' => '',
         ],
         'guard_name' => [
             'label' => 'Guard',
             'tooltip' => 'Specifica la guardia associata al permesso.',
-            'placeholder' => 'Nome della guardia, es. \"web\"',
+            'placeholder' => 'Nome della guardia, es. \\"web\\"',
+            'helper_text' => '',
+            'description' => '',
         ],
         'roles' => [
             'label' => 'Ruoli',
             'tooltip' => 'Seleziona i ruoli a cui assegnare il permesso.',
             'placeholder' => 'Seleziona uno o più ruoli',
+            'helper_text' => '',
+            'description' => '',
         ],
         'users' => [
             'label' => 'Utenti',
             'tooltip' => 'Seleziona gli utenti a cui assegnare il permesso.',
             'placeholder' => 'Seleziona uno o più utenti',
+            'helper_text' => '',
+            'description' => '',
         ],
         'created_at' => [
             'label' => 'Data Creazione',
             'tooltip' => 'La data in cui il permesso è stato creato.',
             'placeholder' => 'Data di creazione',
+            'helper_text' => '',
+            'description' => '',
         ],
         'updated_at' => [
             'label' => 'Ultima Modifica',
             'tooltip' => 'La data dell\'ultima modifica al permesso.',
             'placeholder' => 'Ultima modifica',
+            'helper_text' => '',
+            'description' => '',
         ],
         'description' => [
             'label' => 'Descrizione',
             'tooltip' => 'Fornisci una breve descrizione del permesso.',
             'placeholder' => 'Descrizione del permesso',
+            'helper_text' => '',
+            'description' => '',
         ],
         'applyFilters' => [
             'label' => 'applyFilters',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
     ],
     'actions' => [
@@ -134,4 +151,6 @@ return [
         'manage' => 'Gestisci',
         'full' => 'Accesso Completo',
     ],
+    'label' => 'Missing Label',
+    'plural_label' => 'Missing Plural label',
 ];

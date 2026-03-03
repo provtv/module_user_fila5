@@ -6,14 +6,12 @@ namespace Modules\User\Models;
 
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Carbon;
-use Modules\User\Database\Factories\FeatureFactory;
 use Modules\Xot\Contracts\ProfileContract;
 
 /**
  * @property ProfileContract|null $creator
  * @property ProfileContract|null $updater
  *
- * @method static FeatureFactory  factory($count = null, $state = [])
  * @method static Builder|Feature newModelQuery()
  * @method static Builder|Feature newQuery()
  * @method static Builder|Feature query()
@@ -43,6 +41,8 @@ use Modules\Xot\Contracts\ProfileContract;
  * @mixin IdeHelperFeature
  *
  * @property ProfileContract|null $deleter
+ *
+ * @method static \Modules\User\Database\Factories\FeatureFactory factory($count = null, $state = [])
  *
  * @mixin \Eloquent
  */

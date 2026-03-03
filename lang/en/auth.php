@@ -8,11 +8,17 @@ return [
             'label' => 'Email',
             'placeholder' => 'Enter your email',
             'help' => 'Your email address for authentication',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'password' => [
             'label' => 'Password',
             'placeholder' => 'Enter your password',
             'help' => 'Your account password',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
     ],
     'actions' => [
@@ -32,7 +38,6 @@ return [
         'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
         'unauthorized' => 'You are not authorized to access this resource.',
     ],
-    // Password Reset Widget - specific translations
     'password_reset' => [
         'email_placeholder' => 'Enter your email address',
         'send_button' => 'Send reset link',
@@ -78,5 +83,28 @@ return [
             ],
             'try_again' => 'Try again',
         ],
+    ],
+    'navigation' => [
+        'label' => 'Missing Navigation Label',
+        'plural_label' => 'Missing Navigation Plural Label',
+        'group' => 'Missing Group',
+        'icon' => 'heroicon-o-puzzle-piece',
+        'sort' => 100,
+    ],
+    'label' => 'Missing Label',
+    'plural_label' => 'Missing Plural label',
+    'social' => [
+        'title' => 'Or continue with',
+        'google' => 'Sign in with Google',
+        'microsoft' => 'Sign in with Microsoft',
+        'github' => 'Sign in with GitHub',
+        'facebook' => 'Sign in with Facebook',
+    ],
+    'auth_button' => [
+        'login' => 'Sign in',
+        'logout' => 'Sign out',
+        'profile' => 'My profile',
+        'dashboard' => 'Dashboard',
+        'personal_area' => 'Access personal area',
     ],
 ];

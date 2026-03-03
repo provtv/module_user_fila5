@@ -16,4 +16,8 @@ return [
             'label' => 'Datensätze Neu Anordnen',
         ],
     ],
+    'label' => 'Missing Label',
+    'plural_label' => 'Missing Plural label',
+    'fields' => [
+    ],
 ];

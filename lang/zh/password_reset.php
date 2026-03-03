@@ -14,15 +14,27 @@ return [
     'fields' => [
         'id' => [
             'label' => 'ID',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'email' => [
             'label' => '邮箱',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'token' => [
             'label' => '令牌',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'created_at' => [
             'label' => '创建时间',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
     ],
     'actions' => [

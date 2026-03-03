@@ -6,7 +6,6 @@ namespace Modules\User\Models;
 
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Carbon;
-use Modules\User\Database\Factories\ModelHasRoleFactory;
 use Modules\Xot\Contracts\ProfileContract;
 
 /**
@@ -22,7 +21,6 @@ use Modules\Xot\Contracts\ProfileContract;
  * @property string|null $updated_by
  * @property string|null $created_by
  *
- * @method static ModelHasRoleFactory  factory($count = null, $state = [])
  * @method static Builder|ModelHasRole newModelQuery()
  * @method static Builder|ModelHasRole newQuery()
  * @method static Builder|ModelHasRole query()
@@ -46,6 +44,8 @@ use Modules\Xot\Contracts\ProfileContract;
  * @mixin IdeHelperModelHasRole
  *
  * @property ProfileContract|null $deleter
+ *
+ * @method static \Modules\User\Database\Factories\ModelRoleFactory factory($count = null, $state = [])
  *
  * @mixin \Eloquent
  */

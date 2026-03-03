@@ -8,7 +8,6 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Carbon;
-use Modules\User\Database\Factories\TeamFactory;
 use Modules\Xot\Contracts\ProfileContract;
 
 /**
@@ -35,7 +34,6 @@ use Modules\Xot\Contracts\ProfileContract;
  * @property Collection<int, User>           $users
  * @property int|null                        $users_count
  *
- * @method static TeamFactory  factory($count = null, $state = [])
  * @method static Builder|Team newModelQuery()
  * @method static Builder|Team newQuery()
  * @method static Builder|Team query()
@@ -69,11 +67,13 @@ use Modules\Xot\Contracts\ProfileContract;
  *
  * @property ProfileContract|null $deleter
  *
+ * @method static \Modules\User\Database\Factories\TeamFactory factory($count = null, $state = [])
+ *
  * @mixin \Eloquent
  */
 class Team extends BaseTeam
 {
-    use SoftDeletes;
+    // use SoftDeletes;
 
     protected $fillable = [
         'user_id',

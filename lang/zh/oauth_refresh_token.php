@@ -14,15 +14,27 @@ return [
     'fields' => [
         'id' => [
             'label' => 'ID',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'access_token_id' => [
             'label' => '访问令牌',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'revoked' => [
             'label' => '已撤销',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'expires_at' => [
             'label' => '过期时间',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
     ],
     'actions' => [

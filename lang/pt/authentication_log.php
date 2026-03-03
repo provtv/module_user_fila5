@@ -14,27 +14,51 @@ return [
     'fields' => [
         'id' => [
             'label' => 'ID',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'user_id' => [
             'label' => 'Usuário',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'ip_address' => [
             'label' => 'Endereço IP',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'user_agent' => [
             'label' => 'User Agent',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'login_at' => [
             'label' => 'Acesso Em',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'logout_at' => [
             'label' => 'Desconexão Em',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'login_method' => [
             'label' => 'Método de Acesso',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'success' => [
             'label' => 'Sucesso',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
     ],
     'actions' => [

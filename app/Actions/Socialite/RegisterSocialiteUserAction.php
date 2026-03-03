@@ -10,6 +10,7 @@ declare(strict_types=1);
 namespace Modules\User\Actions\Socialite;
 
 // use DutchCodingCompany\FilamentSocialite\FilamentSocialite;
+use Illuminate\Contracts\Events\Dispatcher;
 use Laravel\Socialite\Contracts\User as SocialiteUserContract;
 use Modules\User\Events\SocialiteUserConnected;
 use Modules\User\Models\SocialiteUser;
@@ -34,15 +35,13 @@ class RegisterSocialiteUserAction
             user: $user,
         );
         // Assign default roles to user, if needed
-        app(SetDefaultRolesBySocialiteUserAction::class, [
-            'provider' => $provider,
-            'userModel' => $user,
-        ])->execute(
+        app(SetDefaultRolesBySocialiteUserAction::class)->execute(
+            provider: $provider,
             userModel: $user,
             oauthUser: $oauthUser,
         );
         // Dispatch the socialite user connected event
-        SocialiteUserConnected::dispatch($socialiteUser);
+        app(Dispatcher::class)->dispatch(new SocialiteUserConnected($socialiteUser));
 
         // Login the user
         // return app(LoginUserAction::class)->execute($socialiteUser);

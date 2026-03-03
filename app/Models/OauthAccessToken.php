@@ -53,6 +53,9 @@ use Modules\Xot\Contracts\UserContract;
  * @method static static                           updateOrCreate(array $attributes, array $values = [])
  *
  * @mixin IdeHelperOauthAccessToken
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|OauthAccessToken existsIn(array $haystack)
+ *
  * @mixin \Eloquent
  */
 class OauthAccessToken extends PassportToken

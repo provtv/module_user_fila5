@@ -33,10 +33,7 @@ class CreateUserAction
     public function execute(string $provider, SocialiteUserContract $oauthUser): UserContract
     {
         // Resolve user attributes from the identity provider
-        $userAttributes = app(GetUserModelAttributesFromSocialiteAction::class, [
-            'provider' => $provider,
-            'oauthUser' => $oauthUser,
-        ]);
+        $userAttributes = app(GetUserModelAttributesFromSocialiteAction::class)->execute($provider, $oauthUser);
 
         // Get the user class from Xot configuration
         $userClass = XotData::make()->getUserClass();
@@ -45,7 +42,7 @@ class CreateUserAction
         $newlyCreatedUser = $userClass::create([
             'name' => $userAttributes->name,
             'first_name' => $userAttributes->name,
-            'last_name' => $userAttributes->last_name,
+            'last_name' => $userAttributes->lastName,
             'email' => $userAttributes->email,
         ]);
 
@@ -54,10 +51,8 @@ class CreateUserAction
         Assert::isInstanceOf($newlyCreatedUser, UserContract::class);
 
         // Assign default roles to the new user
-        app(SetDefaultRolesBySocialiteUserAction::class, [
-            'provider' => $provider,
-            'userModel' => $newlyCreatedUser,
-        ])->execute(
+        app(SetDefaultRolesBySocialiteUserAction::class)->execute(
+            provider: $provider,
             userModel: $newlyCreatedUser,
             oauthUser: $oauthUser,
         );

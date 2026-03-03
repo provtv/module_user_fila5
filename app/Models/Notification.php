@@ -8,7 +8,6 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\DatabaseNotification as BaseNotification;
 use Illuminate\Notifications\DatabaseNotificationCollection;
-use Modules\User\Database\Factories\NotificationFactory;
 use Modules\Xot\Models\Traits\HasXotFactory;
 
 /**
@@ -28,7 +27,7 @@ use Modules\Xot\Models\Traits\HasXotFactory;
  *
  * @mixin IdeHelperNotification
  *
- * @method static NotificationFactory factory($count = null, $state = [])
+ * @method static \Modules\User\Database\Factories\NotificationFactory factory($count = null, $state = [])
  *
  * @mixin \Eloquent
  */

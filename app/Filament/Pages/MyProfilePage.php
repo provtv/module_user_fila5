@@ -14,6 +14,8 @@ use Filament\Facades\Filament;
 use Filament\Forms\Components\TextInput;
 use Filament\Notifications\Notification;
 use Filament\Schemas\Components\Section;
+use Filament\Schemas\Concerns\InteractsWithSchemas;
+use Filament\Schemas\Contracts\HasSchemas;
 use Filament\Schemas\Schema;
 use Filament\Support\Exceptions\Halt;
 use Illuminate\Contracts\Auth\Authenticatable;
@@ -27,8 +29,10 @@ use Modules\Xot\Filament\Pages\XotBasePage;
  * @property Schema $editProfileForm
  * @property Schema $editPasswordForm
  */
-class MyProfilePage extends XotBasePage
+class MyProfilePage extends XotBasePage implements HasSchemas
 {
+    use InteractsWithSchemas;
+
     public ?array $profileData = [];
 
     public ?array $passwordData = [];
@@ -74,15 +78,18 @@ class MyProfilePage extends XotBasePage
                     ->aside()
                     ->description('Ensure your account is using long, random password to stay secure.')
                     ->schema([
-                        TextInput::make('Current password')
+                        TextInput::make('current_password')
                             ->password()
                             ->required()
-                            ->currentPassword(),
+                            ->currentPassword()
+                            ->validationMessages([
+                                'current_password' => 'current_password',
+                            ]),
                         PasswordData::make()
                             ->getPasswordFormComponent('new_password')
                             ->dehydrateStateUsing(fn (string $state): string => Hash::make($state))
                             ->live(debounce: 500),
-                        // ->same('passwordConfirmation')
+                        // ->same('password_confirmation')
                         /*
                          * Forms\Components\TextInput::make('password')
                          * ->password()
@@ -91,9 +98,9 @@ class MyProfilePage extends XotBasePage
                          * ->autocomplete('new-password')
                          * ->dehydrateStateUsing(fn ($state): string => Hash::make($state))
                          * ->live(debounce: 500)
-                         * ->same('passwordConfirmation'),
+                         * ->same('password_confirmation'),
                          */
-                        TextInput::make('passwordConfirmation')
+                        TextInput::make('password_confirmation')
                             ->password()
                             ->required()
                             ->dehydrated(false)
@@ -179,8 +186,8 @@ class MyProfilePage extends XotBasePage
                 unset($data['new_password']);
             }
 
-            if (isset($data['passwordConfirmation'])) {
-                unset($data['passwordConfirmation']);
+            if (isset($data['password_confirmation'])) {
+                unset($data['password_confirmation']);
             }
 
             $this->handleRecordUpdate($this->getUser(), $data);
@@ -211,6 +218,7 @@ class MyProfilePage extends XotBasePage
 
     protected function fillForms(): void
     {
+        /** @var array<string, mixed> $data */
         $data = $this->getUser()->attributesToArray();
 
         $this->editProfileForm->fill($data);

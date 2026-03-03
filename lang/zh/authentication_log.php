@@ -14,27 +14,51 @@ return [
     'fields' => [
         'id' => [
             'label' => 'ID',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'user_id' => [
             'label' => '用户',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'ip_address' => [
             'label' => 'IP地址',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'user_agent' => [
             'label' => '用户代理',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'login_at' => [
             'label' => '登录时间',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'logout_at' => [
             'label' => '登出时间',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'login_method' => [
             'label' => '登录方式',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'success' => [
             'label' => '成功',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
     ],
     'actions' => [

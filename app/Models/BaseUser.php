@@ -27,7 +27,6 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 use Laravel\Passport\Contracts\OAuthenticatable;
 use Laravel\Passport\HasApiTokens;
-use Modules\User\Database\Factories\UserFactory;
 use Modules\User\Models\Traits\HasAuthenticationLogTrait;
 use Modules\User\Models\Traits\HasModules;
 use Modules\User\Models\Traits\HasSpatiePermission;
@@ -95,7 +94,6 @@ use Spatie\MediaLibrary\InteractsWithMedia;
  * @property string|null                                               $profile_photo_path
  * @property Pivot|null                                                $pivot
  *
- * @method static UserFactory  factory($count = null, $state = [])
  * @method static Builder|User newModelQuery()
  * @method static Builder|User newQuery()
  * @method static Builder|User permission($permissions, $without = false)
@@ -140,7 +138,8 @@ abstract class BaseUser extends Authenticatable implements HasMedia, HasName, Ha
     use HasXotFactory;
     use InteractsWithMedia;
     use Notifiable;
-    use SoftDeletes;
+
+    // use SoftDeletes;
     use Traits\HasTenants;
     use XotTraits\RelationX;
 
@@ -165,6 +164,8 @@ abstract class BaseUser extends Authenticatable implements HasMedia, HasName, Ha
     /** @var list<string> */
     protected $fillable = [
         'id',
+        // 'ente',
+        // 'matr',
         'name',
         'first_name',
         'last_name',
@@ -175,7 +176,9 @@ abstract class BaseUser extends Authenticatable implements HasMedia, HasName, Ha
         'is_active',
         'is_otp', // is One Time Password
         'password_expires_at',
+        'email_verified_at',
         'type',
+        'state',
     ];
 
     /** @var list<string> */
@@ -222,7 +225,9 @@ abstract class BaseUser extends Authenticatable implements HasMedia, HasName, Ha
             // Fallback in case database connection is not available (e.g., during testing)
             $this->fillable = array_values($this->getFillable());
             // Avoid calling parent constructor if database is not available
-            $this->attributes = $attributes;
+            foreach ($attributes as $key => $value) {
+                $this->setAttribute($key, $value);
+            }
         }
     }
 

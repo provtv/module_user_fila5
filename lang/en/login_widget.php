@@ -10,6 +10,7 @@ return [
             'help' => 'Enter the email address you used to register',
             'description' => 'Email address for login',
             'helper_text' => 'email',
+            'tooltip' => '',
         ],
         'password' => [
             'label' => 'Password',
@@ -17,6 +18,7 @@ return [
             'help' => 'Enter your account password',
             'description' => 'Password for login',
             'helper_text' => 'password',
+            'tooltip' => '',
         ],
         'remember' => [
             'label' => 'Remember me',
@@ -24,6 +26,7 @@ return [
             'help' => 'Select to keep your session active for 30 days',
             'description' => 'Option to remember login',
             'helper_text' => 'remember',
+            'tooltip' => '',
         ],
     ],
     'actions' => [
@@ -43,4 +46,13 @@ return [
         'forgot_password' => 'Forgot password?',
         'errors_title' => 'Some errors occurred',
     ],
+    'navigation' => [
+        'label' => 'Missing Navigation Label',
+        'plural_label' => 'Missing Navigation Plural Label',
+        'group' => 'Missing Group',
+        'icon' => 'heroicon-o-puzzle-piece',
+        'sort' => 100,
+    ],
+    'label' => 'Missing Label',
+    'plural_label' => 'Missing Plural label',
 ];

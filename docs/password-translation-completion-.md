@@ -103,8 +103,8 @@ Durante l'audit delle traduzioni del modulo User, sono state identificate traduz
 
 ## Collegamenti
 
-- [Documentazione Modulo User](../README.md)
-- [Best Practices Traduzioni](../../Lang/docs/translation_standards.md)
+- [Documentazione Modulo User](../readme.md)
+- [Best Practices Traduzioni](../../lang/docs/translation_standards.md)
 - [Sicurezza Password](../security/password_policies.md)
 
 ## Note per il Futuro
@@ -115,7 +115,6 @@ Durante l'audit delle traduzioni del modulo User, sono state identificate traduz
 4. **Usare icone e colori appropriati** per l'UX
 
 ---
-*Ultimo aggiornamento: 2025-01-06*
 *Autore: Sistema di Audit Traduzioni*
 # Completamento Traduzioni Password - 2025
 
@@ -222,8 +221,8 @@ Durante l'audit delle traduzioni del modulo User, sono state identificate traduz
 
 ## Collegamenti
 
-- [Documentazione Modulo User](../README.md)
-- [Best Practices Traduzioni](../../Lang/docs/translation_standards.md)
+- [Documentazione Modulo User](../readme.md)
+- [Best Practices Traduzioni](../../lang/docs/translation_standards.md)
 - [Sicurezza Password](../security/password_policies.md)
 
 ## Note per il Futuro
@@ -234,5 +233,4 @@ Durante l'audit delle traduzioni del modulo User, sono state identificate traduz
 4. **Usare icone e colori appropriati** per l'UX
 
 ---
-*Ultimo aggiornamento: 2025-01-06*
 *Autore: Sistema di Audit Traduzioni*

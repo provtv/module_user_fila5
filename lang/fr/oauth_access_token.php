@@ -14,24 +14,45 @@ return [
     'fields' => [
         'id' => [
             'label' => 'ID',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'user_id' => [
             'label' => 'Utilisateur',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'client_id' => [
             'label' => 'Client',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'name' => [
             'label' => 'Nom',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'scopes' => [
             'label' => 'Portées',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'revoked' => [
             'label' => 'Révoqué',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'expires_at' => [
             'label' => 'Expire À',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
     ],
     'actions' => [

@@ -14,24 +14,45 @@ return [
     'fields' => [
         'id' => [
             'label' => 'ID',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'email' => [
             'label' => '邮箱',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'team_id' => [
             'label' => '团队',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'role' => [
             'label' => '角色',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'invited_by_id' => [
             'label' => '邀请人',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'accepted_at' => [
             'label' => '接受时间',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'expires_at' => [
             'label' => '过期时间',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
     ],
     'actions' => [

@@ -1,6 +1,6 @@
 # 🔍 Code Quality Tools - Modulo User
 
-**Data Creazione**: 2025-01-27  
+**Data Creazione**: [DATE]  
 **Status**: 🚀 ATTIVO  
 **Scope**: Modulo User  
 **Priority**: HIGH  
@@ -179,14 +179,13 @@ npm install
 - [Stylelint Documentation](https://stylelint.io/)
 
 ### **Guide Specifiche**
-- [PHP Code Quality Guide](../Xot/docs/php-code-quality.md)
-- [Frontend Code Quality Guide](../Xot/docs/frontend-code-quality.md)
-- [Security Best Practices](../Xot/docs/security-best-practices.md)
+- [PHP Code Quality Guide](../xot/docs/php-code-quality.md)
+- [Frontend Code Quality Guide](../xot/docs/frontend-code-quality.md)
+- [Security Best Practices](../xot/docs/security-best-practices.md)
 
 ---
 
-**Last Updated**: 2025-01-27  
-**Next Review**: 2025-02-27  
+
 **Status**: 🚀 ACTIVE IMPLEMENTATION  
 **Confidence Level**: 98%  
 

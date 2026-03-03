@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Modules\User\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Modules\User\Models\OauthClient;
 use Modules\User\Models\OauthPersonalAccessClient;
 
 /**
@@ -19,8 +20,7 @@ class OauthPersonalAccessClientFactory extends Factory
     public function definition(): array
     {
         return [
-            'uuid' => (string) $this->faker->uuid(),
-            'client_id' => (string) $this->faker->uuid(),
+            'client_id' => OauthClient::factory()->asPersonalAccessTokenClient()->create()->id,
         ];
     }
 }

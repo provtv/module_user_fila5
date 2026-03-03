@@ -12,6 +12,9 @@ return [
                 'required' => 'Der Name ist erforderlich',
                 'max' => 'Il nome non può superare i 255 caratteri',
             ],
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'last_name' => [
             'label' => 'Cognome',
@@ -21,6 +24,9 @@ return [
                 'required' => 'Il cognome è obbligatorio',
                 'max' => 'Il cognome non può superare i 255 caratteri',
             ],
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'email' => [
             'label' => 'Email',
@@ -32,6 +38,9 @@ return [
                 'max' => 'L\'email non può superare i 255 caratteri',
                 'unique' => 'Questa email è già registrata',
             ],
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'password' => [
             'label' => 'Password',
@@ -42,6 +51,9 @@ return [
                 'min' => 'La password deve essere di almeno 8 caratteri',
                 'max' => 'La password non può superare i 255 caratteri',
             ],
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'password_confirmation' => [
             'label' => 'Conferma Password',
@@ -53,10 +65,16 @@ return [
                 'max' => 'La password non può superare i 255 caratteri',
                 'same' => 'Le password non coincidono',
             ],
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'remember_me' => [
             'label' => 'Ricordami',
             'help' => 'Mantieni la sessione attiva',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
     ],
     'actions' => [
@@ -141,4 +159,13 @@ return [
             ],
         ],
     ],
+    'navigation' => [
+        'label' => 'Missing Navigation Label',
+        'plural_label' => 'Missing Navigation Plural Label',
+        'group' => 'Missing Group',
+        'icon' => 'heroicon-o-puzzle-piece',
+        'sort' => 100,
+    ],
+    'label' => 'Missing Label',
+    'plural_label' => 'Missing Plural label',
 ];

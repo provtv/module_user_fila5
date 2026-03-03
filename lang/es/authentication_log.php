@@ -16,4 +16,8 @@ return [
             'label' => 'Reordenar Registros',
         ],
     ],
+    'label' => 'Missing Label',
+    'plural_label' => 'Missing Plural label',
+    'fields' => [
+    ],
 ];

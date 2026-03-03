@@ -2,7 +2,11 @@
 
 ## Problema Identificato
 
-Il file `/var/www/html/saluteora/laravel/Themes/One/resources/views/pages/auth/logout.blade.php` presenta un errore fondamentale nella sua implementazione:
+<<<<<<< HEAD
+Il file `/var/www/html/ptvx/laravel/Themes/One/resources/views/pages/auth/logout.blade.php` presenta un errore fondamentale nella sua implementazione:
+=======
+Il file `/var/www/html/healthcare_app/laravel/Themes/One/resources/views/pages/auth/logout.blade.php` presenta un errore fondamentale nella sua implementazione:
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 
 1. **Errore di Sintassi**:
    - Uso errato della direttiva `@volt` quando il file dovrebbe essere una semplice blade template
@@ -120,6 +124,6 @@ class LogoutWidget extends XotBaseWidget
 
 ## Collegamenti Correlati
 - [Documentazione Filament Widgets](https://filamentphp.com/docs/3.x/panels/widgets)
-- [Best Practices di Sicurezza](./SECURITY_BEST_PRACTICES.md)
-- [Gestione Sessione](./SESSION_MANAGEMENT.md)
+- [Best Practices di Sicurezza](./security_best_practices.md)
+- [Gestione Sessione](./session_management.md)
 - [Documentazione Blade](https://laravel.com/docs/10.x/blade) 

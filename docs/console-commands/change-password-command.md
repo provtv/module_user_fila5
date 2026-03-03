@@ -341,10 +341,10 @@ php artisan test --filter=ChangePasswordCommandIntegrationTest
 - `Modules\Xot\Datas\XotData`: Accesso centralizzato dati
 
 ## Collegamenti
-- [README Comandi Console](README.md)
-- [PasswordData](../Datas/PasswordData.md)
-- [NewPasswordSet Event](../Events/NewPasswordSet.md)
-- [User Model](../Models/User.md)
+- [README Comandi Console](readme.md)
+- [PasswordData](../datas/passworddata.md)
+- [NewPasswordSet Event](../events/newpasswordset.md)
+- [User Model](../models/user.md)
 - [Password Management](../password.md)
 
 ## Aggiornamenti
@@ -364,5 +364,4 @@ php artisan test --filter=ChangePasswordCommandIntegrationTest
 - ✅ **Gestione Password**: Hash e scadenza
 - ✅ **Eventi**: Dispatched NewPasswordSet
 
-*Ultimo aggiornamento: 2025-01-27*
 

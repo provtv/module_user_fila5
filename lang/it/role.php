@@ -24,6 +24,7 @@ return [
             'label' => 'ID',
             'tooltip' => 'Identificativo univoco del ruolo',
             'helper_text' => 'Identificativo numerico univoco del ruolo nel sistema',
+            'description' => '',
         ],
         'name' => [
             'label' => 'Nome Ruolo',
@@ -37,18 +38,20 @@ return [
                 'min' => 'Il nome deve essere di almeno :min caratteri',
                 'max' => 'Il nome non può superare i :max caratteri',
             ],
+            'description' => '',
         ],
         'guard_name' => [
             'label' => 'Guard',
             'placeholder' => 'Seleziona la guardia',
             'tooltip' => 'Nome della guardia per questo ruolo, es. "web"',
             'helper_text' => 'Sistema di autenticazione utilizzato per questo ruolo',
-            'help' => 'Specifica il sistema di autenticazione (web, api, ecc.)',
+            'help' => 'Specifica il sistema di autenticazione (web, api, ecc.]',
             'options' => [
                 'web' => 'Web',
                 'api' => 'API',
                 'sanctum' => 'Sanctum',
             ],
+            'description' => '',
         ],
         'permissions' => [
             'label' => 'Permessi',
@@ -56,11 +59,13 @@ return [
             'tooltip' => 'Permessi associati a questo ruolo',
             'helper_text' => 'Elenco dei permessi specifici assegnati a questo ruolo',
             'help' => 'Seleziona i permessi che questo ruolo può esercitare',
+            'description' => '',
         ],
         'users_count' => [
             'label' => 'Numero Utenti',
             'tooltip' => 'Numero di utenti assegnati a questo ruolo',
             'helper_text' => 'Conteggio degli utenti che attualmente hanno questo ruolo assegnato',
+            'description' => '',
         ],
         'description' => [
             'label' => 'Descrizione',
@@ -68,16 +73,19 @@ return [
             'tooltip' => 'Descrizione dettagliata del ruolo e delle sue funzioni',
             'helper_text' => 'Testo descrittivo che spiega lo scopo e le responsabilità del ruolo',
             'help' => 'Fornisci una descrizione chiara delle funzioni del ruolo',
+            'description' => '',
         ],
         'created_at' => [
             'label' => 'Data Creazione',
             'tooltip' => 'Data di creazione del ruolo',
             'helper_text' => 'Data e ora in cui il ruolo è stato creato nel sistema',
+            'description' => '',
         ],
         'updated_at' => [
             'label' => 'Ultima Modifica',
             'tooltip' => 'Data dell\'ultima modifica del ruolo',
             'helper_text' => 'Data e ora dell\'ultimo aggiornamento del ruolo',
+            'description' => '',
         ],
         'team_id' => [
             'label' => 'ID Team',
@@ -85,6 +93,7 @@ return [
             'tooltip' => 'Team associato al ruolo',
             'helper_text' => 'Team specifico al quale questo ruolo appartiene',
             'help' => 'Seleziona il team per cui questo ruolo è valido',
+            'description' => '',
         ],
         'values' => [
             'label' => 'Valori',
@@ -101,11 +110,16 @@ return [
                 'true' => 'Sì',
                 'false' => 'No',
             ],
+            'description' => '',
         ],
         'team' => [
             'name' => [
                 'label' => 'team.name',
             ],
+            'label' => '',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
     ],
     'actions' => [
@@ -384,5 +398,5 @@ return [
         'user' => 'Utente',
     ],
     'label' => 'role',
-    'plural_label' => '',
+    'plural_label' => 'Role (Plurale)',
 ];

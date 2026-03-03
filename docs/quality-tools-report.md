@@ -54,7 +54,15 @@
 
 3. **Property Declaration** (Code Quality)
    - Proprietà con prefisso underscore (non conforme):
-     - `Quaeris/app/Datas/LimeAnswerData.php:15` (`$_group_by`)
+<<<<<<< .merge_file_5V1Pyr
+     - `healthcare_app/app/Datas/LimeAnswerData.php:15` (`$_group_by`)
+=======
+<<<<<<< HEAD
+     - `ExternalProject/app/Datas/LimeAnswerData.php:15` (`$_group_by`)
+=======
+     - `ModuloEsempio/app/Datas/LimeAnswerData.php:15` (`$_group_by`)
+>>>>>>> f04e1ab44 (refactor: update project references from Quaeris to PTVX)
+>>>>>>> .merge_file_kzJdPF
      - `Xot/app/Services/ModuleService.php:23` (`$_instance`)
      - `Xot/app/Traits/HasCsrfToken.php:15` (`$_token`)
    - **Soluzione**: Rimuovere prefisso underscore, usare visibilità appropriata
@@ -158,6 +166,5 @@ cd laravel
 
 - [PHPStan Complete Success](./phpstan-complete-success.md)
 - [PHPStan Corrections Summary](./phpstan-corrections-summary-2025.md)
-- [Filament Class Extension Rules](../../Xot/docs/filament-class-extension-rules.md)
+- [Filament Class Extension Rules](../../xot/docs/filament-class-extension-rules.md)
 
-*Ultimo aggiornamento: 2025-01-02*

@@ -1,6 +1,5 @@
 # Passport Cluster - Verifica Risorse
 
-**Data**: 2025-01-22
 **Status**: ✅ VERIFICATO
 **Metodologia**: Super Mucca
 
@@ -75,6 +74,6 @@ find Modules/User/app/Filament/Clusters/Passport/Resources -name "*Resource.php"
 
 ---
 
-**Ultimo aggiornamento**: 2025-01-22
+**Ultimo aggiornamento**: [DATE]
 **Versione**: 1.0.0
 **Status**: ✅ Verificato - Tutte le risorse sono attinenti a Passport/OAuth

@@ -17,50 +17,91 @@ return [
     'fields' => [
         'name' => [
             'label' => 'Nome',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'user' => [
             'email' => [
                 'label' => 'Proprietario',
             ],
+            'label' => '',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'create' => [
             'label' => 'Crea',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'edit' => [
             'label' => 'Modifica',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'delete' => [
             'label' => 'Elimina',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'toggleColumns' => [
             'label' => 'Gestisci Colonne',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'reorderRecords' => [
             'label' => 'Riordina Record',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'resetFilters' => [
             'label' => 'Reimposta Filtri',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'applyFilters' => [
             'label' => 'Applica Filtri',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'openFilters' => [
             'label' => 'Apri Filtri',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'recordId' => [
             'label' => 'ID Record',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'client_id' => [
             'description' => 'client_id',
             'helper_text' => 'client_id',
             'placeholder' => 'client_id',
             'label' => 'client_id',
+            'tooltip' => '',
         ],
         'secret' => [
             'label' => 'secret',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'id' => [
             'label' => 'id',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
     ],
     'plural' => [
@@ -165,6 +206,6 @@ return [
             'heading' => 'empty',
         ],
     ],
-    'label' => '',
-    'plural_label' => '',
+    'label' => 'Client',
+    'plural_label' => 'Client (Plurale)',
 ];

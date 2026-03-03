@@ -6,7 +6,6 @@ namespace Modules\User\Models;
 
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Modules\User\Database\Factories\TeamPermissionFactory;
 use Modules\Xot\Contracts\ProfileContract;
 
 /**
@@ -29,11 +28,26 @@ use Modules\Xot\Contracts\ProfileContract;
  *
  * @mixin IdeHelperTeamPermission
  *
- * @property ProfileContract|null $creator
- * @property ProfileContract|null $deleter
- * @property ProfileContract|null $updater
+ * @property ProfileContract|null            $creator
+ * @property ProfileContract|null            $deleter
+ * @property ProfileContract|null            $updater
+ * @property string|null                     $name
+ * @property string|null                     $updated_by
+ * @property string|null                     $created_by
+ * @property \Illuminate\Support\Carbon|null $deleted_at
+ * @property string|null                     $deleted_by
  *
- * @method static TeamPermissionFactory factory($count = null, $state = [])
+ * @method static \Modules\User\Database\Factories\TeamPermissionFactory factory($count = null, $state = [])
+ * @method static Builder<static>|TeamPermission                         whereCreatedAt($value)
+ * @method static Builder<static>|TeamPermission                         whereCreatedBy($value)
+ * @method static Builder<static>|TeamPermission                         whereDeletedAt($value)
+ * @method static Builder<static>|TeamPermission                         whereDeletedBy($value)
+ * @method static Builder<static>|TeamPermission                         whereId($value)
+ * @method static Builder<static>|TeamPermission                         whereName($value)
+ * @method static Builder<static>|TeamPermission                         wherePermission($value)
+ * @method static Builder<static>|TeamPermission                         whereTeamId($value)
+ * @method static Builder<static>|TeamPermission                         whereUpdatedAt($value)
+ * @method static Builder<static>|TeamPermission                         whereUpdatedBy($value)
  *
  * @mixin \Eloquent
  */

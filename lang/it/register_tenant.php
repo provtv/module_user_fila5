@@ -25,27 +25,33 @@ return [
     'fields' => [
         'name' => [
             'label' => 'Nome Studio Medico',
-            'placeholder' => 'Inserisci il nome completo dello studio (es. Studio Dentistico Rossi)',
+            'placeholder' => 'Inserisci il nome completo dello studio (es. Studio Dentistico Rossi]',
             'help' => 'Nome ufficiale dello studio medico come registrato in camera di commercio',
             'validation' => [
                 'required' => 'Il nome dello studio è obbligatorio',
                 'min' => 'Il nome deve contenere almeno 3 caratteri',
                 'max' => 'Il nome non può superare i 100 caratteri',
             ],
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'phone' => [
             'label' => 'Numero di Telefono Studio',
-            'placeholder' => 'Inserisci numero telefonico principale (es. +39 06 1234567)',
+            'placeholder' => 'Inserisci numero telefonico principale (es. +39 06 1234567]',
             'help' => 'Numero di telefono principale dello studio per contatti diretti e urgenze',
             'validation' => [
                 'required' => 'Il numero di telefono è obbligatorio',
                 'regex' => 'Inserisci un numero di telefono italiano valido',
                 'min' => 'Il numero deve contenere almeno 10 cifre',
             ],
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'email' => [
             'label' => 'Email Ufficiale Studio',
-            'placeholder' => 'Inserisci email istituzionale (es. info@studiodentistico.it)',
+            'placeholder' => 'Inserisci email istituzionale (es. info@studiodentistico.it]',
             'help' => 'Indirizzo email ufficiale dello studio per comunicazioni istituzionali',
             'validation' => [
                 'required' => 'L\'indirizzo email è obbligatorio',
@@ -53,16 +59,22 @@ return [
                 'unique' => 'Questo indirizzo email è già registrato per un altro studio',
                 'max' => 'L\'indirizzo email non può superare i 255 caratteri',
             ],
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'address' => [
             'label' => 'Indirizzo Completo Studio',
-            'placeholder' => 'Via/Piazza Nome Strada, Numero Civico, CAP Città (Provincia)',
+            'placeholder' => 'Via/Piazza Nome Strada, Numero Civico, CAP Città (Provincia]',
             'help' => 'Indirizzo fisico completo dello studio medico comprensivo di CAP e provincia',
             'validation' => [
                 'required' => 'L\'indirizzo dello studio è obbligatorio',
                 'min' => 'L\'indirizzo deve contenere almeno 15 caratteri',
                 'max' => 'L\'indirizzo non può superare i 300 caratteri',
             ],
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'director_name' => [
             'label' => 'Nome Direttore Sanitario',
@@ -73,6 +85,9 @@ return [
                 'min' => 'Il nome deve contenere almeno 5 caratteri',
                 'max' => 'Il nome non può superare i 100 caratteri',
             ],
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'director_registration' => [
             'label' => 'Numero Iscrizione Albo Medico',
@@ -83,16 +98,22 @@ return [
                 'numeric' => 'Il numero di iscrizione deve contenere solo cifre',
                 'min' => 'Il numero di iscrizione deve contenere almeno 3 cifre',
             ],
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'vat_number' => [
             'label' => 'Partita IVA Studio',
-            'placeholder' => 'Inserisci partita IVA (11 cifre)',
+            'placeholder' => 'Inserisci partita IVA (11 cifre]',
             'help' => 'Partita IVA dello studio medico registrata presso l\'Agenzia delle Entrate',
             'validation' => [
                 'required' => 'La partita IVA è obbligatoria',
                 'regex' => 'La partita IVA deve essere composta da esattamente 11 cifre',
                 'unique' => 'Questa partita IVA è già registrata per un altro studio',
             ],
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'specialization' => [
             'label' => 'Specializzazioni Mediche',
@@ -114,14 +135,20 @@ return [
                 'ortopedia' => 'Ortopedia',
                 'altro' => 'Altra Specializzazione',
             ],
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'website' => [
             'label' => 'Sito Web Studio',
-            'placeholder' => 'https://www.tuostudio.it (opzionale)',
-            'help' => 'Sito web ufficiale dello studio medico (campo facoltativo)',
+            'placeholder' => 'https://www.tuostudio.it (opzionale]',
+            'help' => 'Sito web ufficiale dello studio medico (campo facoltativo]',
             'validation' => [
                 'url' => 'Inserisci un URL valido che inizi con http:// o https://',
             ],
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'staff_count' => [
             'label' => 'Numero Operatori',
@@ -133,6 +160,9 @@ return [
                 'min' => 'Lo studio deve avere almeno 1 operatore',
                 'max' => 'Il numero massimo consentito è 100 operatori',
             ],
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'privacy_acceptance' => [
             'label' => 'Consenso Trattamento Dati',
@@ -141,6 +171,9 @@ return [
             'validation' => [
                 'accepted' => 'È obbligatorio accettare l\'informativa sulla privacy per procedere',
             ],
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'terms_acceptance' => [
             'label' => 'Accettazione Termini di Servizio',
@@ -149,6 +182,9 @@ return [
             'validation' => [
                 'accepted' => 'È obbligatorio accettare i termini e condizioni per procedere',
             ],
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
     ],
     'actions' => [
@@ -251,6 +287,6 @@ return [
         'contact_info' => 'I dati di contatto inseriti verranno utilizzati per tutte le comunicazioni ufficiali',
         'data_protection' => 'Tutti i dati sono protetti secondo le normative europee GDPR',
     ],
-    'label' => '',
-    'plural_label' => '',
+    'label' => 'Register Tenant',
+    'plural_label' => 'Register Tenant (Plurale)',
 ];

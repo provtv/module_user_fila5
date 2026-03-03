@@ -14,15 +14,27 @@ return [
     'fields' => [
         'id' => [
             'label' => 'ID',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'email' => [
             'label' => 'Correo Electrónico',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'token' => [
             'label' => 'Token',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'created_at' => [
             'label' => 'Creado En',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
     ],
     'actions' => [

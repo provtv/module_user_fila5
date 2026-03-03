@@ -9,7 +9,6 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Support\Carbon;
 use Modules\User\Contracts\TeamContract;
-use Modules\User\Database\Factories\TeamInvitationFactory;
 use Modules\Xot\Contracts\ProfileContract;
 use Modules\Xot\Contracts\UserContract;
 use Modules\Xot\Datas\XotData;
@@ -26,7 +25,6 @@ use Modules\Xot\Datas\XotData;
  * @property Team|null         $team
  * @property TeamContract|null $team
  *
- * @method static TeamInvitationFactory  factory($count = null, $state = [])
  * @method static Builder|TeamInvitation newModelQuery()
  * @method static Builder|TeamInvitation newQuery()
  * @method static Builder|TeamInvitation query()
@@ -55,6 +53,14 @@ use Modules\Xot\Datas\XotData;
  * @mixin IdeHelperTeamInvitation
  *
  * @property ProfileContract|null $deleter
+ * @property Carbon|null          $accepted_at
+ * @property Carbon|null          $declined_at
+ * @property string|null          $user_id
+ *
+ * @method static \Modules\User\Database\Factories\TeamInvitationFactory factory($count = null, $state = [])
+ * @method static Builder<static>|TeamInvitation                         whereAcceptedAt($value)
+ * @method static Builder<static>|TeamInvitation                         whereDeclinedAt($value)
+ * @method static Builder<static>|TeamInvitation                         whereUserId($value)
  *
  * @mixin \Eloquent
  */

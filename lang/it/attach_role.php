@@ -9,12 +9,14 @@ return [
             'placeholder' => 'recordId',
             'helper_text' => 'recordId',
             'description' => 'recordId',
+            'tooltip' => '',
         ],
         'team_id' => [
             'label' => 'team_id',
             'placeholder' => 'team_id',
             'helper_text' => 'team_id',
             'description' => 'team_id',
+            'tooltip' => '',
         ],
     ],
     'actions' => [
@@ -34,7 +36,17 @@ return [
             'tooltip' => 'cancel',
         ],
     ],
-    'navigation' => [],
-    'label' => '',
-    'plural_label' => '',
+    'navigation' => [
+        'name' => 'Attach Role',
+        'plural' => 'Attach Role',
+        'group' => [
+            'name' => 'General',
+            'description' => 'General Settings',
+        ],
+        'label' => 'Attach Role',
+        'sort' => 1,
+        'icon' => 'heroicon-o-collection',
+    ],
+    'label' => 'Attach Role',
+    'plural_label' => 'Attach Role (Plurale)',
 ];

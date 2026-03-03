@@ -285,8 +285,8 @@ test('can login user via SSO', function () {
 
 | Data | Versione | Descrizione |
 |------|----------|-------------|
-| 2025-10-15 | 1.0.0 | Creazione iniziale tabella `sso_providers` |
-| 2025-10-15 | 1.0.0 | Aggiunta foreign key in tabella `users` |
+| [DATE] | 1.0.0 | Creazione iniziale tabella `sso_providers` |
+| [DATE] | 1.0.0 | Aggiunta foreign key in tabella `users` |
 
 ## Roadmap
 
@@ -300,6 +300,5 @@ test('can login user via SSO', function () {
 ---
 
 **Autore**: Claude Code
-**Data**: 2025-10-15
 **Versione**: 1.0.0
 **Laravel**: 12.34.0

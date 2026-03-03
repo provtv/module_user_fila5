@@ -9,7 +9,6 @@ use Illuminate\Database\Eloquent\Collection as EloquentCollection;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Carbon;
 use Modules\Media\Models\Media;
-use Modules\User\Database\Factories\TenantFactory;
 use Modules\Xot\Contracts\ProfileContract;
 use Modules\Xot\Contracts\UserContract;
 use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
@@ -17,7 +16,6 @@ use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
 /**
  * Modules\User\Models\Tenant.
  *
- * @method static TenantFactory  factory($count = null, $state = [])
  * @method static Builder|Tenant newModelQuery()
  * @method static Builder|Tenant newQuery()
  * @method static Builder|Tenant query()
@@ -54,6 +52,29 @@ use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
  * @method static Builder<static>|Tenant whereName($value)
  * @method static Builder<static>|Tenant whereSlug($value)
  * @method static Builder<static>|Tenant whereUpdatedAt($value)
+ *
+ * @property string|null $email_address
+ * @property string|null $phone
+ * @property string|null $mobile
+ * @property string|null $address
+ * @property string|null $primary_color
+ * @property string|null $secondary_color
+ * @property string|null $updated_by
+ * @property string|null $created_by
+ * @property string|null $deleted_by
+ * @property string|null $settings
+ *
+ * @method static \Modules\User\Database\Factories\TenantFactory factory($count = null, $state = [])
+ * @method static Builder<static>|Tenant                         whereAddress($value)
+ * @method static Builder<static>|Tenant                         whereCreatedBy($value)
+ * @method static Builder<static>|Tenant                         whereDeletedBy($value)
+ * @method static Builder<static>|Tenant                         whereEmailAddress($value)
+ * @method static Builder<static>|Tenant                         whereMobile($value)
+ * @method static Builder<static>|Tenant                         wherePhone($value)
+ * @method static Builder<static>|Tenant                         wherePrimaryColor($value)
+ * @method static Builder<static>|Tenant                         whereSecondaryColor($value)
+ * @method static Builder<static>|Tenant                         whereSettings($value)
+ * @method static Builder<static>|Tenant                         whereUpdatedBy($value)
  *
  * @mixin \Eloquent
  */

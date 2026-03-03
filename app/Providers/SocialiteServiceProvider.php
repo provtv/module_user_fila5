@@ -4,26 +4,21 @@ declare(strict_types=1);
 
 namespace Modules\User\Providers;
 
-// use SocialiteProviders\Manager\ServiceProvider as BaseSocialiteServiceProvider;
-use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\Event;
+use SocialiteProviders\Manager\ServiceProvider as BaseSocialiteServiceProvider;
+use SocialiteProviders\Manager\SocialiteWasCalled;
 
-class SocialiteServiceProvider extends ServiceProvider
+class SocialiteServiceProvider extends BaseSocialiteServiceProvider
 {
-    // Temporarily disabled until SocialiteProviders package is installed
-
     /**
-     * Check if provider is deferred.
+     * Bootstrap the provider services.
      */
-    public function isDeferred(): bool
+    public function boot(): void
     {
-        return false;
-    }
+        parent::boot();
 
-    /**
-     * Register services.
-     */
-    public function register(): void
-    {
-        // Register services when SocialiteProviders package is available
+        Event::listen(function (SocialiteWasCalled $event): void {
+            $event->extendSocialite('microsoft', \SocialiteProviders\Microsoft\Provider::class);
+        });
     }
 }

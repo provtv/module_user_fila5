@@ -1,6 +1,6 @@
 # User Module - Authentication & Authorization
 
-**Last Update**: 2025-12-05
+**Last Update**: [DATE]
 **Status**: ✅ Production Ready
 **PHPStan Level**: 10
 **Maintainers**: Laraxot Team
@@ -955,19 +955,19 @@ test('user can switch teams', function () {
 
 ## 🔄 Recent Updates
 
-### v2.5.0 - 2025-12-05
+### v2.5.0 - [DATE]
 - **Added**: Laravel 12 compatibility
 - **Added**: Filament 4 support
 - **Fixed**: Merge conflicts in EditProfile and PasswordResetConfirmWidget
 - **Improved**: PHPStan Level 10 compliance
 
-### v2.4.0 - 2025-11-04
+### v2.4.0 - [DATE]
 - **Added**: Device management features
 - **Added**: Enhanced authentication logging
 - **Fixed**: File locking pattern implementation
 - **Improved**: Security alert widgets
 
-See [CHANGELOG.md](./CHANGELOG.md) for full history.
+See [CHANGELOG.md](./changelog.md) for full history.
 
 ---
 
@@ -985,20 +985,20 @@ See [CHANGELOG.md](./CHANGELOG.md) for full history.
 - Social login enhancements
 - Advanced audit reporting
 
-See [ROADMAP.md](./ROADMAP.md) for details.
+See [ROADMAP.md](./roadmap.md) for details.
 
 ---
 
 ## 📖 Related Documentation
 
 ### Internal Modules
-- [Xot Module](../Xot/docs/README.md) - Core foundation
-- [Activity Module](../Activity/docs/README.md) - Activity tracking
-- [Lang Module](../Lang/docs/README.md) - Translations
-- [Tenant Module](../Tenant/docs/README.md) - Enhanced tenancy
+- [Xot Module](../xot/docs/readme.md) - Core foundation
+- [Activity Module](../activity/docs/readme.md) - Activity tracking
+- [Lang Module](../lang/docs/readme.md) - Translations
+- [Tenant Module](../tenant/docs/readme.md) - Enhanced tenancy
 
 ### Project Documentation
-- [CLAUDE.md](../../../CLAUDE.md) - Project architecture
+- [CLAUDE.md](../../../claude.md) - Project architecture
 - [Security Guidelines](../../../docs/security.md)
 
 ### External Resources
@@ -1011,7 +1011,6 @@ See [ROADMAP.md](./ROADMAP.md) for details.
 ---
 
 **Module**: User (Authentication & Authorization)
-**Version**: 2.5.0
 **Framework**: Laravel 12 + Filament 4
 **PHPStan**: Level 10 ✅
 **Test Coverage**: 88%+ ✅

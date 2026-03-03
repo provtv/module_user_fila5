@@ -10,7 +10,6 @@ namespace Modules\User\Models;
 
 use Illuminate\Database\Eloquent\Builder;
 use Modules\Tenant\Models\Traits\SushiToPhpArray;
-use Modules\User\Database\Factories\SocialProviderFactory;
 use Modules\Xot\Contracts\ProfileContract;
 
 /**
@@ -27,7 +26,6 @@ use Modules\Xot\Contracts\ProfileContract;
  * @property ProfileContract|null $creator
  * @property ProfileContract|null $updater
  *
- * @method static SocialProviderFactory  factory($count = null, $state = [])
  * @method static Builder|SocialProvider newModelQuery()
  * @method static Builder|SocialProvider newQuery()
  * @method static Builder|SocialProvider query()
@@ -55,6 +53,8 @@ use Modules\Xot\Contracts\ProfileContract;
  * @mixin IdeHelperSocialProvider
  *
  * @property ProfileContract|null $deleter
+ *
+ * @method static \Modules\User\Database\Factories\SocialProviderFactory factory($count = null, $state = [])
  *
  * @mixin \Eloquent
  */

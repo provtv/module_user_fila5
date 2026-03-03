@@ -10,26 +10,31 @@ return [
             'placeholder' => 'Teamnamen eingeben',
             'helper_text' => 'Team-Identifikationsname',
             'description' => 'Der Name, der dieses Team identifiziert',
+            'tooltip' => '',
         ],
         'personal_team' => [
             'label' => 'Persönliches Team',
             'helper_text' => 'Gibt an, ob es sich um ein persönliches Team handelt',
             'description' => 'Ein persönliches Team ist einem einzelnen Benutzer zugeordnet',
+            'tooltip' => '',
         ],
         'owner' => [
             'label' => 'Besitzer',
             'helper_text' => 'Team-Besitzer-Benutzer',
             'description' => 'Der Benutzer, der dieses Team erstellt und verwaltet',
+            'tooltip' => '',
         ],
         'created_at' => [
             'label' => 'Erstellungsdatum',
             'helper_text' => 'Team-Erstellungsdatum',
             'description' => 'Datum und Uhrzeit der Team-Erstellung',
+            'tooltip' => '',
         ],
         'updated_at' => [
             'label' => 'Zuletzt geändert',
             'helper_text' => 'Datum der letzten Änderung',
             'description' => 'Datum und Uhrzeit der letzten Team-Änderung',
+            'tooltip' => '',
         ],
     ],
     'actions' => [
@@ -75,4 +80,13 @@ return [
             'description' => 'Benutzer, der dieses Team erstellt hat',
         ],
     ],
+    'navigation' => [
+        'label' => 'Missing Navigation Label',
+        'plural_label' => 'Missing Navigation Plural Label',
+        'group' => 'Missing Group',
+        'icon' => 'heroicon-o-puzzle-piece',
+        'sort' => 100,
+    ],
+    'label' => 'Missing Label',
+    'plural_label' => 'Missing Plural label',
 ];

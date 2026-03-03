@@ -28,15 +28,34 @@ return [
     'fields' => [
         'password' => [
             'label' => 'password',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'email' => [
             'label' => 'email',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'name' => [
             'label' => 'name',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
     ],
-    'navigation' => [],
-    'label' => '',
-    'plural_label' => '',
+    'navigation' => [
+        'name' => 'Edit User',
+        'plural' => 'Edit User',
+        'group' => [
+            'name' => 'General',
+            'description' => 'General Settings',
+        ],
+        'label' => 'Edit User',
+        'sort' => 1,
+        'icon' => 'heroicon-o-collection',
+    ],
+    'label' => 'Edit User',
+    'plural_label' => 'Edit User (Plurale)',
 ];

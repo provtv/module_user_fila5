@@ -9,18 +9,24 @@ return [
             'placeholder' => 'Geben Sie Ihre E-Mail ein',
             'help' => 'Geben Sie die E-Mail-Adresse ein, mit der Sie sich registriert haben',
             'description' => 'E-Mail-Adresse für die Anmeldung',
+            'tooltip' => '',
+            'helper_text' => '',
         ],
         'password' => [
             'label' => 'Passwort',
             'placeholder' => 'Geben Sie Ihr Passwort ein',
             'help' => 'Geben Sie Ihr Kontopasswort ein',
             'description' => 'Passwort für die Anmeldung',
+            'tooltip' => '',
+            'helper_text' => '',
         ],
         'remember' => [
             'label' => 'Angemeldet bleiben',
             'placeholder' => 'Sitzung aktiv halten',
             'help' => 'Wählen Sie aus, um Ihre Sitzung 30 Tage lang aktiv zu halten',
             'description' => 'Option zum Merken der Anmeldung',
+            'tooltip' => '',
+            'helper_text' => '',
         ],
     ],
     'actions' => [
@@ -40,4 +46,13 @@ return [
         'forgot_password' => 'Passwort vergessen?',
         'errors_title' => 'Es sind einige Fehler aufgetreten',
     ],
+    'navigation' => [
+        'label' => 'Missing Navigation Label',
+        'plural_label' => 'Missing Navigation Plural Label',
+        'group' => 'Missing Group',
+        'icon' => 'heroicon-o-puzzle-piece',
+        'sort' => 100,
+    ],
+    'label' => 'Missing Label',
+    'plural_label' => 'Missing Plural label',
 ];

@@ -14,15 +14,27 @@ return [
     'fields' => [
         'id' => [
             'label' => 'ID',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'access_token_id' => [
             'label' => 'Token de Acceso',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'revoked' => [
             'label' => 'Revocado',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'expires_at' => [
             'label' => 'Expira En',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
     ],
     'actions' => [

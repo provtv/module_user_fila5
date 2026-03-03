@@ -1,13 +1,17 @@
 # Analisi dell'Errore di Implementazione Volt/Blade
 
 ## Collegamenti correlati
-- [README modulo User](./README.md)
-- [Convenzioni Path](./PATH_CONVENTIONS.md)
-- [Best Practices Volt e Folio](../../Xot/docs/VOLT_FOLIO_BEST_PRACTICES.md)
+- [README modulo User](./readme.md)
+- [Convenzioni Path](./path_conventions.md)
+- [Best Practices Volt e Folio](../../xot/docs/volt_folio_best_practices.md)
 
 ## Identificazione dell'Errore
 
-Durante l'analisi del file `/var/www/html/saluteora/laravel/Themes/One/resources/views/pages/auth/logout.blade.php`, è stato commesso un errore fondamentale di interpretazione. Il file è stato erroneamente analizzato come se utilizzasse la direttiva `@volt`, mentre in realtà utilizza correttamente la sintassi PHP standard con `<?php` all'inizio del file.
+<<<<<<< HEAD
+Durante l'analisi del file `/var/www/html/ptvx/laravel/Themes/One/resources/views/pages/auth/logout.blade.php`, è stato commesso un errore fondamentale di interpretazione. Il file è stato erroneamente analizzato come se utilizzasse la direttiva `@volt`, mentre in realtà utilizza correttamente la sintassi PHP standard con `<?php` all'inizio del file.
+=======
+Durante l'analisi del file `/var/www/html/healthcare_app/laravel/Themes/One/resources/views/pages/auth/logout.blade.php`, è stato commesso un errore fondamentale di interpretazione. Il file è stato erroneamente analizzato come se utilizzasse la direttiva `@volt`, mentre in realtà utilizza correttamente la sintassi PHP standard con `<?php` all'inizio del file.
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 
 ### File Attuale (Corretto)
 

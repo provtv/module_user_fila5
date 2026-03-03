@@ -240,6 +240,5 @@ The User module is critical for the entire system. It needs robust user manageme
 
 ---
 
-**Created**: 2026-01-31
 **Status**: Pending
 **Assignee**: TBD

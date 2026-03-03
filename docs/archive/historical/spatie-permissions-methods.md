@@ -11,7 +11,7 @@ Il modulo User utilizza i package **Spatie Permission** che forniscono automatic
 
 **BaseUser NON deve sovrascrivere i metodi forniti dai trait Spatie** a meno che non sia necessario un comportamento personalizzato.
 
-### Metodi Rimossi da BaseUser (2025-10-15)
+### Metodi Rimossi da BaseUser ([DATE])
 
 I seguenti metodi sono stati rimossi perché **già forniti dai trait**:
 
@@ -485,5 +485,4 @@ $user->assignRole(Role::findByName('admin', 'web'));
 ---
 
 **Autore**: Claude Code
-**Data**: 2025-10-15
 **Versione**: 1.0.0

@@ -1,6 +1,6 @@
 # Service Provider Architecture - Module Pattern
 
-> **Generato**: 2026-01-07
+> **Generato**: [DATE]
 > **Filosofia**: L'Architetto Module-First (Vincitore del Dibattito)
 > **Pattern**: Laravel Modules + DRY + Separation of Concerns
 
@@ -366,9 +366,9 @@ test('user service provider only configures, not registers dependencies', functi
 ## 📚 Collegamenti
 
 ### Documentazione Correlata
-- [PASSPORT_INTEGRATION.md](./PASSPORT_INTEGRATION.md) - Passport integration completa
-- [FILOSOFIA_MODULO_USER.md](./FILOSOFIA_MODULO_USER.md) - Filosofia generale modulo
-- [README.md](./README.md) - Overview modulo
+- [PASSPORT_INTEGRATION.md](./passport_integration.md) - Passport integration completa
+- [FILOSOFIA_MODULO_USER.md](./filosofia_modulo_user.md) - Filosofia generale modulo
+- [README.md](./readme.md) - Overview modulo
 
 ### Documentazione Esterna
 - [Laravel Modules Documentation](https://nwidart.com/laravel-modules)

@@ -14,27 +14,51 @@ return [
     'fields' => [
         'id' => [
             'label' => 'ID',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'name' => [
             'label' => 'Nome',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'client_id' => [
             'label' => 'Client ID',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'client_secret' => [
             'label' => 'Client Secret',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'redirect' => [
             'label' => 'Reindirizza',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'personal_access_client' => [
             'label' => 'Client per accesso personale',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'password_client' => [
             'label' => 'Client per accesso con password',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'revoked' => [
             'label' => 'Revocato',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
     ],
     'actions' => [

@@ -15,6 +15,11 @@ return [
             'icon' => 'reorderRecords',
             'label' => 'reorderRecords',
         ],
+        'openColumnManager' => [
+            'tooltip' => 'openColumnManager',
+            'label' => 'openColumnManager',
+            'icon' => 'openColumnManager',
+        ],
         'edit' => [
             'label' => 'edit',
             'icon' => 'edit',
@@ -60,15 +65,28 @@ return [
             'icon' => 'applyTableColumnManager',
             'tooltip' => 'applyTableColumnManager',
         ],
-        'openColumnManager' => [
-            'label' => 'openColumnManager',
-            'icon' => 'openColumnManager',
-            'tooltip' => 'openColumnManager',
-        ],
     ],
-    'label' => '',
-    'plural_label' => '',
+    'label' => 'Authentication Log',
+    'plural_label' => 'Authentication Log (Plurale)',
     'fields' => [
+        'id' => [
+            'label' => 'Identificativo',
+            'tooltip' => 'Identificativo univoco del record',
+            'helper_text' => '',
+            'description' => '',
+        ],
+        'created_at' => [
+            'label' => 'Data Creazione',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+        'updated_at' => [
+            'label' => 'Ultima Modifica',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
         'ip_address' => [
             'label' => 'ip_address',
         ],
@@ -86,9 +104,6 @@ return [
         ],
         'location' => [
             'label' => 'location',
-        ],
-        'created_at' => [
-            'label' => 'created_at',
         ],
     ],
 ];

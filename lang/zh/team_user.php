@@ -14,18 +14,33 @@ return [
     'fields' => [
         'id' => [
             'label' => 'ID',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'user_id' => [
             'label' => '用户',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'team_id' => [
             'label' => '团队',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'role' => [
             'label' => '角色',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'joined_at' => [
             'label' => '加入时间',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
     ],
     'actions' => [

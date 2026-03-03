@@ -7,7 +7,6 @@ namespace Modules\User\Models;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Support\Carbon;
-use Modules\User\Database\Factories\PermissionFactory;
 use Modules\Xot\Models\Traits\HasXotFactory;
 use Modules\Xot\Models\Traits\RelationX;
 use Modules\Xot\Traits\Updater;
@@ -28,7 +27,6 @@ use Spatie\Permission\Models\Permission as SpatiePermission;
  * @property Collection<int, User>       $users
  * @property int|null                    $users_count
  *
- * @method static PermissionFactory          factory($count = null, $state = [])
  * @method static Builder<static>|Permission newModelQuery()
  * @method static Builder<static>|Permission newQuery()
  * @method static Builder<static>|Permission permission($permissions, $without = false)
@@ -45,6 +43,12 @@ use Spatie\Permission\Models\Permission as SpatiePermission;
  * @method static Builder<static>|Permission withoutRole($roles, $guard = null)
  * @method static static                     firstOrCreate(array $attributes, array $values = [])
  * @method static static                     updateOrCreate(array $attributes, array $values = [])
+ *
+ * @property \Modules\Meetup\Models\Profile|null $creator
+ * @property \Modules\Meetup\Models\Profile|null $deleter
+ * @property \Modules\Meetup\Models\Profile|null $updater
+ *
+ * @method static \Modules\User\Database\Factories\PermissionFactory factory($count = null, $state = [])
  *
  * @mixin \Eloquent
  */

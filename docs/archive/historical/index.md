@@ -46,21 +46,21 @@ This document serves as the central index for the User module, providing guidanc
 - Update this index if new features or significant changes are introduced to the User module.
 
 ## Links to Related Documentation
-- [BaseUser Model](./BaseUser.md)
-- [Authentication Pages Implementation](./AUTH_PAGES_IMPLEMENTATION.md)
-- [Profile Management](./PROFILE_MANAGEMENT.md)
-- [Routing Best Practices](./ROUTING_BEST_PRACTICES.md)
-- [Session Management](./SESSION_MANAGEMENT.md)
+- [BaseUser Model](./baseuser.md)
+- [Authentication Pages Implementation](./auth_pages_implementation.md)
+- [Profile Management](./profile_management.md)
+- [Routing Best Practices](./routing_best_practices.md)
+- [Session Management](./session_management.md)
 
 ## Sottocartelle
 
 ### Models
-- [Index](./Models/INDEX.md) - Indice della documentazione sui modelli
-- [Documentazione Traits](./traits/INDEX.md) - Documentazione sui trait utilizzati
+- [Index](./models/index.md) - Indice della documentazione sui modelli
+- [Documentazione Traits](./traits/index.md) - Documentazione sui trait utilizzati
 
 ### Folio e Blade
-- [Documentazione Blade](./blade/INDEX.md) - Documentazione sui template Blade
-- [Componenti](./components/INDEX.md) - Documentazione sui componenti
+- [Documentazione Blade](./blade/index.md) - Documentazione sui template Blade
+- [Componenti](./components/index.md) - Documentazione sui componenti
 
 ## Roadmap e Sviluppo Futuro
 - [Roadmap](./roadmap.md) - Piano di sviluppo futuro del modulo User
@@ -68,15 +68,7 @@ This document serves as the central index for the User module, providing guidanc
 ## Note sulla Manutenzione
 Questa documentazione viene aggiornata regolarmente. Prima di apportare modifiche al codice, consultare la documentazione pertinente e aggiornare i documenti correlati.
 
-Ultimo aggiornamento: 14 Maggio 2025
 
 # Indice Documentazione User
 
-## Best Practices e Convenzioni
-
 - [filament-best-practices.mdc](./filament-best-practices.mdc) — **Regola fondamentale:** chi estende XotBaseResource NON deve dichiarare $navigationGroup, $navigationLabel, né il metodo statico table(Table $table): Table. Seguire sempre questa regola per evitare errori di override e garantire coerenza tra i moduli.
-
-## Modelli e Database
-
-- [Model Inheritance Analysis](./MODEL_INHERITANCE_ANALYSIS.md) — Analisi completa della gerarchia di ereditarietà dei modelli
-- [Model Inheritance Fixes](./MODEL_INHERITANCE_FIXES.md) — Riepilogo delle correzioni applicate ai modelli (15 Ottobre 2025)

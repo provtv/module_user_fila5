@@ -9,4 +9,10 @@ return [
         'icon' => 'heroicon-o-building-office',
         'sort' => 99,
     ],
+    'label' => 'Missing Label',
+    'plural_label' => 'Missing Plural label',
+    'fields' => [
+    ],
+    'actions' => [
+    ],
 ];

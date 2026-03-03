@@ -548,9 +548,9 @@ class UsersChartWidgetTest extends TestCase
 ## 📚 Risorse
 
 ### Documentazione Correlata
-- [Filament Charts Complete Guide](../../Xot/docs/filament-charts-complete-guide.md)
-- [Chart Export Guide](../../Xot/docs/chart-export-guide.md)
-- [User Module README](./README.md)
+- [Filament Charts Complete Guide](../../xot/docs/filament-charts-complete-guide.md)
+- [Chart Export Guide](../../xot/docs/chart-export-guide.md)
+- [User Module README](./readme.md)
 
 ### Chart.js
 - [Chart.js Documentation](https://www.chartjs.org/docs/latest/)
@@ -561,7 +561,6 @@ class UsersChartWidgetTest extends TestCase
 
 ---
 
-**Ultimo aggiornamento:** Dicembre 2025
 **Modulo:** User
 **Framework:** Laraxot/PTVX
 **Filament:** 4.x

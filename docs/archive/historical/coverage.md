@@ -1,6 +1,5 @@
 # Code Coverage: User
 
-**Date:** 2026-01-17
 **Lines Coverage:** N/A (Tests not executed due to configuration)
 
 ## Summary

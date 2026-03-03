@@ -11,7 +11,7 @@ return [
     'field.guard_name' => 'Guard-Name',
     'field.name' => 'Name',
     'field.permissions' => 'Berechtigungen',
-    'field.select_all.message' => 'Aktivierung aller Berechtigungen, die derzeit für diese Rolle <span class=\"text-primary font-medium\">aktiviert</span> sind',
+    'field.select_all.message' => 'Aktivierung aller Berechtigungen, die derzeit für diese Rolle <span class=\\"text-primary font-medium\\">aktiviert</span> sind',
     'field.select_all.name' => 'Alle auswählen',
     'nav.group' => 'Filament Shield',
     'nav.role.icon' => 'heroicon-o-shield-check',
@@ -35,5 +35,18 @@ return [
         'force_delete_any' => 'Alle endgültig löschen',
         'restore' => 'Wiederherstellen',
         'restore_any' => 'Alle wiederherstellen',
+    ],
+    'navigation' => [
+        'label' => 'Missing Navigation Label',
+        'plural_label' => 'Missing Navigation Plural Label',
+        'group' => 'Missing Group',
+        'icon' => 'heroicon-o-puzzle-piece',
+        'sort' => 100,
+    ],
+    'label' => 'Missing Label',
+    'plural_label' => 'Missing Plural label',
+    'fields' => [
+    ],
+    'actions' => [
     ],
 ];

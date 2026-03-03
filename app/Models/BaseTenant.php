@@ -10,7 +10,6 @@ use Illuminate\Database\Eloquent\Collection as EloquentCollection;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Modules\User\Contracts\TenantContract;
-use Modules\User\Database\Factories\TenantFactory;
 use Modules\Xot\Contracts\ProfileContract;
 use Modules\Xot\Contracts\UserContract;
 use Modules\Xot\Datas\XotData;
@@ -22,7 +21,6 @@ use Spatie\Sluggable\SlugOptions;
 /**
  * Modules\User\Models\Tenant.
  *
- * @method static TenantFactory  factory($count = null, $state = [])
  * @method static Builder|Tenant newModelQuery()
  * @method static Builder|Tenant newQuery()
  * @method static Builder|Tenant query()

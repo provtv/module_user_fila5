@@ -8,15 +8,30 @@ return [
         'edit' => 'Modifica dati negozio',
     ],
     'fields' => [
-        'name' => 'Nome',
-        'phone' => 'Telefono',
-        'email' => 'Email',
+        'name' => [
+            'label' => 'Nome',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+        'phone' => [
+            'label' => 'Telefono',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+        'email' => [
+            'label' => 'Email',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
     ],
     'actions' => [
         'register_tenant' => [
             'label' => 'Aggiungi Studio',
         ],
     ],
-    'label' => '',
-    'plural_label' => '',
+    'label' => 'Tenancy',
+    'plural_label' => 'Tenancy (Plurale)',
 ];

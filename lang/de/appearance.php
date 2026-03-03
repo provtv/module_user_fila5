@@ -9,4 +9,10 @@ return [
         'icon' => 'appearance',
         'sort' => 5,
     ],
+    'label' => 'Missing Label',
+    'plural_label' => 'Missing Plural label',
+    'fields' => [
+    ],
+    'actions' => [
+    ],
 ];

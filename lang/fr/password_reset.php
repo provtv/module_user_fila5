@@ -14,15 +14,27 @@ return [
     'fields' => [
         'id' => [
             'label' => 'ID',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'email' => [
             'label' => 'Email',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'token' => [
             'label' => 'Jeton',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'created_at' => [
             'label' => 'Créé À',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
     ],
     'actions' => [

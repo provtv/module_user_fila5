@@ -13,7 +13,6 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Collection;
 use Modules\User\Contracts\TeamContract;
-use Modules\User\Database\Factories\TeamFactory;
 use Modules\Xot\Contracts\ProfileContract;
 use Modules\Xot\Contracts\UserContract;
 use Modules\Xot\Datas\XotData;
@@ -35,7 +34,6 @@ use Modules\Xot\Datas\XotData;
  * @property EloquentCollection<int, Model&UserContract> $users
  * @property int|null                                    $users_count
  *
- * @method static TeamFactory  factory($count = null, $state = [])
  * @method static Builder|Team newModelQuery()
  * @method static Builder|Team newQuery()
  * @method static Builder|Team query()

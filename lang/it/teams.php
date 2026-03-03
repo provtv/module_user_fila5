@@ -10,26 +10,31 @@ return [
             'placeholder' => 'Inserisci il nome del team',
             'helper_text' => 'Nome identificativo del team',
             'description' => 'Il nome che identifica questo team',
+            'tooltip' => '',
         ],
         'personal_team' => [
             'label' => 'Team Personale',
             'helper_text' => 'Indica se questo è un team personale',
             'description' => 'Un team personale è associato a un singolo utente',
+            'tooltip' => '',
         ],
         'owner' => [
             'label' => 'Proprietario',
             'helper_text' => 'Utente proprietario del team',
             'description' => 'L\'utente che ha creato e gestisce questo team',
+            'tooltip' => '',
         ],
         'created_at' => [
             'label' => 'Data Creazione',
             'helper_text' => 'Data di creazione del team',
             'description' => 'Data e ora in cui è stato creato il team',
+            'tooltip' => '',
         ],
         'updated_at' => [
             'label' => 'Ultima Modifica',
             'helper_text' => 'Data dell\'ultima modifica',
             'description' => 'Data e ora dell\'ultima modifica al team',
+            'tooltip' => '',
         ],
     ],
     'actions' => [
@@ -75,7 +80,17 @@ return [
             'description' => 'Utente che ha creato questo team',
         ],
     ],
-    'navigation' => [],
-    'label' => '',
-    'plural_label' => '',
+    'navigation' => [
+        'name' => 'Teams',
+        'plural' => 'Teams',
+        'group' => [
+            'name' => 'General',
+            'description' => 'General Settings',
+        ],
+        'label' => 'Teams',
+        'sort' => 1,
+        'icon' => 'heroicon-o-collection',
+    ],
+    'label' => 'Teams',
+    'plural_label' => 'Teams (Plurale)',
 ];

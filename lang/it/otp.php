@@ -24,13 +24,22 @@ return [
         'current_password' => [
             'label' => 'Password Attuale',
             'validation_attribute' => 'password_attuale',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'password' => [
             'label' => 'Nuova Password',
             'validation_attribute' => 'password',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'password_confirmation' => [
             'label' => 'Conferma Password',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
     ],
     'reset_password' => 'Reimposta Password',
@@ -96,6 +105,6 @@ return [
         'sort' => 31,
         'icon' => 'user-user-otp',
     ],
-    'label' => '',
-    'plural_label' => '',
+    'label' => 'Otp',
+    'plural_label' => 'Otp (Plurale)',
 ];

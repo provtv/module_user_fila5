@@ -1,9 +1,5 @@
 <?php
 
-/**
- * @see https://github.com/DutchCodingCompany/filament-socialite
- */
-
 declare(strict_types=1);
 
 namespace Modules\User\Actions\Socialite;
@@ -15,14 +11,12 @@ class ValidateProviderAction
 {
     use QueueableAction;
 
-    /**
-     * Execute the action.
-     */
     public function execute(string $provider): void
     {
-        $res = config()->has('services.'.$provider);
-        if (! $res) {
-            throw ProviderNotConfigured::make($provider);
+        $hasConfig = config()->has('services.'.$provider);
+        if (! $hasConfig) {
+            $ex = new ProviderNotConfigured();
+            throw $ex->make($provider);
         }
     }
 }

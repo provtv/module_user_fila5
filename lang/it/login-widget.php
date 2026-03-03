@@ -9,15 +9,21 @@ return [
             'label' => 'Email',
             'placeholder' => 'Inserisci la tua email',
             'helper_text' => 'Indirizzo email per accedere',
+            'tooltip' => '',
+            'description' => '',
         ],
         'password' => [
             'label' => 'Password',
             'placeholder' => 'Inserisci la tua password',
             'helper_text' => 'Password di accesso',
+            'tooltip' => '',
+            'description' => '',
         ],
         'remember' => [
             'label' => 'Ricordami',
             'helper_text' => 'Mantieni la sessione attiva',
+            'tooltip' => '',
+            'description' => '',
         ],
     ],
     'actions' => [
@@ -44,7 +50,17 @@ return [
             'too_many_attempts' => 'Troppi tentativi, riprova più tardi',
         ],
     ],
-    'navigation' => [],
-    'label' => '',
-    'plural_label' => '',
+    'navigation' => [
+        'name' => 'Login Widget',
+        'plural' => 'Login Widget',
+        'group' => [
+            'name' => 'General',
+            'description' => 'General Settings',
+        ],
+        'label' => 'Login Widget',
+        'sort' => 1,
+        'icon' => 'heroicon-o-collection',
+    ],
+    'label' => 'Login Widget',
+    'plural_label' => 'Login Widget (Plurale)',
 ];

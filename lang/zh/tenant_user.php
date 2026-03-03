@@ -14,21 +14,39 @@ return [
     'fields' => [
         'id' => [
             'label' => 'ID',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'user_id' => [
             'label' => '用户',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'tenant_id' => [
             'label' => '租户',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'role' => [
             'label' => '角色',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'created_at' => [
             'label' => '创建时间',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'updated_at' => [
             'label' => '更新时间',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
     ],
     'actions' => [

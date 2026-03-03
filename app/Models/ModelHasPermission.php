@@ -6,7 +6,6 @@ namespace Modules\User\Models;
 
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Carbon;
-use Modules\User\Database\Factories\ModelHasPermissionFactory;
 use Modules\Xot\Contracts\ProfileContract;
 
 /**
@@ -17,7 +16,6 @@ use Modules\Xot\Contracts\ProfileContract;
  * @property string $model_type
  * @property string $model_id
  *
- * @method static ModelHasPermissionFactory  factory($count = null, $state = [])
  * @method static Builder|ModelHasPermission newModelQuery()
  * @method static Builder|ModelHasPermission newQuery()
  * @method static Builder|ModelHasPermission query()
@@ -45,6 +43,8 @@ use Modules\Xot\Contracts\ProfileContract;
  * @mixin IdeHelperModelHasPermission
  *
  * @property ProfileContract|null $deleter
+ *
+ * @method static \Modules\User\Database\Factories\ModelHasPermissionFactory factory($count = null, $state = [])
  *
  * @mixin \Eloquent
  */

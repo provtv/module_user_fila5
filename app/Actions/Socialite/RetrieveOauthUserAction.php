@@ -8,9 +8,10 @@ declare(strict_types=1);
 
 namespace Modules\User\Actions\Socialite;
 
+use Illuminate\Contracts\Events\Dispatcher;
 use Laravel\Socialite\Contracts\User as SocialiteUserContract;
-use Laravel\Socialite\Facades\Socialite;
 // use DutchCodingCompany\FilamentSocialite\FilamentSocialite;
+use Laravel\Socialite\Facades\Socialite;
 use Laravel\Socialite\Two\InvalidStateException;
 use Modules\User\Events\InvalidState;
 use Spatie\QueueableAction\QueueableAction;
@@ -18,6 +19,11 @@ use Spatie\QueueableAction\QueueableAction;
 class RetrieveOauthUserAction
 {
     use QueueableAction;
+
+    public function __construct(
+        private readonly Dispatcher $eventDispatcher,
+    ) {
+    }
 
     /**
      * Execute the action.
@@ -27,12 +33,17 @@ class RetrieveOauthUserAction
         try {
             return Socialite::driver($provider)->user();
 
-            // SocialiteProviders\Manager\OAuth2\User - Commented out temporarily
-        } catch (InvalidStateException $invalidStateException) {
-            InvalidState::dispatch($invalidStateException);
+            // SocialiteProviders\Manager\OAuth2\User
+        } catch (InvalidStateException $e) {
+            $this->handleInvalidStateException($e);
         }
 
         return null;
+    }
+
+    private function handleInvalidStateException(InvalidStateException $exception): void
+    {
+        $this->eventDispatcher->dispatch(new InvalidState($exception));
     }
 }
 

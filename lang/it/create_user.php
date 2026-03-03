@@ -6,12 +6,21 @@ return [
     'fields' => [
         'name' => [
             'label' => 'name',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'email' => [
             'label' => 'email',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'password' => [
             'label' => 'password',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
     ],
     'actions' => [
@@ -29,7 +38,17 @@ return [
             'icon' => 'logout',
         ],
     ],
-    'navigation' => [],
-    'label' => '',
-    'plural_label' => '',
+    'navigation' => [
+        'name' => 'Create User',
+        'plural' => 'Create User',
+        'group' => [
+            'name' => 'General',
+            'description' => 'General Settings',
+        ],
+        'label' => 'Create User',
+        'sort' => 1,
+        'icon' => 'heroicon-o-collection',
+    ],
+    'label' => 'Create User',
+    'plural_label' => 'Create User (Plurale)',
 ];

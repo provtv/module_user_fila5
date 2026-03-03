@@ -24,9 +24,48 @@ return [
     'pages' => 'Pages',
     'custom' => 'Permessi Personalizzati',
     'forbidden' => 'Non hai i permessi di accesso',
-    'navigation' => [],
-    'label' => '',
-    'plural_label' => '',
-    'fields' => [],
-    'actions' => [],
+    'navigation' => [
+        'name' => 'Filament Shield',
+        'plural' => 'Filament Shield',
+        'group' => [
+            'name' => 'General',
+            'description' => 'General Settings',
+        ],
+        'label' => 'Filament Shield',
+        'sort' => 1,
+        'icon' => 'heroicon-o-collection',
+    ],
+    'label' => 'Filament Shield',
+    'plural_label' => 'Filament Shield (Plurale)',
+    'fields' => [
+        'id' => [
+            'label' => 'Identificativo',
+            'tooltip' => 'Identificativo univoco del record',
+            'helper_text' => '',
+            'description' => '',
+        ],
+        'created_at' => [
+            'label' => 'Data Creazione',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+        'updated_at' => [
+            'label' => 'Ultima Modifica',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+    ],
+    'actions' => [
+        'create' => [
+            'label' => 'Crea Filament Shield',
+        ],
+        'edit' => [
+            'label' => 'Modifica Filament Shield',
+        ],
+        'delete' => [
+            'label' => 'Elimina Filament Shield',
+        ],
+    ],
 ];

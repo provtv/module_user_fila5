@@ -11,6 +11,7 @@ namespace Modules\User\Actions\Socialite;
 // use DutchCodingCompany\FilamentSocialite\FilamentSocialite;
 use Filament\Facades\Filament;
 use Illuminate\Contracts\Auth\Authenticatable;
+use Illuminate\Contracts\Events\Dispatcher;
 use Illuminate\Http\RedirectResponse;
 use Modules\User\Events\SocialiteUserConnected;
 use Modules\User\Models\SocialiteUser;
@@ -36,7 +37,7 @@ class LoginUserAction
         /** @var Authenticatable $authenticatableUser */
         $authenticatableUser = $user;
         Filament::auth()->login($authenticatableUser);
-        SocialiteUserConnected::dispatch($socialiteUser);
+        app(Dispatcher::class)->dispatch(new SocialiteUserConnected($socialiteUser));
         // session()->regenerate();
 
         // return redirect()->intended(Filament::getUrl());

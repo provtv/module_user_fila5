@@ -15,75 +15,140 @@ return [
         'icon' => 'ui-user-team',
     ],
     'fields' => [
-        'first_name' => 'Nome',
-        'last_name' => 'Cognome',
+        'first_name' => [
+            'label' => 'Nome',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+        'last_name' => [
+            'label' => 'Cognome',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
         'detach' => [
             'label' => 'detach',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'toggleColumns' => [
             'label' => 'toggleColumns',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'reorderRecords' => [
             'label' => 'reorderRecords',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'resetFilters' => [
             'label' => 'resetFilters',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'create' => [
             'label' => 'create',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'attach' => [
             'label' => 'attach',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'view' => [
             'label' => 'view',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'edit' => [
             'label' => 'edit',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'openFilters' => [
             'label' => 'openFilters',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'applyFilters' => [
             'label' => 'applyFilters',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'updated_at' => [
             'label' => 'updated_at',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'created_at' => [
             'label' => 'created_at',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'users_count' => [
             'label' => 'users_count',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'name' => [
             'label' => 'name',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'recordId' => [
             'label' => 'recordId',
             'description' => 'recordId',
             'helper_text' => 'recordId',
             'placeholder' => 'recordId',
+            'tooltip' => '',
         ],
         'personal_team' => [
             'label' => 'personal_team',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'role' => [
             'label' => 'role',
             'description' => 'role',
             'helper_text' => 'role',
             'placeholder' => 'role',
+            'tooltip' => '',
         ],
         'description' => [
             'description' => 'description',
             'helper_text' => 'description',
             'placeholder' => 'description',
+            'label' => '',
+            'tooltip' => '',
         ],
         'delete' => [
             'label' => 'delete',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
         'layout' => [
             'label' => 'layout',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
         ],
     ],
     'actions' => [
@@ -101,8 +166,6 @@ return [
         ],
         'create' => [
             'label' => 'create',
-            'icon' => 'create',
-            'tooltip' => 'create',
         ],
         'logout' => [
             'icon' => 'logout',
@@ -174,21 +237,6 @@ return [
             'icon' => 'delete',
             'label' => 'delete',
         ],
-        'view' => [
-            'label' => 'view',
-            'icon' => 'view',
-            'tooltip' => 'view',
-        ],
-        'edit' => [
-            'label' => 'edit',
-            'icon' => 'edit',
-            'tooltip' => 'edit',
-        ],
-        'layout' => [
-            'label' => 'layout',
-            'icon' => 'layout',
-            'tooltip' => 'layout',
-        ],
     ],
     'plural' => [
         'model' => [
@@ -199,5 +247,5 @@ return [
         'label' => 'team.model',
     ],
     'label' => 'team',
-    'plural_label' => '',
+    'plural_label' => 'Team (Plurale)',
 ];
