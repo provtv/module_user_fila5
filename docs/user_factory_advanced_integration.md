@@ -298,7 +298,6 @@ public function run(): void
 ---
 
 **Status**: ✅ **PRODUCTION READY**  
-**Last Updated**: Gennaio 2025  
 **Maintenance**: Active development  
 **Support**: Enterprise-grade
 

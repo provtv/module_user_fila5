@@ -55,6 +55,9 @@ use Modules\Xot\Contracts\UserContract;
  * @mixin IdeHelperOauthAccessToken
  *
  * @method static \Illuminate\Database\Eloquent\Builder<static>|OauthAccessToken existsIn(array $haystack)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|OauthAccessToken existsIn(array $haystack)
+ *                                                                                                                   >>>>>>> da38c10 (.)
+ * @method static \Modules\User\Database\Factories\OauthAccessTokenFactory       factory($count = null, $state = [])
  *
  * @mixin \Eloquent
  */
@@ -64,4 +67,7 @@ class OauthAccessToken extends PassportToken
     protected $connection = 'user';
 
     // protected $fillable = ['id', 'user_id', 'client_id', 'name', 'scopes', 'revoked', 'expires_at'];
+
+
+
 }

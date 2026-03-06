@@ -62,6 +62,16 @@ use Modules\Xot\Datas\XotData;
  * @method static Builder<static>|TeamInvitation                         whereDeclinedAt($value)
  * @method static Builder<static>|TeamInvitation                         whereUserId($value)
  *
+ * @property Carbon|null $accepted_at
+ * @property Carbon|null $declined_at
+ * @property string|null $user_id
+ *
+ * @method static \Modules\User\Database\Factories\TeamInvitationFactory factory($count = null, $state = [])
+ * @method static Builder<static>|TeamInvitation                         whereAcceptedAt($value)
+ * @method static Builder<static>|TeamInvitation                         whereDeclinedAt($value)
+ * @method static Builder<static>|TeamInvitation                         whereUserId($value)
+ *                                                                                                           >>>>>>> da38c10 (.)
+ *
  * @mixin \Eloquent
  */
 class TeamInvitation extends BaseModel

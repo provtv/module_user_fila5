@@ -28,6 +28,8 @@ use Modules\Xot\Models\Traits\HasXotFactory;
  * @mixin IdeHelperNotification
  *
  * @method static \Modules\User\Database\Factories\NotificationFactory factory($count = null, $state = [])
+ * @method static \Modules\User\Database\Factories\NotificationFactory factory($count = null, $state = [])
+ *                                                                                                         >>>>>>> da38c10 (.)
  *
  * @mixin \Eloquent
  */

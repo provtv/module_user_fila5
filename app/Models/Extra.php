@@ -47,6 +47,8 @@ use Spatie\SchemalessAttributes\SchemalessAttributes;
  * @property ProfileContract|null $deleter
  *
  * @method static \Modules\User\Database\Factories\ExtraFactory factory($count = null, $state = [])
+ * @method static \Modules\User\Database\Factories\ExtraFactory factory($count = null, $state = [])
+ *                                                                                                  >>>>>>> da38c10 (.)
  *
  * @mixin \Eloquent
  */

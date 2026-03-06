@@ -61,6 +61,8 @@ use Modules\Xot\Datas\XotData;
  * @property ProfileContract|null $deleter
  *
  * @method static \Modules\User\Database\Factories\SocialiteUserFactory factory($count = null, $state = [])
+ * @method static \Modules\User\Database\Factories\SocialiteUserFactory factory($count = null, $state = [])
+ *                                                                                                          >>>>>>> da38c10 (.)
  *
  * @mixin \Eloquent
  */
