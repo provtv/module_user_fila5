@@ -3,6 +3,9 @@
 declare(strict_types=1);
 
 ?>
+@php
+    $form = $getForm();
+@endphp
 
 <div class="space-y-6">
     <div class="text-center">
@@ -14,8 +17,8 @@ declare(strict_types=1);
         </p>
     </div>
 
-    <form wire:submit="submit" class="space-y-6">
-        {{ $this->form }}
+    <form wire:submit="register" class="space-y-6">
+        {{ $form }}
 
         <div class="flex items-center justify-between">
             <div class="text-sm">

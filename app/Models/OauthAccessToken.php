@@ -4,26 +4,24 @@ declare(strict_types=1);
 
 namespace Modules\User\Models;
 
-// use Laravel\Passport\AccessToken as PassportAccessToken;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Carbon;
-use Laravel\Passport\Token as PassportToken;
-use Modules\Xot\Contracts\UserContract;
+use Laravel\Passport\AccessToken as PassportAccessToken;
 
 /**
  * Modules\User\Models\OauthAccessToken.
  *
- * @property string            $id
- * @property string|null       $user_id
- * @property string            $client_id
- * @property string|null       $name
- * @property array|null        $scopes
- * @property bool              $revoked
- * @property Carbon|null       $created_at
- * @property Carbon|null       $updated_at
- * @property Carbon|null       $expires_at
- * @property OauthClient|null  $client
- * @property UserContract|null $user
+ * @property string           $id
+ * @property string|null      $user_id
+ * @property string           $client_id
+ * @property string|null      $name
+ * @property array|null       $scopes
+ * @property bool             $revoked
+ * @property Carbon|null      $created_at
+ * @property Carbon|null      $updated_at
+ * @property Carbon|null      $expires_at
+ * @property OauthClient|null $client
+ * @property User|null        $user
  *
  * @method static Builder|OauthAccessToken newModelQuery()
  * @method static Builder|OauthAccessToken newQuery()
@@ -55,19 +53,11 @@ use Modules\Xot\Contracts\UserContract;
  * @mixin IdeHelperOauthAccessToken
  *
  * @method static \Illuminate\Database\Eloquent\Builder<static>|OauthAccessToken existsIn(array $haystack)
- * @method static \Illuminate\Database\Eloquent\Builder<static>|OauthAccessToken existsIn(array $haystack)
- *                                                                                                                   >>>>>>> da38c10 (.)
- * @method static \Modules\User\Database\Factories\OauthAccessTokenFactory       factory($count = null, $state = [])
  *
  * @mixin \Eloquent
  */
-class OauthAccessToken extends PassportToken
+class OauthAccessToken extends PassportAccessToken
 {
     /** @var string */
     protected $connection = 'user';
-
-    // protected $fillable = ['id', 'user_id', 'client_id', 'name', 'scopes', 'revoked', 'expires_at'];
-
-
-
 }

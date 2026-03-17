@@ -2,7 +2,8 @@
 
 declare(strict_types=1);
 
-use Illuminate\Foundation\Testing\DatabaseTransactions;
+namespace Modules\User\Tests\Feature\Actions\Socialite;
+
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Event;
 use Modules\User\Actions\Socialite\LoginUserAction;
@@ -11,7 +12,7 @@ use Modules\User\Models\SocialiteUser;
 use Modules\User\Models\User;
 use Modules\User\Tests\TestCase;
 
-uses(TestCase::class, DatabaseTransactions::class);
+uses(TestCase::class);
 
 describe('LoginUserAction', function (): void {
     test('authenticates connected socialite user and dispatches event', function (): void {
@@ -120,6 +121,7 @@ describe('LoginUserAction', function (): void {
         $response = app(LoginUserAction::class)->execute($socialiteUser);
 
         expect($response)->toBeInstanceOf(RedirectResponse::class);
+        expect($response->getTargetUrl())->toContain('<nome progetto>');
     });
 
     test('handles null user assertion gracefully', function (): void {

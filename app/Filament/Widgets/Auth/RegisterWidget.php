@@ -11,7 +11,6 @@ use Filament\Schemas\Components\Section;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Log;
 use Illuminate\Validation\ValidationException;
 use Modules\User\Models\User;
 use Modules\Xot\Actions\Cast\SafeStringCastAction;
@@ -97,7 +96,6 @@ class RegisterWidget extends XotBaseWidget
     {
         try {
             $validatedData = $this->validateForm();
-            $this->logRegistrationAttempt($validatedData);
 
             $user = DB::transaction(function () use ($validatedData) {
                 $user = $this->createUser($validatedData);
@@ -128,23 +126,10 @@ class RegisterWidget extends XotBaseWidget
             'password' => Hash::make(
                 app(SafeStringCastAction::class)->execute($data['password']),
             ),
-            'type' => 'customer_user',
+            'type' => 'standard',
             'state' => 'pending',
             'email_verified_at' => null,
         ];
-    }
-
-    /**
-     * @param array<string, mixed> $data
-     */
-    protected function logRegistrationAttempt(array $data): void
-    {
-        $email = app(SafeStringCastAction::class)->execute($data['email']);
-        Log::info('Registration attempt', [
-            'email_hash' => hash('sha256', $email),
-            'ip' => request()->ip(),
-            'user_agent' => request()->userAgent(),
-        ]);
     }
 
     /**
@@ -186,13 +171,6 @@ class RegisterWidget extends XotBaseWidget
 
     protected function handleRegistrationError(\Exception $e): void
     {
-        Log::error('Registration failed: '.$e->getMessage(), [
-            'exception' => $e,
-            'trace' => $e->getTraceAsString(),
-            'ip' => request()->ip(),
-            'user_agent' => request()->userAgent(),
-        ]);
-
-        throw new \RuntimeException(__('user::auth.registration.error_occurred'));
+        throw new \RuntimeException(__('user::auth.registration.error_occurred'), 0, $e);
     }
 }

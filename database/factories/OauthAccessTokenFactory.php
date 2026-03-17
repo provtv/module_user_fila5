@@ -13,16 +13,10 @@ use Modules\User\Models\User;
  * OauthAccessToken Factory.
  *
  * Factory for creating OauthAccessToken model instances for testing and seeding.
- *
- * @extends Factory<OauthAccessToken>
  */
 class OauthAccessTokenFactory extends Factory
 {
-    /**
-     * The name of the factory's corresponding model.
-     *
-     * @var class-string<OauthAccessToken>
-     */
+    /** @phpstan-ignore-next-line Passport access token is an Eloquent model at runtime, but PHPStan loses that type here. */
     protected $model = OauthAccessToken::class;
 
     /**
@@ -37,16 +31,11 @@ class OauthAccessTokenFactory extends Factory
             'user_id' => User::factory(),
             'client_id' => OauthClient::factory(),
             'name' => $this->faker->optional()->words(2, true),
-            'scopes' => $this->faker->optional()->randomElements(
-                [
-                    'read',
-                    'write',
-                    'admin',
-                    'user',
-                ],
+            'scopes' => $this->faker->randomElements(
+                ['read', 'write', 'admin', 'user'],
                 $this->faker->numberBetween(1, 3),
             ),
-            'revoked' => $this->faker->boolean(10), // 10% revoked
+            'revoked' => $this->faker->boolean(10),
             'expires_at' => $this->faker->dateTimeBetween('now', '+1 year'),
         ];
     }
@@ -56,7 +45,7 @@ class OauthAccessTokenFactory extends Factory
      */
     public function revoked(): static
     {
-        return $this->state(fn (array $_attributes): array => [
+        return $this->state(fn (): array => [
             'revoked' => true,
         ]);
     }
@@ -66,7 +55,7 @@ class OauthAccessTokenFactory extends Factory
      */
     public function active(): static
     {
-        return $this->state(fn (array $_attributes): array => [
+        return $this->state(fn (): array => [
             'revoked' => false,
             'expires_at' => $this->faker->dateTimeBetween('+1 day', '+1 year'),
         ]);
@@ -77,7 +66,7 @@ class OauthAccessTokenFactory extends Factory
      */
     public function forUser(User $user): static
     {
-        return $this->state(fn (array $_attributes): array => [
+        return $this->state(fn (): array => [
             'user_id' => $user->id,
         ]);
     }
@@ -87,7 +76,7 @@ class OauthAccessTokenFactory extends Factory
      */
     public function forClient(OauthClient $client): static
     {
-        return $this->state(fn (array $_attributes): array => [
+        return $this->state(fn (): array => [
             'client_id' => $client->id,
         ]);
     }
@@ -99,7 +88,7 @@ class OauthAccessTokenFactory extends Factory
      */
     public function withScopes(array $scopes): static
     {
-        return $this->state(fn (array $_attributes): array => [
+        return $this->state(fn (): array => [
             'scopes' => $scopes,
         ]);
     }

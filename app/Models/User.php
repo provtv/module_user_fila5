@@ -58,7 +58,7 @@ use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
  * @property int|null                                          $teams_count
  * @property Collection<int, Tenant>                           $tenants
  * @property int|null                                          $tenants_count
- * @property Collection<int, OauthAccessToken>                 $tokens
+ * @property Collection<int, OauthToken>                       $tokens
  * @property int|null                                          $tokens_count
  *
  * @method static Builder|User         newModelQuery()
@@ -131,6 +131,7 @@ use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
  *
  * @method static \Modules\User\Database\Factories\UserFactory factory($count = null, $state = [])
  *
+ * @property string|null                  $uuid
  * @property string                       $surname
  * @property string|null                  $two_factor_secret
  * @property string|null                  $two_factor_recovery_codes
@@ -144,9 +145,6 @@ use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
  * @method static Builder<static>|User whereTwoFactorConfirmedAt($value)
  * @method static Builder<static>|User whereTwoFactorRecoveryCodes($value)
  * @method static Builder<static>|User whereTwoFactorSecret($value)
- *
- * @property string|null $uuid
- *
  * @method static Builder<static>|User whereUuid($value)
  *
  * @mixin \Eloquent

@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\User\Tests\Feature\Filament\Resources;
+
 use Filament\Forms\Components\Placeholder;
 use Filament\Forms\Components\TextInput;
 use Filament\Schemas\Components\Section;
@@ -16,11 +18,12 @@ use Modules\Xot\Filament\Resources\XotBaseResource;
 uses(TestCase::class);
 
 beforeEach(function (): void {
-    $this->user = User::factory()->create([
-        'type' => UserType::MasterAdmin,
-        'email' => 'admin-'.uniqid().'@example.com',
-        'password' => Hash::make('password123'),
-    ]);
+    $user = User::factory()
+        ->create([
+            'type' => UserType::MasterAdmin,
+            'email' => 'admin-'.uniqid().'@example.com',
+            'password' => Hash::make('password123'),
+        ]);
 });
 
 test('user resource has correct navigation icon', function (): void {

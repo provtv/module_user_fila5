@@ -33,10 +33,7 @@ return new class extends XotBaseMigration {
             if (! $this->hasColumn('settings')) {
                 $table->json('settings')->nullable();
             }
-            $this->updateTimestamps(
-                table: $table,
-                hasSoftDeletes: true,
-            );
+            $this->updateTimestamps(table: $table, hasSoftDeletes: true);
         });
     }
 };

@@ -65,8 +65,6 @@ use Modules\Xot\Models\Traits\HasXotFactory;
  * @property ProfileContract|null $updater
  *
  * @method static \Modules\User\Database\Factories\SsoProviderFactory factory($count = null, $state = [])
- * @method static \Modules\User\Database\Factories\SsoProviderFactory factory($count = null, $state = [])
- *                                                                                                        >>>>>>> da38c10 (.)
  *
  * @mixin \Eloquent
  */

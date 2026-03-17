@@ -2,7 +2,9 @@
 
 declare(strict_types=1);
 
-uses(Modules\User\Tests\TestCase::class);
+namespace Modules\User\Tests\Unit\Console;
+
+uses(\Modules\User\Tests\TestCase::class);
 
 use Modules\User\Console\Commands\AssignRoleCommand;
 use Modules\User\Console\Commands\ChangeTypeCommand;

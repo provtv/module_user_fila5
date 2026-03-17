@@ -43,8 +43,10 @@ return new class extends XotBaseMigration {
         $this->tableUpdate(function (Blueprint $table): void {
             // Usa Schema::hasColumn direttamente per verificare esistenza
             $tableName = 'permissions';
-            if (! Illuminate\Support\Facades\Schema::connection('user')->hasColumn($tableName, 'created_at')
-                && ! Illuminate\Support\Facades\Schema::connection('user')->hasColumn($tableName, 'updated_at')) {
+            if (
+                ! Illuminate\Support\Facades\Schema::connection('user')->hasColumn($tableName, 'created_at')
+                && ! Illuminate\Support\Facades\Schema::connection('user')->hasColumn($tableName, 'updated_at')
+            ) {
                 $this->updateTimestamps($table);
             } else {
                 // Se i timestamp esistono già, aggiungi solo i campi user se mancanti

@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Modules\User\Tests\Feature;
+
 use Illuminate\Database\QueryException;
 use Illuminate\Support\Facades\Notification;
 use Modules\User\Models\Team;
@@ -107,21 +109,17 @@ describe('Team Membership', function () {
     it('can get team membership with pivot data', function () {
         $this->team->users()->attach($this->member, [
             'role' => 'editor',
+            'joined_at' => now(),
         ]);
 
-        $user = $this->team
+        $membership = $this->team
             ->users()
-            ->where('users.id', $this->member->id)
-            ->first();
-
-        expect($user)->not->toBeNull();
-        // Verify the user was attached with the correct role via the pivot table
-        $pivotRole = Illuminate\Support\Facades\DB::connection('user')
-            ->table('team_user')
-            ->where('team_id', $this->team->id)
             ->where('user_id', $this->member->id)
-            ->value('role');
-        expect($pivotRole)->toBe('editor');
+            ->first()
+            ->membership; // Accessed as 'membership' due to as('membership')
+
+        expect($membership->role)->toBe('editor');
+        expect($membership->joined_at)->not->toBeNull();
     });
 });
 
@@ -156,13 +154,19 @@ describe('User Team Relationship', function () {
         $teammate2 = User::factory()->create();
 
         $this->team->users()->attach([$this->member->id, $teammate1->id, $teammate2->id]);
+        // Member is already attached above, so ensure we don't duplicate if unique constraint exists
+        // Or check if already attached
+        if (! $this->member->teams->contains($this->team)) {
+            $this->member->teams()->attach($this->team);
+        }
 
-        // Verify the team has all the expected users via direct query
-        $teamUserIds = $this->team->users()->pluck('users.id')->toArray();
+        // Check by IDs for safety
+        $allTeamUsers = $this->member->allTeamUsers();
 
-        expect(in_array($teammate1->id, $teamUserIds, true))->toBeTrue();
-        expect(in_array($teammate2->id, $teamUserIds, true))->toBeTrue();
-        expect(in_array($this->member->id, $teamUserIds, true))->toBeTrue();
+        expect($allTeamUsers->contains('id', $teammate1->id))->toBeTrue();
+        expect($allTeamUsers->contains('id', $teammate2->id))->toBeTrue();
+        // Self should be included in "allTeamUsers"
+        expect($allTeamUsers->contains('id', $this->member->id))->toBeTrue();
     });
 });
 
@@ -264,14 +268,13 @@ describe('Team Permissions', function () {
     it('can check team member permissions', function () {
         $this->team->users()->attach($this->member, ['role' => 'admin']);
 
-        // Verify the role via direct DB query since pivot accessor 'membership' is not configured
-        $pivotRole = Illuminate\Support\Facades\DB::connection('user')
-            ->table('team_user')
-            ->where('team_id', $this->team->id)
+        $membership = $this->team
+            ->users()
             ->where('user_id', $this->member->id)
-            ->value('role');
+            ->first()
+            ->membership;
 
-        expect($pivotRole)->toBe('admin');
+        expect($membership->role)->toBe('admin');
     });
 });
 

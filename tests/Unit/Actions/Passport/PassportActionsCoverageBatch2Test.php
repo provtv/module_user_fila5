@@ -2,7 +2,8 @@
 
 declare(strict_types=1);
 
-use Illuminate\Foundation\Testing\DatabaseTransactions;
+namespace Modules\User\Tests\Unit\Actions\Passport;
+
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
@@ -16,7 +17,7 @@ use Modules\User\Models\OauthClient;
 use Modules\User\Models\User;
 use Modules\User\Tests\TestCase;
 
-uses(TestCase::class, DatabaseTransactions::class);
+uses(TestCase::class);
 
 describe('Passport actions coverage batch 2', function (): void {
     it('creates oauth client with defaults and user association', function (): void {

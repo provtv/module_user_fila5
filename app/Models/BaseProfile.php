@@ -11,7 +11,6 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Notifications\DatabaseNotification;
 use Illuminate\Notifications\DatabaseNotificationCollection;
 use Illuminate\Notifications\Notifiable;
-use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Str;
 use Modules\Media\Models\Media;
 use Modules\User\Models\Traits\IsProfileTrait;
@@ -84,10 +83,7 @@ abstract class BaseProfile extends BaseModel implements ProfileContract
     {
         static::creating(static function (self $model): void {
             if (empty($model->uuid)) {
-                $connection = $model->getConnectionName() ?? config('database.default');
-                if (is_string($connection) && Schema::connection($connection)->hasColumn($model->getTable(), 'uuid')) {
-                    $model->uuid = (string) Str::uuid();
-                }
+                $model->uuid = (string) Str::uuid();
             }
         });
     }

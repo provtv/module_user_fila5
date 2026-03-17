@@ -2,14 +2,13 @@
 
 declare(strict_types=1);
 
+namespace Modules\User\Tests\Feature;
+
 use Illuminate\Support\Facades\View;
 use Modules\User\Models\User;
-use Modules\User\Tests\TestCase;
 
 use function Pest\Laravel\actingAs;
 use function Pest\Laravel\get;
-
-uses(TestCase::class);
 
 describe('Auth Components Tests', function (): void {
     test('auth components exist and work correctly', function (): void {

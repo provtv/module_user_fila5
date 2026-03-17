@@ -18,7 +18,6 @@ use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 use Illuminate\Database\Eloquent\Relations\MorphOne;
 use Illuminate\Database\Eloquent\Relations\Pivot;
-use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\DatabaseNotification;
 use Illuminate\Notifications\DatabaseNotificationCollection;
@@ -66,7 +65,7 @@ use Spatie\MediaLibrary\InteractsWithMedia;
  * @property int|null                                                  $teams_count
  * @property Collection<int, Tenant>                                   $tenants
  * @property int|null                                                  $tenants_count
- * @property Collection<int, OauthAccessToken>                         $tokens
+ * @property Collection<int, OauthToken>                               $tokens
  * @property int|null                                                  $tokens_count
  * @property string                                                    $last_name
  * @property string|null                                               $facebook_id
@@ -385,11 +384,12 @@ abstract class BaseUser extends Authenticatable implements HasMedia, HasName, Ha
     /**
      * Get the entity's notifications.
      *
-     * @return MorphMany<DatabaseNotification, $this>
+     * @return MorphMany<Notification, static|$this>
      */
     public function notifications(): MorphMany
     {
-        return $this->morphMany(DatabaseNotification::class, 'notifiable')->latest();
+        // @phpstan-ignore return.type
+        return $this->morphMany(Notification::class, 'notifiable');
     }
 
     /**
