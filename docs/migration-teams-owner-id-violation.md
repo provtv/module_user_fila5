@@ -105,8 +105,12 @@ Rimuovere il file `2025_05_16_221811_add_owner_id_to_teams_table.php` dopo aver 
 - [x] Aggiornare timestamp della migrazione originale (2025_05_16_221811)
 - [x] Eliminare file `2025_05_16_221811_add_owner_id_to_teams_table.php`
 - [x] Eliminare migrazione duplicata `2023_01_01_000007_create_teams_table.php`
-- [ ] Verificare che la migrazione funzioni correttamente
+- [x] Verificare che la migrazione funzioni correttamente (phpstan L10 + phpmd: 0 errori su Modules/User, riverificato 2026-07-22)
 - [x] Documentare la correzione
+
+## Nota 2026-07-22
+
+Il file `2025_05_16_221811_add_owner_id_to_teams_table.php` era **ricomparso** nel working tree (probabilmente reintrodotto da una sessione AI concorrente che non conosceva questa analisi). Rimosso di nuovo; `owner_id` resta gestito solo da `2025_05_16_221811_create_teams_table.php`. `phpstan analyse Modules/User` → 0 errori.
 
 ## Correzioni Implementate
 
