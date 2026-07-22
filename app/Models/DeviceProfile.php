@@ -31,13 +31,4 @@ use Modules\Xot\Contracts\ProfileContract;
  */
 class DeviceProfile extends DeviceUser
 {
-    /**
-     * Create a new model instance.
-     *
-     * @param array<string, mixed> $attributes
-     */
-    public function __construct(array $attributes = [])
-    {
-        parent::__construct($attributes);
-    }
 }
