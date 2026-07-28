@@ -3,7 +3,7 @@ title: "Filament 5.x compatibility - modulo User"
 type: concept
 tags: [filament, compatibility]
 created: 2026-07-14
-updated: 2026-07-20
+updated: 2026-07-14
 qmd: "filament-5x-compatibility filament 5.x compatibility - modulo user"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
@@ -57,12 +57,6 @@ La sintassi corretta e sicura per Filament 5.x è l'uso diretto della classe:
 
 Questo evita errori di `ComponentNotFoundException` nelle architetture modulari.
 
-## Form nelle view Blade
-
-Filament 5 richiede un form HTML nativo con `wire:submit` e `{{ $this->form }}`.
-`<x-filament-schemas::form>` non è registrato e fa fallire `php artisan view:cache`.
-La sequenza di verifica è `php artisan view:clear` seguita da `php artisan view:cache`.
-
 ## Checklist modulo
 
 - [x] Nessun import diretto da `Filament\*` base classes
@@ -76,4 +70,3 @@ La sequenza di verifica è `php artisan view:clear` seguita da `php artisan view
 - [Guida upgrade Filament 5 (Xot)](../../Xot/docs/filament-5-upgrade-guide.md)
 - [Regole Laraxot per Filament 5 (Xot)](../../Xot/docs/filament-5-laraxot-rules.md)
 - [Documentazione ufficiale](https://filamentphp.com/docs/5.x/upgrade-guide)
-- [Rendering ufficiale dei form](https://filamentphp.com/docs/5.x/components/form)

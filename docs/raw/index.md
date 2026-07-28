@@ -1,21 +1,13 @@
 ---
 title: "Raw Sources — User"
 type: concept
-tags: [index, raw, user]
+tags: [index]
 created: 2026-07-14
-updated: 2026-07-20
-qmd: "Raw Sources — User concept index raw user user module documentation"
-issues:
-  - "https://github.com/laraxot/module_user_fila5/issues/23"
-discussions:
-  - "https://github.com/laraxot/module_user_fila5/discussions/24"
+updated: 2026-07-14
+qmd: "index raw sources — user"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
-  - README.md
-  - ../00-index-1.md
-  - ../00-index.md
-  - ../2025-12-01-teams-migration-laraxot-compliance.deprecated.md
-  - ../2fa-guide.md
-  - ../2fa.md
 ---
 
 # Raw Sources — User

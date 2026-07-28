@@ -1,21 +1,14 @@
 ---
 title: "Testing del Bug Fix: Infinite Loop in make:filament-user"
 type: concept
-tags: [bugs, testing, user]
+tags: [testing]
 created: 2026-07-14
-updated: 2026-07-20
-qmd: "Testing del Bug Fix: Infinite Loop in make:filament-user concept bugs testing user user module documentation"
-issues:
-  - "https://github.com/laraxot/module_user_fila5/issues/23"
-discussions:
-  - "https://github.com/laraxot/module_user_fila5/discussions/24"
+updated: 2026-07-14
+qmd: "testing testing del bug fix: infinite loop in make:filament-user"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
-  - TESTING.md
-  - make-filament-user-infinite-loop.md
-  - ../00-index-1.md
-  - ../00-index.md
-  - ../2025-12-01-teams-migration-laraxot-compliance.deprecated.md
-  - ../2fa-guide.md
+  - "./make-filament-user-infinite-loop.md"
 ---
 
 # Testing del Bug Fix: Infinite Loop in make:filament-user

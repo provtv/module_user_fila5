@@ -1,21 +1,22 @@
 ---
 title: "User Module Wiki Index"
 type: index
-tags: [index, user, wiki]
+module: User
+tags: [user, wiki, index, auth, socialite, permissions]
 created: 2026-04-15
-updated: 2026-07-20
-qmd: "User Module Wiki Index index index user wiki user module documentation"
+updated: 2026-07-27
+qmd: "user module wiki index auth socialite permissions filament forms"
 issues:
-  - "https://github.com/laraxot/module_user_fila5/issues/23"
 discussions:
-  - "https://github.com/laraxot/module_user_fila5/discussions/24"
 related:
-  - AGENTS.md
-  - README.md
-  - SCHEMA.md
-  - agents.md
-  - architecture.md
-  - auth-patterns.md
+  - "./agents.md"
+  - "./architecture.md"
+  - "./auth-patterns.md"
+  - "./bmad-method.md"
+  - "./context-compression.md"
+  - "./log.md"
+  - "./overview.md"
+  - "./socialite-architecture.md"
 ---
 
 # User Module LLM Wiki
@@ -55,6 +56,16 @@ Indice operativo del wiki User.
 ## Scopo User Module
 
 Gestione utenti, profili, ruoli, permessi e autenticazione social (Socialite).
+
+## Runtime config & schema (2026-07-27)
+
+| Pagina | Argomento |
+|--------|-----------|
+| [bugfix-permission-table-names-singular](../bugfix-permission-table-names-singular.md) | `permission.php` table_names — non modificare |
+| [spatie-permission-table-names](./concepts/spatie-permission-table-names.md) | Pivot da config |
+| [spatie-permission-migration-no-table-name](./concepts/spatie-permission-migration-no-table-name.md) | Migrazioni pivot |
+| [profile-id-bigint-uuid-fix](./concepts/profile-id-bigint-uuid-fix.md) | Profiles id/uuid |
+| [migration-naming-religion-user](./concepts/migration-naming-religion-user.md) | Naming migrazioni User |
 
 ## Compiled Pages
 
@@ -99,7 +110,8 @@ Gestione utenti, profili, ruoli, permessi e autenticazione social (Socialite).
 
 - NON creare Service classes - usare Actions (vedi [actions-over-services-governance](https://github.com/laraxot/base_fixcity_fila5/blob/main/.opencode/skills/actions-over-services-governance/SKILL.md))
 - NON usare `dehydrated(false)` nei trait - blocca salvataggio (vedi Geo CoordinatePicker fix)
-- NON hardcodare password - usare `.env` (vedi [laravel-security-audit](../../../../docs/wiki/concepts/laravel-security-audit.md))
+- NON modificare `laravel/config/permission.php` → `table_names` per fix 1146 (vedi [bugfix-permission-table-names-singular](../bugfix-permission-table-names-singular.md))
+- NON hardcodare nomi tabella pivot su modelli (`$table`) — usare `getTable()` da config
 
 ## False Friends
 
@@ -115,4 +127,4 @@ Gestione utenti, profili, ruoli, permessi e autenticazione social (Socialite).
 | [phpstan-widget-property-types-2026-05-06](./troubleshooting/phpstan-widget-property-types-.md.md) | Troubleshooting | Tipizzazione widget Livewire/Filament |
 | [phpstan-module-analysis-memory](./troubleshooting/phpstan-module-analysis-memory.md) | Troubleshooting | PHPStan User OOM/cache vs errori reali |
 
-Aggiornato: 2026-05-06
+Aggiornato: 2026-07-27

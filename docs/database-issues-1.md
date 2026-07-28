@@ -1,3 +1,23 @@
+---
+title: "Database Issues in User Module"
+type: concept
+tags: [database, issues]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "database-issues-1 database issues in user module"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./00-index-1.md"
+  - "./00-index.md"
+  - "./2fa-guide.md"
+  - "./2fa.md"
+  - "./accessor-delegation-pattern.md"
+  - "./actions-path-convention-1.md"
+  - "./actions-path-convention-2.md"
+  - "./actions-path-convention.md"
+---
+
 # Database Issues in User Module
 
 ## Missing `doctor_team` Table
@@ -17,8 +37,8 @@
 **Latest Update (Corrected Migration Structure)**: Updated the migration files for `doctor_team` table on 2025-05-16 to use the correct structure with `tableCreate` and `tableUpdate` methods from `XotBaseMigration`. Also updated project rules in `.mdc` files to enforce this convention. Attempted migration again to resolve the `Internal Server Error`.
 
 **Related Documentation**:
-- [User Module Overview](../INDEX.md)
-- [Team Management](./TEAM_MANAGEMENT.md)
-- [BaseUser Model](./BaseUser.md)
-- [Database Structure](../DATABASE_STRUCTURE.md)
-- [Migration Guidelines](../../../../docs/collegamenti-documentazione.md)
+- [User Module Overview](../index.md)
+- [Team Management](./team_management.md)
+- [BaseUser Model](./baseuser.md)
+- [Database Structure](../database_structure.md)
+- [Migration Guidelines](../../../../../docs/collegamenti-documentazione.md)

@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Modules\User\Actions\Socialite;
 
 use Laravel\Socialite\Contracts\User as SocialiteUserContract;
-use Modules\User\Adapters\Socialite\UserNameFieldsResolver;
+use Modules\User\Actions\Socialite\Utils\UserNameFieldsResolver;
 use Modules\User\Datas\SocialiteUserAttributesData;
 use Spatie\QueueableAction\QueueableAction;
 

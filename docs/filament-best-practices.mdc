@@ -1,14 +1,10 @@
 ---
-description:
-globs:
-alwaysApply: false
----
----
 description: >
   Regola per l'estensione di XotBaseResource nelle Filament Resource: vietato dichiarare le proprietà statiche $navigationGroup, $navigationLabel e il metodo statico table(Table $table): Table. Garantisce coerenza, DRY e compatibilità con l'architettura XotBaseResource.
 globs:
   - '*/Filament/Resources/*.php'
-alwaysApply: true
+alwaysApply: false
+---
 
 # Regola: Estensione di XotBaseResource
 

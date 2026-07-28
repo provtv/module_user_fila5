@@ -1,0 +1,12 @@
+---
+module: theme
+topic: user-module-quality
+canonical: ../../../../Themes/docs/shared-components/user-module-quality-report.md
+<<<<<<< HEAD
+=======
+related:
+  - "./user-module-quality-report.md"
+>>>>>>> origin/dev
+---
+
+See canonical documentation: ../../../../Themes/docs/shared-components/user-module-quality-report.md

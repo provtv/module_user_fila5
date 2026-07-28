@@ -1,21 +1,12 @@
 ---
 title: "Skills Index"
 type: index
-tags: [index, skills, user, wiki]
 created: 2026-05-11
-updated: 2026-07-20
-qmd: "Skills Index index index skills user wiki user module documentation"
-issues:
-  - "https://github.com/laraxot/module_user_fila5/issues/23"
-discussions:
-  - "https://github.com/laraxot/module_user_fila5/discussions/24"
+updated: 2026-05-11
+tags: [skills, index, on-demand]
 related:
-  - filament-translation-audit.md
-  - ../AGENTS.md
-  - ../README.md
-  - ../SCHEMA.md
-  - ../agents.md
-  - ../architecture.md
+  - ../rules/00-TRIGGER_MAP.md
+  - ../rules/on-demand-pattern.md
 ---
 
 # Skills Index

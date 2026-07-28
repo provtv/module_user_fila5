@@ -1,3 +1,23 @@
+---
+title: "Il Grande Dibattito Furioso: PHPStan Level 10 - La Verità Assoluta"
+type: concept
+tags: [phpstan, furious, debate]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "phpstan-furious-debate- il grande dibattito furioso: phpstan level 10 - la verità assoluta"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./00-index-1.md"
+  - "./00-index.md"
+  - "./2fa-guide.md"
+  - "./2fa.md"
+  - "./accessor-delegation-pattern.md"
+  - "./actions-path-convention-1.md"
+  - "./actions-path-convention-2.md"
+  - "./actions-path-convention.md"
+---
+
 # Il Grande Dibattito Furioso: PHPStan Level 10 - La Verità Assoluta
 
 **Data**: 2025-01-22
@@ -163,7 +183,7 @@ Ogni modulo corretto è un traguardo.
 
 - [PHPStan Errors Philosophy](./phpstan-errors-philosophy.md)
 - [Filament 4 Actions Namespace](./filament-4-actions-namespace.md)
-- [DRY/KISS Principles](../../../docs/architecture/dry-kiss-principles.md)
+- [DRY/KISS Principles](../../../../docs/architecture/dry-kiss-principles.md)
 
 ---
 

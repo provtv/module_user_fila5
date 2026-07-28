@@ -24,7 +24,7 @@ uses(TestCase::class);
 
 beforeEach(function (): void {
     UserFactory::new()
-        ->createOne([
+        ->create([
             'type' => UserType::MasterAdmin,
             'email' => 'admin-'.uniqid().'@example.com',
             'password' => Hash::make('password123'),

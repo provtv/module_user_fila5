@@ -1,10 +1,30 @@
+---
+title: "Implementazione del Selettore di Lingua e Avatar Utente nell'Header"
+type: concept
+tags: [header, language, avatar, implementation]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "header-language-avatar-implementation-1 implementazione del selettore di lingua e avatar utente nell'header"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./00-index-1.md"
+  - "./00-index.md"
+  - "./2fa-guide.md"
+  - "./2fa.md"
+  - "./accessor-delegation-pattern.md"
+  - "./actions-path-convention-1.md"
+  - "./actions-path-convention-2.md"
+  - "./actions-path-convention.md"
+---
+
 # Implementazione del Selettore di Lingua e Avatar Utente nell'Header
 
 ## Collegamenti correlati
-- [README modulo User](./README.md)
-- [Convenzioni Path](./PATH_CONVENTIONS.md)
-- [Volt Folio Logout](./VOLT_FOLIO_LOGOUT.md)
-- [Implementazione Logout](./LOGOUT_BLADE_IMPLEMENTATION.md)
+- [README modulo User](./readme.md)
+- [Convenzioni Path](./path-conventions-2.md)
+- [Volt Folio Logout](./volt-folio-logout-2.md)
+- [Implementazione Logout](./logout-blade-implementation-2.md)
 
 ## Panoramica
 

@@ -136,7 +136,7 @@ class MyProfilePage extends XotBasePage implements HasSchemas
 
     public function getSubheading(): ?string
     {
-        return __('user::profile.subheading') ?? null;
+        return __('user::profile.subheading');
     }
 
     // public static function shouldRegisterNavigation(): bool

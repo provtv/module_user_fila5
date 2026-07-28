@@ -1,0 +1,19 @@
+---
+module: theme
+topic: passport
+canonical: ../../../../Themes/docs/shared-components/passport.md
+<<<<<<< HEAD
+=======
+related:
+  - "./eav.md"
+  - "./filament.md"
+  - "./gdpr.md"
+  - "./json.md"
+  - "./links.md"
+  - "./payment.md"
+  - "./phpstan.md"
+  - "./profile.md"
+>>>>>>> origin/dev
+---
+
+See canonical documentation: ../../../../Themes/docs/shared-components/passport.md

@@ -1,21 +1,17 @@
 ---
 title: "Bugfix: DeviceUser e HasXotFactory"
 type: concept
-tags: [bugfix, deviceuser, hasxotfactory, user]
+tags: [deviceuser, hasxotfactory]
 created: 2026-07-14
-updated: 2026-07-20
-qmd: "Bugfix: DeviceUser e HasXotFactory concept bugfix deviceuser hasxotfactory user user module documentation"
-issues:
-  - "https://github.com/laraxot/module_user_fila5/issues/23"
-discussions:
-  - "https://github.com/laraxot/module_user_fila5/discussions/24"
+updated: 2026-07-14
+qmd: "deviceuser-hasxotfactory bugfix: deviceuser e hasxotfactory"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
-  - deviceuser-hasxotfactory-fix.md
-  - git-conflicts-resolution.md
-  - gits-resolution.md
-  - multiple-bugs-resolution.md
-  - ../00-index-1.md
-  - ../00-index.md
+  - "./deviceuser-hasxotfactory-fix.md"
+  - "./git-conflicts-resolution.md"
+  - "./gits-resolution.md"
+  - "./multiple-bugs-resolution.md"
 ---
 
 # Bugfix: DeviceUser e HasXotFactory

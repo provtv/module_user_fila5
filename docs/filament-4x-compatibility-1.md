@@ -1,3 +1,23 @@
+---
+title: "Compatibilità Filament 4.x - Modulo User"
+type: concept
+tags: [filament, compatibility]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "filament-4x-compatibility-1 compatibilità filament 4.x - modulo user"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./00-index-1.md"
+  - "./00-index.md"
+  - "./2fa-guide.md"
+  - "./2fa.md"
+  - "./accessor-delegation-pattern.md"
+  - "./actions-path-convention-1.md"
+  - "./actions-path-convention-2.md"
+  - "./actions-path-convention.md"
+---
+
 # Compatibilità Filament 4.x - Modulo User
 
 **Data**: 2025-01-27
@@ -131,7 +151,7 @@ $this->info("Current user type: " . $typeLabelString);
 
 ## 🔗 Collegamenti
 
-- [Rapporto Aggiornamento Filament 4.x](../../docs/filament_4x_upgrade_report.md)
+- [Rapporto Aggiornamento Filament 4.x](../../../docs/filament_4x_upgrade_report.md)
 - [Guida Ufficiale Filament 4.x](https://filamentphp.com/docs/4.x/upgrade-guide)
 - [Documentazione Autenticazione](https://filamentphp.com/docs/panels/authentication)
 

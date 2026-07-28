@@ -343,26 +343,23 @@ final class ProfileEditVoltComponent extends Component
             ]);
 
             $user = Auth::user();
-            if (! $user instanceof User) {
-                throw new \RuntimeException('User must be authenticated and an instance of User model for account deletion');
-            }
+            Assert::notNull($user, 'User must be authenticated for account deletion');
+            Assert::isInstanceOf($user, User::class, 'User must be an instance of User model');
             Assert::same($this->user_id, (string) $user->id, 'User ID mismatch detected');
 
             // Validate deletion password
             Assert::stringNotEmpty($this->delete_password, 'Password cannot be empty for account deletion');
-            Assert::string($password = $user->password, 'User password must be a string');
             Assert::true(
-                Hash::check($this->delete_password, $password),
+                Hash::check($this->delete_password, $user->password),
                 'Password is incorrect for account deletion',
             );
 
             // Store user data for logging before deletion
-            $createdAt = $user->created_at;
             $userData = [
                 'id' => $user->id,
                 'email' => $user->email,
                 'name' => $user->name,
-                'created_at' => $createdAt instanceof \Carbon\Carbon ? $createdAt->toDateTimeString() : null,
+                'created_at' => $user->created_at?->toDateTimeString(),
                 'ip_address' => request()->ip(),
                 'user_agent' => request()->userAgent(),
                 'deletion_timestamp' => now()->toDateTimeString(),

@@ -35,6 +35,7 @@ class AssignRoleCommand extends Command
     public function handle(): void
     {
         $email = text('email ?');
+        $user_class = XotData::make()->getUserClass();
         /** @var UserContract */
         $user = XotData::make()->getUserByEmail($email);
         /**

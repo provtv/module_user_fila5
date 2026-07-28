@@ -1,3 +1,23 @@
+---
+title: "Collegamento al Modulo Cms"
+type: concept
+tags: [cms, link]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "cms-link-1 collegamento al modulo cms"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./00-index-1.md"
+  - "./00-index.md"
+  - "./2fa-guide.md"
+  - "./2fa.md"
+  - "./accessor-delegation-pattern.md"
+  - "./actions-path-convention-1.md"
+  - "./actions-path-convention-2.md"
+  - "./actions-path-convention.md"
+---
+
 # Collegamento al Modulo Cms
 
 Questo documento descrive le relazioni e i collegamenti tra il modulo User e il modulo Cms per quanto riguarda i componenti Filament e le convenzioni di namespace.
@@ -11,7 +31,7 @@ Sia il modulo User che il modulo Cms seguono le stesse convenzioni di namespace 
 
 Per dettagli specifici, consulta:
 - [Convenzioni di Namespace](./namespace-conventions.md) in questo modulo
-- [Convenzioni Namespace Filament](../../Cms/docs/convenzioni-namespace-filament.md) nel modulo Cms
+- [Convenzioni Namespace Filament](../../cms/docs/convenzioni-namespace-filament.md) nel modulo Cms
 
 ## Punti di Integrazione
 
@@ -21,8 +41,8 @@ Per dettagli specifici, consulta:
 
 ## Collegamenti Bidirezionali
 
-- [Convenzioni Namespace Filament nel modulo Cms](../../Cms/docs/convenzioni-namespace-filament.md)
-- [Collegamento User-Cms nel modulo Cms](../../Cms/docs/user-link.md)
+- [Convenzioni Namespace Filament nel modulo Cms](../../cms/docs/convenzioni-namespace-filament.md)
+- [Collegamento User-Cms nel modulo Cms](../../cms/docs/user-link.md)
 
 ---
 
@@ -33,7 +53,7 @@ Quando aggiungi nuovi componenti Filament nel modulo User, assicurati di:
 3. Seguire le convenzioni di stile condivise con il modulo Cms
 
 ## Collegamenti tra versioni di cms-link.md
-* [cms-link.md](../../../Xot/docs/cms-link.md)
-* [cms-link.md](../../../User/docs/cms-link.md)
-* [cms-link.md](../../../UI/docs/cms-link.md)
-* [cms-link.md](../../../Lang/docs/cms-link.md)
+* [cms-link.md](../../../xot/docs/cms-link.md)
+* [cms-link.md](../../../user/docs/cms-link.md)
+* [cms-link.md](../../../ui/docs/cms-link.md)
+* [cms-link.md](../../../lang/docs/cms-link.md)

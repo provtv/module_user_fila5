@@ -1,3 +1,23 @@
+---
+title: "Actions Structure"
+type: concept
+tags: [actions, structure]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "actions-structure-1 actions structure"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./00-index-1.md"
+  - "./00-index.md"
+  - "./2fa-guide.md"
+  - "./2fa.md"
+  - "./accessor-delegation-pattern.md"
+  - "./actions-path-convention-1.md"
+  - "./actions-path-convention-2.md"
+  - "./actions-path-convention.md"
+---
+
 # Actions Structure
 
 ## Directory Structure
@@ -71,7 +91,7 @@ class DeleteUserAction
 
 ## Documentazione Correlata
 
-- [Path Conventions](./PATH_CONVENTIONS.md)
-- [Directory Structure Checklist](./DIRECTORY_STRUCTURE_CHECKLIST.md)
-- [Module Structure](./MODULE_STRUCTURE.md)
+- [Path Conventions](./path-conventions-2.md)
+- [Directory Structure Checklist](./directory-structure-checklist.md)
+- [Module Structure](./module-structure-2.md)
 - [Queueable Actions Best Practices](./best-practices/queueable-actions.md)

@@ -1,21 +1,16 @@
 ---
-title: "Testing"
-type: concept
-tags: [best-practices, testing, user]
-created: 2026-07-20
-updated: 2026-07-20
-qmd: "Testing concept best-practices testing user user module documentation"
-issues:
-  - "https://github.com/laraxot/module_user_fila5/issues/23"
-discussions:
-  - "https://github.com/laraxot/module_user_fila5/discussions/24"
+module: theme
+topic: testing
+canonical: ../../../../Themes/docs/shared-components/testing-rules.md
 related:
-  - auth-components-best-practices.md
-  - auth-widget-rules.md
-  - auth-widget.md
-  - case-sensitivity-rules.md
-  - case-sensitivity.md
-  - component-verification-rules.md
+  - "./auth-components-best-practices.md"
+  - "./auth-widget-rules.md"
+  - "./auth-widget.md"
+  - "./case-sensitivity-rules.md"
+  - "./case-sensitivity.md"
+  - "./component-verification-rules.md"
+  - "./component-verification.md"
+  - "./dependency-rules.md"
 ---
 
 See canonical documentation: ../../../../Themes/docs/shared-components/testing-rules.md

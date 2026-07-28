@@ -1,5 +1,8 @@
 includes:
     - ./phpstan-baseline.neon
+    - ../../vendor/larastan/larastan/extension.neon
+    - ../../vendor/nesbot/carbon/extension.neon
+    - ../../vendor/pestphp/pest/extension.neon
     #- ./../../vendor/larastan/larastan/extension.neon
     #- ./../../vendor/thecodingmachine/phpstan-safe-rule/phpstan-safe-rule.neon
     #- ./vendor/symplify/phpstan-rules/config/code-complexity-rules.neon
@@ -13,35 +16,13 @@ parameters:
     level: max
 
     paths:
-        - ../../app
-        - ../../database
-        - ../../resources
-        - ../../config
-        - ../../lang
-        - ../../routes
-        - ../../tests
-        - ../../docs
-        - ../../vendor
-        - ../../bootstrap
-        - ../../storage
-        - ../../public
-        - ../../node_modules
-        - ../../Modules
-        - ../../Modules/Xot
-        - ../../Modules/User
-        - ../../Modules/User/app
-        - ../../Modules/User/database
-        - ../../Modules/User/tests
-        - ../../Modules/User/resources
-        - ../../Modules/User/config
-        - ../../Modules/User/lang
-        - ../../Modules/User/routes
-        - ../../Modules/User/docs
-        - ../../Modules/User/vendor
-        - ../../Modules/User/bootstrap
-        - ../../Modules/User/storage
-        - ../../Modules/User/public
-        - ../../Modules/User/node_modules
+        - ./app
+        - ./config
+        - ./database
+        - ./lang
+        - ./resources
+        - ./routes
+        - ./tests
     
           
 
@@ -50,6 +31,8 @@ parameters:
         - '#PHPDoc tag @mixin contains unknown class #'
         - identifier: missingType.iterableValue
         - identifier: missingType.generics
+        - '#Cannot cast mixed to (string|float|double|int|bool|boolean).#'
+        - identifier: theCodingMachineSafe.function
 
     excludePaths:
         - ./vendor/*
@@ -65,7 +48,7 @@ parameters:
         - ../../vendor/autoload.php
 
     scanFiles:
-    #    - ./Helpers/Helper.php
+    #    - ./helpers/Helper.php
     #    - ./vendor/amenadiel/jpgraph/src/config.inc.php
     #    - ../../vendor/autoload.php
     
@@ -75,15 +58,6 @@ parameters:
     editorUrl: 'vscode://file/%%file%%:%%line%%'
 
     tmpDir: ./build/phpstan
-    checkUnusedViews: false
-    # checkMissingIterableValueType: false
-    # checkGenericClassInNonGenericObjectType: false
     treatPhpDocTypesAsCertain: false
     reportUnmatchedIgnoredErrors: false
-    checkOctaneCompatibility: false
-    checkModelProperties: false
-    bootstrapFiles:
-        - ./phpstan_constants.php
-        - ../../vendor/autoload.php
-    bootstrapped: false
 

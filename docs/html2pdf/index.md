@@ -1,20 +1,13 @@
 ---
-title: "Index"
-type: index
-tags: [html2pdf, index, user]
-created: 2026-07-20
-updated: 2026-07-20
-qmd: "Index index html2pdf index user user module documentation"
-issues:
-  - "https://github.com/laraxot/module_user_fila5/issues/23"
-discussions:
-  - "https://github.com/laraxot/module_user_fila5/discussions/24"
+module: theme
+topic: index
+canonical: ../../../../Themes/docs/shared-components/index.md
 related:
-  - advanced.md
-  - laravel.md
-  - security.md
-  - styling.md
-  - usage.md
+  - "./advanced.md"
+  - "./laravel.md"
+  - "./security.md"
+  - "./styling.md"
+  - "./usage.md"
 ---
 
 See canonical documentation: ../../../../Themes/docs/shared-components/index.md

@@ -1,23 +1,3 @@
----
-title: "User Module Roadmap"
-type: index
-tags: [readme, roadmap, user]
-created: 2026-07-20
-updated: 2026-07-20
-qmd: "User Module Roadmap index readme roadmap user user module documentation"
-issues:
-  - "https://github.com/laraxot/module_user_fila5/issues/23"
-discussions:
-  - "https://github.com/laraxot/module_user_fila5/discussions/24"
-related:
-  - -q4-roadmap.md
-  - 00-index-1.md
-  - 00-index.md
-  - 00-overview.md
-  - 01-current-state.md
-  - 01-now.md
----
-
 # User Module Roadmap
 
 > "Authentication, authorization, and user management for the entire Laraxot ecosystem."

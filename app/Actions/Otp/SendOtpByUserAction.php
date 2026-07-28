@@ -8,7 +8,6 @@ use Filament\Notifications\Notification as FilamentNotification;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Notification;
 use Illuminate\Support\Str;
-use Modules\User\Adapters\Otp\Hasher;
 use Modules\User\Datas\PasswordData;
 use Modules\User\Notifications\Auth\Otp;
 use Modules\Xot\Contracts\UserContract;

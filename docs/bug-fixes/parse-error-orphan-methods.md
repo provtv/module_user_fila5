@@ -1,21 +1,15 @@
 ---
-title: "Parse Error Orphan Methods"
-type: memory
-tags: [bug-fixes, error, methods, orphan, parse, user]
-created: 2026-07-20
-updated: 2026-07-20
-qmd: "Parse Error Orphan Methods memory bug-fixes error methods orphan parse user user module documentation"
-issues:
-  - "https://github.com/laraxot/module_user_fila5/issues/23"
-discussions:
-  - "https://github.com/laraxot/module_user_fila5/discussions/24"
+module: theme
+topic: parse-error-orphan-methods
+canonical: ../../../../Themes/docs/shared-components/parse-error-orphan-methods.md
 related:
-  - make-filament-user-crash-loop.md
-  - parse-error-orphan-methods-.deprecated.md
-  - parse-error-orphan-methods-.md
-  - parse-error-orphan-methods-1-1.md
-  - parse-error-orphan-methods-1.md
-  - parse-error-orphan-methods-2.md
+  - "./make-filament-user-crash-loop.md"
+  - "./parse-error-orphan-methods-.md"
+  - "./parse-error-orphan-methods-1-1.md"
+  - "./parse-error-orphan-methods-1.md"
+  - "./parse-error-orphan-methods-2.md"
+  - "./parse-error-orphan-methods-3.md"
+  - "./parse-orphan-methods.md"
 ---
 
 See canonical documentation: ../../../../Themes/docs/shared-components/parse-error-orphan-methods.md

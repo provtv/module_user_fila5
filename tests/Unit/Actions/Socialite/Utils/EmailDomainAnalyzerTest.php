@@ -5,10 +5,11 @@ declare(strict_types=1);
 use Illuminate\Support\Facades\Config;
 use Laravel\Socialite\Contracts\User as SocialiteUser;
 use Mockery\MockInterface;
-use Modules\User\Adapters\Socialite\EmailDomainAnalyzer;
+use Modules\User\Actions\Socialite\Utils\EmailDomainAnalyzer;
+use Modules\User\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
-uses(Modules\User\Tests\TestCase::class);
+uses(TestCase::class);
 
 function createMockSocialiteUserForEmailAnalyzer(?string $email): SocialiteUser
 {

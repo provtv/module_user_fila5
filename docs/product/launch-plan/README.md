@@ -1,22 +1,3 @@
----
-title: "User Module - Product Launch Plan"
-type: index
-tags: [launch-plan, product, readme, user]
-created: 2026-07-20
-updated: 2026-07-20
-qmd: "User Module - Product Launch Plan index launch-plan product readme user user module documentation"
-issues:
-  - "https://github.com/laraxot/module_user_fila5/issues/23"
-discussions:
-  - "https://github.com/laraxot/module_user_fila5/discussions/24"
-related:
-  - ../../README.md
-  - ../../architecture.md
-  - ../../best-practices.md
-  - ../../INDEX.md
-  - ../../activitylog.md
----
-
 # User Module - Product Launch Plan
 
 ## Launch Overview

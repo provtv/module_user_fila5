@@ -1,21 +1,16 @@
 ---
-title: "Ai Methodologies"
-type: concept
-tags: [methodologies, user]
-created: 2026-07-20
-updated: 2026-07-20
-qmd: "Ai Methodologies concept methodologies user user module documentation"
-issues:
-  - "https://github.com/laraxot/module_user_fila5/issues/23"
-discussions:
-  - "https://github.com/laraxot/module_user_fila5/discussions/24"
+module: theme
+topic: ai-methodologies
+canonical: ../../../Themes/docs/shared-components/ai-methodologies.md
 related:
-  - ./00-index-1.md
-  - ./00-index.md
-  - ./2025-12-01-teams-migration-laraxot-compliance.deprecated.md
-  - ./2fa-guide.md
-  - ./2fa.md
-  - ./CHANGELOG.md
+  - "./00-index-1.md"
+  - "./00-index.md"
+  - "./2fa-guide.md"
+  - "./2fa.md"
+  - "./accessor-delegation-pattern.md"
+  - "./actions-path-convention-1.md"
+  - "./actions-path-convention-2.md"
+  - "./actions-path-convention.md"
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/ai-methodologies.md

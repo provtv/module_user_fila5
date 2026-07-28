@@ -1,20 +1,17 @@
 ---
 title: "Comandi Console - Modulo User"
 type: concept
-tags: [console-commands, readme, user]
+tags: [readme]
 created: 2026-07-14
-updated: 2026-07-20
-qmd: "Comandi Console - Modulo User concept console-commands readme user user module documentation"
-issues:
-  - "https://github.com/laraxot/module_user_fila5/issues/23"
-discussions:
-  - "https://github.com/laraxot/module_user_fila5/discussions/24"
+updated: 2026-07-14
+qmd: "readme comandi console - modulo user"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
-  - README.md
-  - assign-module-command.md
-  - change-password-command.md
-  - console-commands-philosophy.md
-  - console-commands.md
+  - "./assign-module-command.md"
+  - "./change-password-command.md"
+  - "./console-commands-philosophy.md"
+  - "./console-commands.md"
 ---
 
 # Comandi Console - Modulo User

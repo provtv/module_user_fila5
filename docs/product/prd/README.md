@@ -1,22 +1,3 @@
----
-title: "User Module - Product Requirements Document (PRD)"
-type: index
-tags: [prd, product, readme, user]
-created: 2026-07-20
-updated: 2026-07-20
-qmd: "User Module - Product Requirements Document (PRD) index prd product readme user user module documentation"
-issues:
-  - "https://github.com/laraxot/module_user_fila5/issues/23"
-discussions:
-  - "https://github.com/laraxot/module_user_fila5/discussions/24"
-related:
-  - ../../README.md
-  - ../../architecture.md
-  - ../../best-practices.md
-  - ../../INDEX.md
-  - ../../activitylog.md
----
-
 # User Module - Product Requirements Document (PRD)
 
 ## Document Information

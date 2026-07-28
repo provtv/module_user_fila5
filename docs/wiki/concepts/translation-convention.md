@@ -1,23 +1,3 @@
----
-title: "Translation Convention - User Module"
-type: concept
-tags: [concepts, convention, translation, user, wiki]
-created: 2026-07-20
-updated: 2026-07-20
-qmd: "Translation Convention - User Module concept concepts convention translation user wiki user module documentation"
-issues:
-  - "https://github.com/laraxot/module_user_fila5/issues/23"
-discussions:
-  - "https://github.com/laraxot/module_user_fila5/discussions/24"
-related:
-  - INDEX.md
-  - ai-harness-user-discipline.md
-  - baseuser-hierarchy.md
-  - code-redundancy-user.md
-  - context-mode-user-discipline.md
-  - context-overflow-prevention.md
----
-
 # Translation Convention - User Module
 
 ## Regola

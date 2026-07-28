@@ -13,6 +13,8 @@ services:
       APP_ENV: local
       APP_DEBUG: true
       APP_KEY: base64:your-app-key
+      # Daemon = MariaDB (`db` image sotto); in Laravel manteniamo `mysql` perché TenantServiceProvider
+      # purge/reconnect sulla connessione di nome mysql e PDO parla comunque bene con MariaDB.
       DB_CONNECTION: mysql
       DB_HOST: db
       DB_PORT: 3306

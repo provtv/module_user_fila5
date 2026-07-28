@@ -1,21 +1,12 @@
 ---
 title: "Commands Index"
 type: index
-tags: [commands, index, user, wiki]
 created: 2026-05-11
-updated: 2026-07-20
-qmd: "Commands Index index commands index user wiki user module documentation"
-issues:
-  - "https://github.com/laraxot/module_user_fila5/issues/23"
-discussions:
-  - "https://github.com/laraxot/module_user_fila5/discussions/24"
+updated: 2026-05-11
+tags: [commands, index, on-demand]
 related:
-  - user-super-admin.md
-  - ../AGENTS.md
-  - ../README.md
-  - ../SCHEMA.md
-  - ../agents.md
-  - ../architecture.md
+  - ../rules/00-TRIGGER_MAP.md
+  - ../rules/on-demand-pattern.md
 ---
 
 # Commands Index

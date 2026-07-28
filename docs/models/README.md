@@ -1,23 +1,3 @@
----
-title: "User Module - Model Documentation"
-type: index
-tags: [models, readme, user]
-created: 2026-07-20
-updated: 2026-07-20
-qmd: "User Module - Model Documentation index models readme user user module documentation"
-issues:
-  - "https://github.com/laraxot/module_user_fila5/issues/23"
-discussions:
-  - "https://github.com/laraxot/module_user_fila5/discussions/24"
-related:
-  - base-classes-hierarchy.md
-  - baseuser.md
-  - readme.md
-  - team.md
-  - teampermission.md
-  - xotbaivot-migration.md
----
-
 # User Module - Model Documentation
 
 **Modulo**: User

@@ -1,3 +1,23 @@
+---
+title: "TeamsRelationManager in User Module"
+type: concept
+tags: [teams, relation, manager]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "teams-relation-manager-1 teamsrelationmanager in user module"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./filament-table-columns-1.md"
+  - "./filament-table-columns-2.md"
+  - "./filament-table-columns-3.md"
+  - "./filament-table-columns.md"
+  - "./teams-relation-manager-2.md"
+  - "./teams-relation-manager-3.md"
+  - "./teams-relation-manager.md"
+  - "./widgets-responsive-layout.md"
+---
+
 # TeamsRelationManager in User Module
 
 ## Panoramica
@@ -180,8 +200,8 @@ public function getTableActions(): array
 
 ## Link a Documentazione Correlata
 
-- [XotBaseRelationManager](/laravel/Modules/Xot/docs/filament/relation_managers.md)
-- [HasXotTable Trait](/laravel/Modules/Xot/docs/filament/xot_table.md)
-- [Regole di Traduzione per Filament](/laravel/Modules/Xot/docs/translation_rules.md)
+- [XotBaseRelationManager](/laravel/modules/xot/docs/filament/relation_managers.md)
+- [HasXotTable Trait](/laravel/modules/xot/docs/filament/xot_table.md)
+- [Regole di Traduzione per Filament](/laravel/modules/xot/docs/translation_rules.md)
 
 *Ultimo aggiornamento: 3 Giugno 2025*

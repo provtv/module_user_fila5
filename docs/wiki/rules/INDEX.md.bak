@@ -1,0 +1,69 @@
+---
+title: "Rules Index"
+type: index
+<<<<<<< HEAD
+created: 2026-05-11
+updated: 2026-07-08
+tags: [rules, index, on-demand]
+related:
+  - ../rules/00-TRIGGER_MAP.md
+  - ../rules/on-demand-pattern.md
+=======
+tags: [index, rules, user, wiki]
+created: 2026-05-11
+updated: 2026-07-20
+qmd: "Rules Index index index rules user wiki user module documentation"
+issues:
+  - "https://github.com/laraxot/module_user_fila5/issues/23"
+discussions:
+  - "https://github.com/laraxot/module_user_fila5/discussions/24"
+related:
+  - agent-confidence-protocol.md
+  - can-comment-retired-wrong-placement.md
+  - frontend-stack-canonical.md
+  - header-auth-flow.md
+  - header-design-colors.md
+  - module-commit-push-after-change.md
+>>>>>>> origin/dev
+---
+
+# Rules Index
+
+Le Rules progettuali vivono qui, nel wiki del Module **User**, e vengono caricate **on-demand**.
+
+> Vedi anche → [Trigger Map](../rules/00-TRIGGER_MAP.md)
+
+## Regola
+
+1. individua il trigger del task
+2. consulta `../rules/00-TRIGGER_MAP.md`
+3. se serve, esegui `qmd search "<topic>"`
+4. leggi solo la Rules wiki pertinente
+
+## Pattern di caricamento
+
+| Pattern | Comando |
+|---------|---------|
+| Carica Rules specifica | `Read ../rules/<name>.md` |
+| Ricerca semantica | `qmd search "<topic>"` |
+| Via trigger map | Consulta `../rules/00-TRIGGER_MAP.md` |
+
+## Note
+
+- La sorgente di verita' per le Rules e' sempre il wiki locale
+- Non embeddare Rules nei prompt di avvio
+- Per Rules globali, consulta il [wiki root](../../docs/wiki/rules/INDEX.md)
+
+## Rules ricorrenti
+
+| Rule | Scopo |
+|------|-------|
+| [module-commit-push-after-change](module-commit-push-after-change.md) | Commit e push dal repo modulo dopo ogni modifica |
+
+## Aggiungere una Nuova RULES
+
+1. Crea `../rules/<nome>.md` con contenuto completo
+2. Aggiungi la voce in `../rules/00-TRIGGER_MAP.md`
+3. Aggiorna questo indice se la Rules e' ricorrente
+4. Committa: `docs: add rules <nome>`
+

@@ -1,23 +1,17 @@
 ---
-title: "Linee guida per l'uso di Spatie Queueable Action"
-type: concept
-tags: [actions, user]
-created: 2026-07-20
-updated: 2026-07-20
-qmd: "Linee guida per l'uso di Spatie Queueable Action concept actions user user module documentation"
-issues:
-  - "https://github.com/laraxot/module_user_fila5/issues/23"
-discussions:
-  - "https://github.com/laraxot/module_user_fila5/discussions/24"
+description:
+globs:
+alwaysApply: false
 related:
-  - ./00-index-1.md
-  - ./00-index.md
-  - ./2025-12-01-teams-migration-laraxot-compliance.deprecated.md
-  - ./2fa-guide.md
-  - ./2fa.md
-  - ./CHANGELOG.md
+  - "./00-index-1.md"
+  - "./00-index.md"
+  - "./2fa-guide.md"
+  - "./2fa.md"
+  - "./accessor-delegation-pattern.md"
+  - "./actions-path-convention-1.md"
+  - "./actions-path-convention-2.md"
+  - "./actions-path-convention.md"
 ---
-
 # Linee guida per l'uso di Spatie Queueable Action
 
 ## Introduzione

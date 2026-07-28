@@ -1,21 +1,9 @@
 ---
 title: "User Module Documentation"
 type: documentation
-tags: [readme, user]
+tags: [module, documentation]
 created: 2026-06-05
-updated: 2026-07-20
-qmd: "User Module Documentation documentation readme user user module documentation"
-issues:
-  - "https://github.com/laraxot/module_user_fila5/issues/23"
-discussions:
-  - "https://github.com/laraxot/module_user_fila5/discussions/24"
-related:
-  - ./00-index-1.md
-  - ./00-index.md
-  - ./2025-12-01-teams-migration-laraxot-compliance.deprecated.md
-  - ./2fa-guide.md
-  - ./2fa.md
-  - ./CHANGELOG.md
+updated: 2026-07-27
 ---
 
 # Modulo User - Documentazione Completa
@@ -45,7 +33,7 @@ Modules\User\Models\User extends BaseModel
 // Team management
 Modules\User\Models\Team
 
-// Tenant isolation  
+// Tenant isolation
 Modules\User\Models\Tenant
 ```
 
@@ -72,7 +60,7 @@ Modules\User\Models\Tenant
 ## Architectural Rules — Violations Fixed
 
 ### Module Directory Structure Standard
-In compliance with the [Global Rule](../../../docs/wiki/rules/module-root-php-folders-forbidden.md), all root-level capitalized directories (`Actions/`, `Application/`, `Database/`, `Events/`, `Listeners/`) have been moved into `app/` or renamed to lowercase `database/`. 
+In compliance with the [Global Rule](../../../docs/wiki/rules/module-root-php-folders-forbidden.md), all root-level capitalized directories (`Actions/`, `Application/`, `Database/`, `Events/`, `Listeners/`) have been moved into `app/` or renamed to lowercase `database/`.
 - **app/**: Home for all PHP functional code (mapped via PSR-4).
 - **database/**: Strictly lowercase for migrations/factories/seeders.
 
@@ -80,11 +68,21 @@ In compliance with the [Global Rule](../../../docs/wiki/rules/module-root-php-fo
 Per evitare crash dei parallel workers su analisi massive, usare sempre:
 `php -d memory_limit=-1 ./vendor/bin/phpstan analyse [target] --memory-limit=-1`
 
-### Profiles migration governance
-- La tabella `profiles` deve avere sia `id` sia `uuid`.
-- Il modulo User usa **una sola migrazione autorevole** per `profiles`: `*_create_profiles_table.php`.
-- Se manca una colonna come `uuid`, si corregge quella migrazione e si aggiorna il timestamp del file; non si crea una migrazione `add_uuid_to_profiles`.
-- Riferimento canonico: [wiki/concepts/profile-migration-uuid-contract.md](./wiki/concepts/profile-migration-uuid-contract.md)
+### Profiles migration governance (workorder)
+
+**Owner schema = WorkOrder** (`main_module`), non User:
+
+- [profile-schema-ownership.md](../WorkOrder/docs/profile-schema-ownership.md)
+- [wiki/concepts/profile-migration-uuid-contract.md](./wiki/concepts/profile-migration-uuid-contract.md)
+- Migrazione canonica: `WorkOrder/database/migrations/2026_07_27_111500_create_profiles_table.php`
+- Duplicati User archiviati in `database/migrations/_bak/*.merged`
+
+### Spatie Permission — `table_names` intoccabile
+
+- `laravel/config/permission.php` → nomi pivot **singolari** (`model_has_role`, …)
+- Vietato modificare `table_names` o hardcodare nomi tabella in migrazioni/modelli
+- [wiki/concepts/spatie-permission-table-names.md](./wiki/concepts/spatie-permission-table-names.md)
+- [wiki/concepts/spatie-permission-migration-no-table-name.md](./wiki/concepts/spatie-permission-migration-no-table-name.md)
 
 ### No Log calls in production code
 `Log::info()`, `Log::debug()`, `Log::error()` are forbidden in Actions, Models, Services, and Widgets.
@@ -92,7 +90,7 @@ Found and removed from `RegisterWidget`. Laravel logs unhandled exceptions autom
 See: [no-log-in-production.md](./no-log-in-production.md)
 
 ### Git merge conflicts in migrations
-46 migration files in `database/migrations/` had unresolved conflict markers (`<<<<<<< HEAD`, `=======`, `>>>>>>>`).
+46 migration files in `database/migrations/` had unresolved conflict markers .
 These break PHP syntax and halt PHPStan entirely. All were resolved.
 Rule: never commit files with conflict markers. Fix immediately when found.
 

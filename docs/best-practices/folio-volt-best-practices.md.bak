@@ -1,0 +1,27 @@
+---
+<<<<<<< HEAD
+module: theme
+topic: folio-volt-best-practices
+canonical: ../../../../Themes/docs/shared-components/folio-volt-best-practices-Modules.md
+=======
+title: "Folio Volt Best Practices"
+type: concept
+tags: [best, best-practices, folio, practices, user, volt]
+created: 2026-07-20
+updated: 2026-07-20
+qmd: "Folio Volt Best Practices concept best best-practices folio practices user volt user module documentation"
+issues:
+  - "https://github.com/laraxot/module_user_fila5/issues/23"
+discussions:
+  - "https://github.com/laraxot/module_user_fila5/discussions/24"
+related:
+  - auth-components-best-practices.md
+  - auth-widget-rules.md
+  - auth-widget.md
+  - case-sensitivity-rules.md
+  - case-sensitivity.md
+  - component-verification-rules.md
+>>>>>>> origin/dev
+---
+
+See canonical documentation: ../../../../Themes/docs/shared-components/folio-volt-best-practices-Modules.md

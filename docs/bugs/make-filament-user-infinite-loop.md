@@ -1,21 +1,14 @@
 ---
 title: "Bug: Infinite Loop in make:filament-user Command"
 type: concept
-tags: [bugs, filament, infinite, loop, make, user]
+tags: [make, filament, user, infinite]
 created: 2026-07-14
-updated: 2026-07-20
-qmd: "Bug: Infinite Loop in make:filament-user Command concept bugs filament infinite loop make user user module documentation"
-issues:
-  - "https://github.com/laraxot/module_user_fila5/issues/23"
-discussions:
-  - "https://github.com/laraxot/module_user_fila5/discussions/24"
+updated: 2026-07-14
+qmd: "make-filament-user-infinite-loop bug: infinite loop in make:filament-user command"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
-  - TESTING.md
-  - testing.md
-  - ../00-index-1.md
-  - ../00-index.md
-  - ../2025-12-01-teams-migration-laraxot-compliance.deprecated.md
-  - ../2fa-guide.md
+  - "./testing.md"
 ---
 
 # Bug: Infinite Loop in make:filament-user Command

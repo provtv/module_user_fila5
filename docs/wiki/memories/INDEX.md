@@ -1,21 +1,12 @@
 ---
 title: "Memories Index"
 type: index
-tags: [index, memories, user, wiki]
 created: 2026-05-11
-updated: 2026-07-20
-qmd: "Memories Index index index memories user wiki user module documentation"
-issues:
-  - "https://github.com/laraxot/module_user_fila5/issues/23"
-discussions:
-  - "https://github.com/laraxot/module_user_fila5/discussions/24"
+updated: 2026-05-11
+tags: [memories, index, on-demand]
 related:
-  - phpstan-belongstomany-covariance-.deprecated.md
-  - phpstan-belongstomany-covariance-2026-07-06.deprecated.md
-  - phpstan-belongstomany-covariance.md
-  - ../AGENTS.md
-  - ../README.md
-  - ../SCHEMA.md
+  - ../rules/00-TRIGGER_MAP.md
+  - ../rules/on-demand-pattern.md
 ---
 
 # Memories Index

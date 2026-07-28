@@ -1,21 +1,12 @@
 ---
 title: "Rules Index"
 type: index
-tags: [index, rules, user, wiki]
 created: 2026-05-11
-updated: 2026-07-20
-qmd: "Rules Index index index rules user wiki user module documentation"
-issues:
-  - "https://github.com/laraxot/module_user_fila5/issues/23"
-discussions:
-  - "https://github.com/laraxot/module_user_fila5/discussions/24"
+updated: 2026-07-08
+tags: [rules, index, on-demand]
 related:
-  - agent-confidence-protocol.md
-  - can-comment-retired-wrong-placement.md
-  - frontend-stack-canonical.md
-  - header-auth-flow.md
-  - header-design-colors.md
-  - module-commit-push-after-change.md
+  - ../rules/00-TRIGGER_MAP.md
+  - ../rules/on-demand-pattern.md
 ---
 
 # Rules Index

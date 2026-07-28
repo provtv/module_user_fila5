@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Modules\User\Actions\Socialite\Utils;
 
 use Illuminate\Support\Str;
+use InvalidArgumentException;
 use Laravel\Socialite\Contracts\User;
 
 final class EmailDomainAnalyzer
@@ -22,7 +23,7 @@ final class EmailDomainAnalyzer
     public function setUser(User $ssoUser): self
     {
         // if ($ssoUser === null) {
-        //    throw new \InvalidArgumentException('L\'utente SSO non può essere null');
+        //    throw new InvalidArgumentException('L\'utente SSO non può essere null');
         // }
         $this->ssoUser = $ssoUser;
 

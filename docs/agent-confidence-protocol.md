@@ -1,21 +1,19 @@
 ---
 title: "Massima confidenza agente"
 type: reference
-tags: [agent, confidence, protocol, user]
-created: 2026-05-26
-updated: 2026-07-20
-qmd: "Massima confidenza agente reference agent confidence protocol user user module documentation"
-issues:
-  - "https://github.com/laraxot/module_user_fila5/issues/23"
-discussions:
-  - "https://github.com/laraxot/module_user_fila5/discussions/24"
+status: approved
+tags: [agents, confidence, verification]
+created: "2026-05-26"
+updated: "2026-05-26"
 related:
-  - ./00-index-1.md
-  - ./00-index.md
-  - ./2025-12-01-teams-migration-laraxot-compliance.deprecated.md
-  - ./2fa-guide.md
-  - ./2fa.md
-  - ./CHANGELOG.md
+  - "./00-index-1.md"
+  - "./00-index.md"
+  - "./2fa-guide.md"
+  - "./2fa.md"
+  - "./accessor-delegation-pattern.md"
+  - "./actions-path-convention-1.md"
+  - "./actions-path-convention-2.md"
+  - "./actions-path-convention.md"
 ---
 
 # Massima confidenza agente

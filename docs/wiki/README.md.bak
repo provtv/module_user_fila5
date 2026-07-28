@@ -1,0 +1,27 @@
+---
+<<<<<<< HEAD
+module: theme
+topic: README
+canonical: ../../../../Themes/docs/shared-components/README-Modules.md
+=======
+title: "Readme"
+type: index
+tags: [readme, user, wiki]
+created: 2026-07-20
+updated: 2026-07-20
+qmd: "Readme index readme user wiki user module documentation"
+issues:
+  - "https://github.com/laraxot/module_user_fila5/issues/23"
+discussions:
+  - "https://github.com/laraxot/module_user_fila5/discussions/24"
+related:
+  - AGENTS.md
+  - SCHEMA.md
+  - agents.md
+  - architecture.md
+  - auth-patterns.md
+  - bmad-method.md
+>>>>>>> origin/dev
+---
+
+See canonical documentation: ../../../../Themes/docs/shared-components/README-Modules.md

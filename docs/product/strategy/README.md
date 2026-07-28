@@ -1,22 +1,3 @@
----
-title: "User Module - Product Strategy Document"
-type: index
-tags: [product, readme, strategy, user]
-created: 2026-07-20
-updated: 2026-07-20
-qmd: "User Module - Product Strategy Document index product readme strategy user user module documentation"
-issues:
-  - "https://github.com/laraxot/module_user_fila5/issues/23"
-discussions:
-  - "https://github.com/laraxot/module_user_fila5/discussions/24"
-related:
-  - ../../README.md
-  - ../../architecture.md
-  - ../../best-practices.md
-  - ../../INDEX.md
-  - ../../activitylog.md
----
-
 # User Module - Product Strategy Document
 
 ## Document Information

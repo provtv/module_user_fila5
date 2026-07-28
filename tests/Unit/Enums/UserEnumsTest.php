@@ -6,9 +6,10 @@ use Modules\User\Enums\LanguageEnum;
 use Modules\User\Enums\SocialProviderEnum;
 use Modules\User\Enums\SystemRole;
 use Modules\User\Enums\UserType;
+use Modules\User\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
-uses(Modules\User\Tests\TestCase::class);
+uses(TestCase::class);
 
 test('UserType enum has expected cases', function (): void {
     $values = array_map(static fn ($case) => $case->value, UserType::cases());

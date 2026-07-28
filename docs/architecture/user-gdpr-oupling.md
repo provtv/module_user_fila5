@@ -1,21 +1,16 @@
 ---
-title: "User Gdpr Oupling"
-type: architecture
-tags: [architecture, gdpr, oupling, user]
-created: 2026-07-20
-updated: 2026-07-20
-qmd: "User Gdpr Oupling architecture architecture gdpr oupling user user module documentation"
-issues:
-  - "https://github.com/laraxot/module_user_fila5/issues/23"
-discussions:
-  - "https://github.com/laraxot/module_user_fila5/discussions/24"
+module: theme
+topic: user-gdpr-oupling
+canonical: ../../../../Themes/docs/shared-components/user-gdpr-decoupling.md
 related:
-  - README.md
-  - architecture-rules.md
-  - architecture.md
-  - auth-blade-structure.md
-  - component-registration.md
-  - readme.md
+  - "./architecture-rules.md"
+  - "./architecture.md"
+  - "./auth-blade-structure.md"
+  - "./component-registration.md"
+  - "./readme.md"
+  - "./structure.md"
+  - "./testing-structure.md"
+  - "./user-gdpr-decoupling.md"
 ---
 
 See canonical documentation: ../../../../Themes/docs/shared-components/user-gdpr-decoupling.md

@@ -1,21 +1,12 @@
 ---
-title: "Gits Resolution"
-type: memory
-tags: [bugfix, gits, resolution, user]
-created: 2026-07-20
-updated: 2026-07-20
-qmd: "Gits Resolution memory bugfix gits resolution user user module documentation"
-issues:
-  - "https://github.com/laraxot/module_user_fila5/issues/23"
-discussions:
-  - "https://github.com/laraxot/module_user_fila5/discussions/24"
+module: theme
+topic: gits-resolution
+canonical: ../../../../Themes/docs/shared-components/git-conflicts-resolution.md
 related:
-  - deviceuser-hasxotfactory-fix.md
-  - deviceuser-hasxotfactory.md
-  - git-conflicts-resolution.md
-  - multiple-bugs-resolution.md
-  - ../00-index-1.md
-  - ../00-index.md
+  - "./deviceuser-hasxotfactory-fix.md"
+  - "./deviceuser-hasxotfactory.md"
+  - "./git-conflicts-resolution.md"
+  - "./multiple-bugs-resolution.md"
 ---
 
 See canonical documentation: ../../../../Themes/docs/shared-components/git-conflicts-resolution.md

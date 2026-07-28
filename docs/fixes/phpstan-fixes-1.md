@@ -1,3 +1,22 @@
+---
+title: "Correzioni PHPStan nel Modulo User"
+type: concept
+tags: [phpstan, fixes]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "phpstan-fixes-1 correzioni phpstan nel modulo user"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./base-classes-corrections-.md"
+  - "./base-classes-corrections-1.md"
+  - "./base-classes-corrections-2.md"
+  - "./base-classes-corrections-3.md"
+  - "./base-classes-corrections.md"
+  - "./phpstan-fixes.md"
+  - "./phpstanes.md"
+---
+
 # Correzioni PHPStan nel Modulo User
 
 ## Team.php
@@ -31,13 +50,13 @@ Il modello `Team` accede direttamente a proprietà che potrebbero non essere dis
 3. Implementare controlli di tipo più robusti
 
 ### Collegamenti Bidirezionali
-- [Documentazione Generale PHPStan](/docs/phpstan/PHPSTAN_LEVEL10_LINEE_GUIDA.md)
+- [Documentazione Generale PHPStan](/docs/phpstan/phpstan_level10_linee_guida.md)
 - [Contratti del Modulo User](/docs/modules/user/contracts.md)
 - [Best Practices per i Modelli](/docs/modules/user/models.md)
 - [Interfacce e Contratti](/docs/modules/xot/contracts.md)
 
-## Collegamenti tra versioni di phpstan_fixes.md
-* [phpstan_fixes.md](../../../Xot/docs/phpstan_fixes.md)
-* [phpstan_fixes.md](../../../User/docs/phpstan_fixes.md)
-* [phpstan_fixes.md](../../../User/docs/fixes/phpstan_fixes.md)
-* [phpstan_fixes.md](../../../Activity/docs/phpstan_fixes.md)
+## Collegamenti tra versioni di phpstan-fixes-8.md
+* [phpstan-fixes-8.md](../../../xot/docs/phpstan-fixes-8.md)
+* [phpstan-fixes-8.md](../../../user/docs/phpstan-fixes-8.md)
+* [phpstan-fixes-8.md](../../../user/docs/fixes/phpstan-fixes-8.md)
+* [phpstan-fixes-8.md](../../../activity/docs/phpstan-fixes-8.md)

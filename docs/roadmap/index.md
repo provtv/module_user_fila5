@@ -1,21 +1,16 @@
 ---
-title: "Index"
-type: index
-tags: [index, roadmap, user]
-created: 2026-07-20
-updated: 2026-07-20
-qmd: "Index index index roadmap user user module documentation"
-issues:
-  - "https://github.com/laraxot/module_user_fila5/issues/23"
-discussions:
-  - "https://github.com/laraxot/module_user_fila5/discussions/24"
+module: theme
+topic: index
+canonical: ../../../../Themes/docs/shared-components/00-index-Modules.md
 related:
-  - -q4-roadmap.md
-  - 00-index-1.md
-  - 00-index.md
-  - 00-overview.md
-  - 01-current-state.md
-  - 01-now.md
+  - "./00-index-1.md"
+  - "./00-index.md"
+  - "./00-overview.md"
+  - "./01-current-state.md"
+  - "./01-now.md"
+  - "./02-goals.md"
+  - "./02-next.md"
+  - "./03-later.md"
 ---
 
 See canonical documentation: ../../../../Themes/docs/shared-components/00-index-Modules.md

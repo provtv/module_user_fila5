@@ -1,23 +1,3 @@
----
-title: "Comandi Console - Modulo User"
-type: index
-tags: [console-commands, readme, user]
-created: 2026-07-20
-updated: 2026-07-20
-qmd: "Comandi Console - Modulo User index console-commands readme user user module documentation"
-issues:
-  - "https://github.com/laraxot/module_user_fila5/issues/23"
-discussions:
-  - "https://github.com/laraxot/module_user_fila5/discussions/24"
-related:
-  - assign-module-command.md
-  - change-password-command.md
-  - console-commands-philosophy-1-1.md
-  - console-commands-philosophy-1.md
-  - console-commands-philosophy-2.md
-  - console-commands-philosophy.md
----
-
 # Comandi Console - Modulo User
 
 ## Panoramica

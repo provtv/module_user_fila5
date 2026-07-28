@@ -1,13 +1,33 @@
+---
+title: "Implementazione Corretta delle Pagine Auth"
+type: concept
+tags: [auth, pages, implementation]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "auth-pages-implementation-1 implementazione corretta delle pagine auth"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./00-index-1.md"
+  - "./00-index.md"
+  - "./2fa-guide.md"
+  - "./2fa.md"
+  - "./accessor-delegation-pattern.md"
+  - "./actions-path-convention-1.md"
+  - "./actions-path-convention-2.md"
+  - "./actions-path-convention.md"
+---
+
 # Implementazione Corretta delle Pagine Auth
 
 ## Collegamenti correlati
-- [Documentazione centrale](../../../docs/README.md)
-- [Collegamenti documentazione](../../../docs/collegamenti-documentazione.md)
-- [README modulo User](./README.md)
-- [Convenzioni Path](./PATH_CONVENTIONS.md)
-- [Volt Errors](./VOLT_ERRORS.md)
-- [Volt Folio Logout](./VOLT_FOLIO_LOGOUT.md)
-- [Volt Logout Action](./VOLT_LOGOUT_ACTION.md)
+- [Documentazione centrale](../../../../docs/readme.md)
+- [Collegamenti documentazione](../../../../docs/collegamenti-documentazione.md)
+- [README modulo User](./readme.md)
+- [Convenzioni Path](./path-conventions-2.md)
+- [Volt Errors](./volt-errors-2.md)
+- [Volt Folio Logout](./volt-folio-logout-2.md)
+- [Volt Logout Action](./volt-logout-action-2.md)
 
 ## Introduzione
 

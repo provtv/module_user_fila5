@@ -3,126 +3,80 @@ title: "BaseUser Model in Laravel Modules"
 type: concept
 tags: [baseuser]
 created: 2026-07-14
-updated: 2026-07-20
+updated: 2026-07-14
 qmd: "baseuser baseuser model in laravel modules"
 issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
 discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
+  - "./00-index-1.md"
   - "./00-index.md"
-  - "./actions.md"
-  - "./permissions.md"
-  - "./passport-integration.md"
-  - "./socialite-microsoft-integration.md"
+  - "./2fa-guide.md"
+  - "./2fa.md"
+  - "./accessor-delegation-pattern.md"
+  - "./actions-path-convention-1.md"
+  - "./actions-path-convention-2.md"
+  - "./actions-path-convention.md"
 ---
 
 # BaseUser Model in Laravel Modules
 
 ## Overview
-`Modules\User\Models\BaseUser` (`app/Models/BaseUser.php`) is the abstract authenticatable
-model that provides identity, auth, team, permission, device, OAuth (Passport) and Socialite
-functionality for every user type in the system. `Modules\User\Models\User` (`app/Models/User.php`)
-is the concrete, non-abstract class actually used at runtime; it extends `BaseUser` and adds
-Single Table Inheritance (STI) child types via Parental's `HasChildren`.
+This document outlines the structure and usage of the `BaseUser` model within a Laravel module, serving as the foundation for user-related functionality.
 
-This reflects the code as of 2026-07-20 (`BaseUser.php`, 515 lines; `User.php`, 173 lines),
-not the generic scaffold previously documented here.
+## Key Principles
+1. **Inheritance**: `BaseUser` provides common attributes and methods for all user types, allowing for easy extension.
+2. **Modularity**: Designed to be reusable across projects without modification.
+3. **Customization**: Can be extended to include specific user types like admin or customer.
 
-## Key facts
+## Implementation Guidelines
+### 1. Model Structure
+- The `BaseUser` model includes essential fields like `id`, `name`, `email`, and authentication-related attributes.
+  ```php
+  namespace Modules\User\Models;
 
-- **Primary key**: UUID string (`HasUuids`, `$incrementing = false`, `$keyType = 'string'`), not
-  auto-increment int.
-- **Connection**: uses a dedicated `user` DB connection (`protected $connection = 'user'`).
-- **STI**: `$childColumn = 'type'`; `User::$childTypes` maps `master_admin`, `backoffice_user`,
-  `customer_user`, `system`, `technician` all to `User::class` (i.e. type differentiates data,
-  not PHP class, in the current setup).
-- **Interfaces implemented**: `FilamentUser`, `HasName`, `HasTenants` (Filament), `MustVerifyEmail`,
-  `OAuthenticatable` (Passport), `HasMedia` (Spatie Media Library), plus module contracts
-  `HasAuthentications` and `Xot\Contracts\UserContract`.
+  use Illuminate\Foundation\Auth\User as Authenticatable;
 
-## Traits composed on BaseUser (and why)
+  class BaseUser extends Authenticatable
+  {
+      protected $fillable = ['name', 'email', 'password'];
+      // Common methods and relationships
+  }
+  ```
 
-| Trait | Purpose |
-|---|---|
-| `HasApiTokens` (Passport) | OAuth2 personal access tokens |
-| `HasAuthenticationLogTrait` | Records login/logout events, exposes `latestAuthentication()` |
-| `HasChildren` (Parental) | STI support for `type` column |
-| `HasDevices` | Device/session tracking (see `Device`, `DeviceUser`, `DeviceProfile`) |
-| `HasModules` | Per-module role/permission helpers (`assignModule()`) |
-| `HasSocialite` | Social login glue (SSO providers, `SocialiteUser`) |
-| `HasSpatiePermission` + `HasTeams` | See "teams() vs membershipTeams()" below — combined with an explicit conflict-resolution `insteadof`/`as` |
-| `HasUuids` | UUID primary keys |
-| `HasXotFactory` | Factory resolution across modules |
-| `InteractsWithMedia` | Spatie Media Library |
-| `Notifiable` | Laravel notifications |
-| `Traits\HasTenants` (module-local) | Multi-tenant resolution, distinct from Filament's `HasTenants` interface |
-| `XotTraits\RelationX` | Cross-module relation helpers (`belongsToManyX`, etc.) |
+### 2. Extending BaseUser
+- Create specific user models by extending `BaseUser` to add custom fields or logic.
+  ```php
+  namespace Modules\User\Models;
 
-## `teams()` vs `membershipTeams()` — the non-obvious part
+  class User extends BaseUser
+  {
+      protected $fillable = ['name', 'email', 'password', 'role'];
+      // Custom logic for this user type
+  }
+  ```
 
-Both `HasSpatiePermission` and `HasTeams` (module trait, `app/Models/Traits/HasTeams.php`)
-define a `teams()` method, and they mean different things:
+### 3. Single Table Inheritance
+- Use single table inheritance to manage different user types within the same database table, using a `type` column to differentiate.
 
-- `HasSpatiePermission::teams()` — Spatie Permission's "teams" feature (permission scoping by team).
-- `HasTeams::teams()` — Laraxot/Jetstream-style team **membership** pivot
-  (`belongsToManyX($teamClass)` via `RelationX`).
+## Common Issues and Fixes
+- **Inheritance Conflicts**: Ensure that extending models do not redefine essential `BaseUser` methods unless intentional.
+- **Attribute Overlap**: Avoid duplicating attributes in child models that are already defined in `BaseUser`.
 
-`BaseUser` resolves the collision explicitly:
+## Documentation and Updates
+- Document any custom extensions or modifications to `BaseUser` in the relevant module's documentation folder.
+- Update this document if significant changes are made to the `BaseUser` structure or functionality.
 
-```php
-use HasSpatiePermission, HasTeams {
-    HasSpatiePermission::teams insteadof HasTeams;
-    HasTeams::teams as membershipTeams;
-}
-```
-
-So on any `BaseUser`/`User` instance:
-- `$user->teams()` / `$user->teams` → Spatie's permission-teams relation (guard/permission scoping).
-- `$user->membershipTeams()` / `$user->membershipTeams` → actual team membership (Jetstream-style),
-  used by `treeSons()`, `allTeams()`, `attach()/detach()`.
-
-This split is verified working via a runtime PSR-4 gate check. Do not "clean up" by renaming one
-of them without checking every caller — `HasTeams::allTeams()` merges `ownedTeams` with
-`membershipTeams`, and Filament resources/relation managers may depend on either name.
-
-## Key relations and behavior
-
-- `profile(): HasOne` — resolves the profile class dynamically via `XotData::make()->getProfileClass()`,
-  with a fallback to `Modules\User\Models\Profile`, and a final no-op fallback relation
-  (`whereRaw('1=0')`) if nothing resolves — avoids hard-coupling to a single Profile class across
-  projects that override it.
-- `clients(): MorphMany` — OAuth2 clients owned by the user (`OauthClient`, polymorphic `owner`).
-- `notifications(): MorphMany` — module-local `Notification` model (not the default Laravel
-  `DatabaseNotification` table).
-- `latestAuthentication(): MorphOne` — latest `AuthenticationLog` row, `latestOfMany()`.
-- `findForPassport()` / `validateForPassportPasswordGrant()` — Passport password-grant support.
-
-## Password and name accessors (non-obvious)
-
-- `setPasswordAttribute()`: if the incoming value is shorter than 32 chars it is hashed via
-  `Hash::make()`; if ≥32 chars it is stored as-is (already-hashed values, e.g. from imports/seeders,
-  pass through unchanged). Empty values unset the attribute rather than overwriting the stored hash.
-- `getNameAttribute()`: if `name` is not set, derives a unique slug from the email local-part
-  (`email-before-@-1`, `-2`, ...) and persists it via `update()` — except during testing
-  (`app()->environment('testing')` or `APP_ENV=testing`), where it only sets the in-memory attribute
-  to avoid DB writes during unit tests.
-- `getFilamentName()` / `getFullNameAttribute()`: both build a display name from
-  `name`/`first_name`/`last_name`, falling back to `email`, then the literal string `'User'`.
-
-## Panel access
-
-`canAccessPanel(Panel $panel)`: any non-`admin` panel ID is treated as a role name and access is
-granted only if `$this->hasRole($panelId)`. The `admin` panel currently allows all authenticated
-users (`return true`), with a commented-out email-domain check left in place as a marked TODO/example
-in the source — flag before relying on it as an authorization boundary.
-
-## Extending BaseUser
-
-`User extends BaseUser` is the only concrete subclass in this module; project-level overrides should
-extend `User` (or `BaseUser` directly if bypassing STI), not fork `BaseUser`.
-
-## Related Documentation
-- [Actions conventions](./actions.md)
-- [Permissions](./permissions.md)
-- [Passport integration](./passport-integration.md)
-- [Socialite + Microsoft integration](./socialite-microsoft-integration.md)
-- [Module index](./00-index.md)
+## Links to Related Documentation
+- [User Module Index](./index.md)
+- [Authentication Pages Implementation](./auth-pages-implementation.md)
+- [Profile Management](./profile-management-2.md)
+- [Routing Best Practices](./routing-best-practices-2.md)
+- [Session Management](./session-management-2.md)
+- [[HasTeamsContract]]
+- [[UserContract]]
+- [[Team]]
+- [[Role]]
+- [[Tenant]]
+- [[Device]]
+- [[SocialiteUser]]
+- [[AuthenticationLog]]

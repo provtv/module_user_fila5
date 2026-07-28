@@ -1,21 +1,13 @@
 ---
 title: "Socialite Configuration"
 type: concept
-tags: [admin, configuration, socialite, user]
+tags: [socialite, configuration]
 created: 2026-07-14
-updated: 2026-07-20
-qmd: "Socialite Configuration concept admin configuration socialite user user module documentation"
-issues:
-  - "https://github.com/laraxot/module_user_fila5/issues/23"
-discussions:
-  - "https://github.com/laraxot/module_user_fila5/discussions/24"
+updated: 2026-07-14
+qmd: "socialite-configuration socialite configuration"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
-  - ../00-index-1.md
-  - ../00-index.md
-  - ../2025-12-01-teams-migration-laraxot-compliance.deprecated.md
-  - ../2fa-guide.md
-  - ../2fa.md
-  - ../CHANGELOG.md
 ---
 
 ---

@@ -437,7 +437,7 @@ abstract class TestCase extends XotBaseTestCase
         ], $overrides);
 
         if (Schema::connection('user')->hasColumn('oauth_clients', 'owner_id')) {
-            $payload['owner_id'] = $payload['owner_id'] ?? $payload['user_id'] ?? null;
+            $payload['owner_id'] = $payload['owner_id'] ?? $payload['user_id'];
             $payload['owner_type'] = $payload['owner_type'] ?? null;
         }
 

@@ -1,3 +1,23 @@
+---
+title: "Conversione Livewire Auth/Login a Filament LoginWidget"
+type: concept
+tags: [login, widget, conversion]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "login-widget-conversion-1 conversione livewire auth/login a filament loginwidget"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
+related:
+  - "./00-index-1.md"
+  - "./00-index.md"
+  - "./2fa-guide.md"
+  - "./2fa.md"
+  - "./accessor-delegation-pattern.md"
+  - "./actions-path-convention-1.md"
+  - "./actions-path-convention-2.md"
+  - "./actions-path-convention.md"
+---
+
 # Conversione Livewire Auth/Login a Filament LoginWidget
 
 ## Analisi del componente Livewire
@@ -89,6 +109,6 @@ class LoginWidget extends XotBaseWidget
 - Alcune funzionalità (es. `render()`) non sono necessarie nel widget.
 
 ## Collegamenti
-- [WIDGETS_STRUCTURE.md](../WIDGETS_STRUCTURE.md) — Regole di struttura per i widget Filament nel modulo User.
+- [WIDGETS_STRUCTURE.md](../widgets-structure-2.md) — Regole di struttura per i widget Filament nel modulo User.
 - [filament_best_practices.md](filament_best_practices.md) — Best practices per risorse e widget Filament.
-- [login-improvements.md](../../../Themes/TwentyOne/docs/login-improvements.md) — Analisi e miglioramenti della pagina di login nel tema TwentyOne.
+- [login-improvements.md](../../../themes/twentyone/docs/login-improvements.md) — Analisi e miglioramenti della pagina di login nel tema TwentyOne.

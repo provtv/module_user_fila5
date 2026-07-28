@@ -6,7 +6,7 @@ namespace Modules\User\Tests\Unit\Actions\Socialite\Utils;
 
 use Laravel\Socialite\Contracts\User as SocialiteUser;
 use Mockery\MockInterface;
-use Modules\User\Adapters\Socialite\UserNameFieldsResolver;
+use Modules\User\Actions\Socialite\Utils\UserNameFieldsResolver;
 use Modules\User\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 

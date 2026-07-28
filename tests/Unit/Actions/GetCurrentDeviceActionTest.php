@@ -2,12 +2,14 @@
 
 declare(strict_types=1);
 
+use Jenssegers\Agent\Agent;
 use Modules\User\Actions\GetCurrentDeviceAction;
 use Modules\User\Models\Device;
 use Modules\User\Tests\Fakes\FakeAgent;
+use Modules\User\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
-uses(Modules\User\Tests\TestCase::class);
+uses(TestCase::class);
 
 /**
  * @param array<string, mixed> $expected
@@ -21,7 +23,7 @@ function assertDeviceMatches(Device $device, array $expected): void
 
 function bindFakeAgent(FakeAgent $agent): void
 {
-    app()->instance(Jenssegers\Agent\Agent::class, $agent);
+    app()->instance(Agent::class, $agent);
 }
 
 it('creates device with valid agent data', function (): void {

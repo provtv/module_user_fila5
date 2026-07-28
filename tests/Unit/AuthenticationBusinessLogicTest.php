@@ -3,9 +3,10 @@
 declare(strict_types=1);
 
 use Carbon\Carbon;
+use Modules\User\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
-uses(Modules\User\Tests\TestCase::class);
+uses(TestCase::class);
 
 function authBizSuspiciousLogin(): bool
 {

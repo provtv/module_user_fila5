@@ -1,22 +1,3 @@
----
-title: "User Module - User Research"
-type: index
-tags: [product, readme, user, user-research]
-created: 2026-07-20
-updated: 2026-07-20
-qmd: "User Module - User Research index product readme user user-research user module documentation"
-issues:
-  - "https://github.com/laraxot/module_user_fila5/issues/23"
-discussions:
-  - "https://github.com/laraxot/module_user_fila5/discussions/24"
-related:
-  - ../../README.md
-  - ../../architecture.md
-  - ../../best-practices.md
-  - ../../INDEX.md
-  - ../../activitylog.md
----
-
 # User Module - User Research
 
 ## Research Overview

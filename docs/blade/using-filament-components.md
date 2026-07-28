@@ -1,21 +1,13 @@
 ---
 title: "Utilizzo dei componenti Blade di Filament"
 type: concept
-tags: [blade, components, filament, user, using]
+tags: [using, filament, components]
 created: 2026-07-14
-updated: 2026-07-20
-qmd: "Utilizzo dei componenti Blade di Filament concept blade components filament user using user module documentation"
-issues:
-  - "https://github.com/laraxot/module_user_fila5/issues/23"
-discussions:
-  - "https://github.com/laraxot/module_user_fila5/discussions/24"
+updated: 2026-07-14
+qmd: "using-filament-components utilizzo dei componenti blade di filament"
+issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
+discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
-  - ../00-index-1.md
-  - ../00-index.md
-  - ../2025-12-01-teams-migration-laraxot-compliance.deprecated.md
-  - ../2fa-guide.md
-  - ../2fa.md
-  - ../CHANGELOG.md
 ---
 
 # Utilizzo dei componenti Blade di Filament

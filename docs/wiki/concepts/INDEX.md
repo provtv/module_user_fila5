@@ -1,26 +1,23 @@
 ---
 title: "concepts index — User"
 type: index
-tags: [concepts, index, user, wiki]
+tags: [concepts, User]
 created: 2026-05-11
-updated: 2026-07-20
-qmd: "concepts index — User index concepts index user wiki user module documentation"
-issues:
-  - "https://github.com/laraxot/module_user_fila5/issues/23"
-discussions:
-  - "https://github.com/laraxot/module_user_fila5/discussions/24"
-related:
-  - ai-harness-user-discipline.md
-  - baseuser-hierarchy.md
-  - code-redundancy-user.md
-  - context-mode-user-discipline.md
-  - context-overflow-prevention.md
-  - filament-langserviceprovider-governance.md
+updated: 2026-07-27
 ---
 
 # concepts Index — User
 
 Concetti specifici del modulo User. Carica on-demand via `qmd search` o consulta il [trigger map root](/docs/wiki/rules/00-TRIGGER_MAP.md).
+
+## Runtime config & RBAC (2026-07-27)
+
+- [bugfix-permission-table-names-singular](../../bugfix-permission-table-names-singular.md) — **`permission.php` `table_names` immutabili**; schema segue config
+- [spatie-permission-table-names](spatie-permission-table-names.md) — contratto pivot Spatie
+- [spatie-permission-migration-no-table-name](spatie-permission-migration-no-table-name.md) — migrazioni senza nome tabella hardcoded
+- [profile-id-bigint-uuid-fix](profile-id-bigint-uuid-fix.md) — profiles `id` bigint + `uuid`
+- [profile-migration-uuid-contract](profile-migration-uuid-contract.md) — owner migrazione profiles
+- [migration-naming-religion-user](migration-naming-religion-user.md) — 1 model = 1 `create_*`
 
 ## Filament auth FO
 
