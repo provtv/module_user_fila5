@@ -1,0 +1,7 @@
+
+# LFS image placeholders (corrupted LFS objects removed 2026-07-28)
+docs/img/*.jpg
+docs/img/*.png
+docs/screenshots/*.png
+resources/img/*.png
+resources/favicon.png
