@@ -190,11 +190,7 @@ trait HasTeams
      */
     public function allTeamUsers(): Collection // @phpstan-ignore return.type
     {/** @var Collection<int, mixed> $teams */
-<<<<<<< HEAD
-                        $teams = $this->membershipTeams; // @phpstan-ignore property.nonObject
-=======
             $teams = $this->membershipTeams; // @phpstan-ignore property.nonObject
->>>>>>> ddd198be (.)
         /** @var Collection<int, User> $result */
         $result = $teams->flatMap( // @phpstan-ignore argument.type
             /** @param mixed $team @return array<int,User>|Collection<int,User> */

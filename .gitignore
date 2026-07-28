@@ -6,3 +6,7 @@ docs/screenshots/*.png
 resources/img/*.png
 resources/favicon.png
 phpstan*
+
+# MODULE ROOT FORBIDDEN DIRS
+_docs
+workbench
