@@ -135,6 +135,63 @@ This maintains forward-only git discipline (no reset/revert) and allows the code
 
 ---
 
-**Status:** Awaiting manual intervention on image files  
-**Last updated:** 2026-07-28  
-**Next:** Execute Option A cleanup or confirm Option B (infrastructure fix)
+## Resolution Attempt A — Executed Cleanup Commit
+
+**Commit:** bdf5c64 `fix(User): remove LFS-tracked images blocking push to remote`
+
+Removed all 11 LFS-tracked images from git tracking. Files preserved locally in .gitignore.
+
+**Result:** ❌ Push still failed with LFS error  
+**Root cause:** Earlier commit 4547061 in history contains LFS pointers unknown to provtv server
+
+```
+remote: error: GH008: Your push referenced at least 11 unknown Git LFS objects:
+  e400cd031a594c8b3ea19d7711c0394f1315eeabb182f13351602aaf935cde53
+  d82a070ef9ee39f25805bce168450feaeabef237ff9b9177afdb77ed88860b26
+  ... (9 more)
+```
+
+## Why Forward-Only Fixes Are Blocked
+
+When pushing commits 4547061..bdf5c64, server pre-receive hook validates ALL commits in the range:
+
+1. ✅ bdf5c64 — removes LFS pointers (clean)
+2. ❌ 4547061 — **contains LFS pointers for objects unknown to server** ← blocks push
+
+**Why standard forward-only approaches fail:**
+- `git push provtv dev` — server rejects at pre-receive
+- `git push --force-with-lease` — server still rejects (server-side enforcement)
+- `git pull laraxot` — histories are unrelated (disjoint)
+- `git rebase -i` to remove commit 4547061 — violates forward-only
+- `git filter-branch` — violates forward-only
+
+## Infrastructure Blocker — Escalation Required
+
+**Problem:** Git LFS object storage on provtv is either:
+1. Not initialized/configured for this repository
+2. Not synced from laraxot (source of truth)
+3. Missing the 11 specific OIDs from commit 4547061
+
+**Evidence:**
+```
+Commits to push: 5 total
+  bdf5c64 fix(User): remove LFS-tracked images blocking push to remote
+  9c6859c refactor: streamline database migration files
+  8744ed3 .
+  53b3b60 fix: resolve migration conflicts
+  4547061 Remove unused files... [CONTAINS LFS POINTERS]
+          └─ blocks push due to 11 missing OIDs
+```
+
+**Action Required:** Contact repository administrator to:
+1. Check LFS storage status on provtv fork
+2. Sync LFS objects from laraxot (if source) OR initialize LFS
+3. Manually import the 11 OIDs or authorize an override
+
+**Meanwhile:** Proceed with local PHPStan L10 validation to unblock code quality gates
+
+---
+
+**Status:** ⛔ BLOCKED_ON_INFRASTRUCTURE  
+**Last updated:** 2026-07-28T14:35Z  
+**Fallback:** Run PHPStan L10 locally while waiting for remote LFS fix
