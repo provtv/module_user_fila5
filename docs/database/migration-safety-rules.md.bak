@@ -1,0 +1,18 @@
+---
+module: theme
+topic: migration-safety-rules
+<<<<<<< HEAD
+canonical: ../../../../Themes/docs/shared-components/MIGRATION_SAFETY_RULES.md
+---
+
+See canonical documentation: ../../../../Themes/docs/shared-components/MIGRATION_SAFETY_RULES.md
+=======
+canonical: ../../../../Themes/docs/shared-components/migration-safety-rules-1.md
+related:
+  - "./migration-safety-rules-1.md"
+  - "./profile-uuid-philosophy-1.md"
+  - "./profile-uuid-philosophy.md"
+---
+
+See canonical documentation: ../../../../Themes/docs/shared-components/migration-safety-rules-1.md
+>>>>>>> origin/dev

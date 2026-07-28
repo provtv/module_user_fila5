@@ -1,0 +1,35 @@
+---
+title: "Disciplina agenti per massimizzare la confidenza"
+type: rule
+<<<<<<< HEAD
+status: approved
+tags: [agent, confidence, verification]
+created: "2026-05-26"
+updated: "2026-05-26"
+related:
+  - "../../Xot/docs/wiki/concepts/agent-confidence-discipline.md"
+issue: "https://github.com/provtv/base_ptv_fila5_mono/issues/152"
+=======
+tags: [agent, confidence, discipline, user]
+created: 2026-05-26
+updated: 2026-07-20
+qmd: "Disciplina agenti per massimizzare la confidenza rule agent confidence discipline user user module documentation"
+issues:
+  - "https://github.com/laraxot/module_user_fila5/issues/23"
+discussions:
+  - "https://github.com/laraxot/module_user_fila5/discussions/24"
+related:
+  - ./00-index-1.md
+  - ./00-index.md
+  - ./2025-12-01-teams-migration-laraxot-compliance.deprecated.md
+  - ./2fa-guide.md
+  - ./2fa.md
+  - ./CHANGELOG.md
+>>>>>>> origin/dev
+---
+
+# Disciplina agenti per massimizzare la confidenza
+
+Regola canonica: [../../Xot/docs/wiki/concepts/agent-confidence-discipline.md](../../Xot/docs/wiki/concepts/agent-confidence-discipline.md).
+
+Sintesi: verificare prima di affermare; riprodurre prima di correggere; documentare prove, dubbi e rischio residuo; rispondere in italiano sintetico.
