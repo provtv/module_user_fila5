@@ -8,3 +8,33 @@ See canonical documentation: ../../../Themes/docs/shared-components/.gitignore-M
 archive
 legacy
 agentdb.rvf
+
+# Version-suffixed markdown (AI artifacts)
+*-[0-9]*.md
+password-translation-completion-2025.md
+baseuser-refactoring-completed-2025-10-15.md
+phpstan-fixes-2025-10-01.md
+quality-status-2025-11.md
+login-widget-translation-audit-2025.md
+git-conflicts-resolution-2025-01-27.md
+translation-syntax-fixes-2025.md
+navigation-translations-fixes-january-2026.md
+phpstan-dry-kiss-improvements-2025-10-17.md
+bugfix-phpmd-cleanup-2026-07.md
+ponytail-audit-2026-07-02.md
+copilot-redundancy-audit-2026-05-25.md
+phpstan-l10-analysis-2026-07-28.md
+git-push-lfs-issue-2026-07-28.md
+translation-city-field-refactor-2025-08-08.md
+phpstan-fixes-2025.md
+updates-2025.md
+dry-kiss-analysis-2025-10-15.md
+roadmap-2025.md
+status-blockers-2026-07-28.md
+phpstan-fixes-gennaio-2025.md
+redundancy-audit-2026-05-21.md
+redundancy-fixes-january-2026.md
+
+# No numbered .md duplicates (rule: docs/wiki/rules/no-numbered-filenames.md)
+*-[0-9].md
+*-[0-9][0-9].md
