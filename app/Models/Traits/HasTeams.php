@@ -487,16 +487,16 @@ trait HasTeams
      * Laraxot team membership (Jetstream-style pivot).
      * Su {@see BaseUser} esposto come {@see membershipTeams()} — {@see HasRoles::teams()} resta Spatie.
      *
-     * @return BelongsToMany<Model&TeamContract, Model, Pivot, 'pivot'>
+     * @return BelongsToMany<Model&TeamContract, Model&static, Pivot, 'pivot'>
      *
-     * @phpstan-return BelongsToMany<Model&TeamContract, Model, Pivot, 'pivot'>
+     * @phpstan-return BelongsToMany<Model&TeamContract, Model&static, Pivot, 'pivot'>
      */
     public function teams(): BelongsToMany
     {
         $xot = XotData::make();
         $teamClass = $xot->getTeamClass();
 
-        /** @var BelongsToMany<Model&TeamContract, Model, Pivot, 'pivot'> $relation */
+        /** @var BelongsToMany<Model&TeamContract, Model&static, Pivot, 'pivot'> $relation */
         $relation = $this->belongsToManyX($teamClass);
 
         return $relation;
