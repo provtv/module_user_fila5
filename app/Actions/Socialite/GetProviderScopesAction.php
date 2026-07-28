@@ -32,6 +32,9 @@ class GetProviderScopesAction
             return [];
         }
 
-        return array_values(array_map(static fn (mixed $scope): string => (string) $scope, $scopes));
+        return array_values(array_map(
+            static fn (mixed $scope): string => is_string($scope) ? $scope : (string) $scope,
+            $scopes
+        ));
     }
 }

@@ -73,7 +73,7 @@ class ChangeTypeCommand extends Command
             } elseif ($label instanceof Htmlable) {
                 $typeLabel = $label->toHtml();
             } else {
-                $typeLabel = (string) $label;
+                $typeLabel = is_string($label) ? $label : (string) $label;
             }
         }
 
@@ -91,9 +91,10 @@ class ChangeTypeCommand extends Command
             ) {
                 $value = app(SafeObjectCastAction::class)
                     ->getStringProperty($item, 'value', '');
-                $options[$value] = (string) $item->getLabel();
+                $label = $item->getLabel();
+                $options[$value] = is_string($label) ? $label : (string) $label;
             } else {
-                $options[(string) $key] = 'Unknown';
+                $options[is_string($key) ? $key : (string) $key] = 'Unknown';
             }
         }
 

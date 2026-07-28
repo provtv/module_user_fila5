@@ -27,7 +27,9 @@ class GetUserTeamsOptionAction
                 continue;
             }
 
-            $options[(string) $team->getKey()] = (string) $team->getAttribute('name');
+            $key = $team->getKey();
+            $name = $team->getAttribute('name');
+            $options[is_string($key) ? $key : (string) $key] = is_string($name) ? $name : (string) $name;
         }
 
         return $options;

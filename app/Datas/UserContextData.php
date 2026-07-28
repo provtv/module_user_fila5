@@ -25,17 +25,24 @@ class UserContextData extends Data
 
     public static function fromUserModel(object $userModel): self
     {
-        $userId = property_exists($userModel, 'id') ? (string) $userModel->id : null;
+        $rawId = property_exists($userModel, 'id') ? $userModel->id : null;
+        $userId = $rawId !== null ? (string) $rawId : null;
 
         $roles = array_values(array_map(
-            static fn (mixed $role): string => (string) $role,
+            static fn (mixed $role): string => is_string($role) ? $role : (string) $role,
             is_array($userModel->roles ?? null) ? $userModel->roles : [],
         ));
 
+        $rawEmail = $userModel->email ?? '';
+        $email = is_string($rawEmail) ? $rawEmail : (string) $rawEmail;
+
+        $rawRole = $userModel->role ?? '';
+        $isAdmin = ! empty($rawRole) && 'admin' === strtolower(is_string($rawRole) ? $rawRole : (string) $rawRole);
+
         return new self(
             userId: $userId,
-            email: (string) ($userModel->email ?? ''),
-            isAdministrator: ! empty($userModel->role) && 'admin' === strtolower((string) $userModel->role),
+            email: $email,
+            isAdministrator: $isAdmin,
             roles: $roles,
         );
     }

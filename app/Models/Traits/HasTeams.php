@@ -368,7 +368,7 @@ trait HasTeams
             $permissionsCollection = $role->permissions;
             /** @var list<string> $rolePermissionNames */
             $rolePermissionNames = array_values(array_map(
-                static fn (mixed $name): string => (string) $name,
+                static fn (mixed $name): string => is_string($name) ? $name : (string) $name,
                 $permissionsCollection->pluck('name')->all(),
             ));
 

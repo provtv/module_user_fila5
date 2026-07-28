@@ -225,9 +225,10 @@ class UserMassSeeder extends Seeder
         }
 
         // Assegna ruoli casuali
-        /** @var Collection<int, \Spatie\Permission\Models\Role> $roles */
+        /** @var Collection<int, Role> $roles */
         $roles = Role::all();
         foreach ($users as $user) {
+            /** @var Role $randomRole */
             $randomRole = $roles->random();
             $user->assignRole($randomRole);
         }
