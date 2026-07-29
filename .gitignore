@@ -11,3 +11,4 @@ phpstan*
 _docs
 workbench
 docs/**/*-[0-9].md
+resources/img/screenshots
