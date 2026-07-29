@@ -1,26 +1,3 @@
-<<<<<<< HEAD
-=======
----
-title: "Task 001: Implement User Management and Authentication System"
-type: concept
-tags: [001, user, management, system]
-created: 2026-07-14
-updated: 2026-07-14
-qmd: "001-user-management-system task 001: implement user management and authentication system"
-issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
-discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
-related:
-  - "./audit-dipendenze-user.md"
-  - "./auditipendenze-user.md"
-  - "./aumentare-copertura-test-user.md"
-  - "./fix-doc-merge-markers.md"
-  - "./fixoc-merge-kers.md"
-  - "./query-optimization-user.md"
-  - "./spostamento-widget-violante.md"
-  - "./tasks-index.md"
----
-
->>>>>>> origin/dev
 # Task 001: Implement User Management and Authentication System
 
 ## Description

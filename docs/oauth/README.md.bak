@@ -1,26 +1,3 @@
-<<<<<<< HEAD
-=======
----
-title: "OAuth Documentation Index"
-type: index
-tags: [oauth, readme, user]
-created: 2026-07-20
-updated: 2026-07-20
-qmd: "OAuth Documentation Index index oauth readme user user module documentation"
-issues:
-  - "https://github.com/laraxot/module_user_fila5/issues/23"
-discussions:
-  - "https://github.com/laraxot/module_user_fila5/discussions/24"
-related:
-  - github.md
-  - oauth-architecture.md
-  - ../00-index-1.md
-  - ../00-index.md
-  - ../2025-12-01-teams-migration-laraxot-compliance.deprecated.md
-  - ../2fa-guide.md
----
-
->>>>>>> origin/dev
 # OAuth Documentation Index
 
 > **Module**: User  

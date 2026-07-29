@@ -7,18 +7,6 @@ updated: 2026-06-10
 qmd: notifications runtime user databasenotification NotificationSchema unread
 issues: []
 discussions: []
-<<<<<<< HEAD
-=======
-related:
-  - "./ai-harness-user-discipline.md"
-  - "./baseuser-hierarchy.md"
-  - "./code-redundancy-user.md"
-  - "./context-mode-user-discipline.md"
-  - "./context-overflow-prevention.md"
-  - "./filament-langserviceprovider-governance.md"
-  - "./filament-widget-linear-crud-model-create.md"
-  - "./filament-widget-resource-form-delegation.md"
->>>>>>> origin/dev
 ---
 
 # notifications — modello runtime User

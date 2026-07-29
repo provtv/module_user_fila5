@@ -1,30 +1,12 @@
 ---
 title: "Memories Index"
 type: index
-<<<<<<< HEAD
 created: 2026-05-11
 updated: 2026-05-11
 tags: [memories, index, on-demand]
 related:
   - ../rules/00-TRIGGER_MAP.md
   - ../rules/on-demand-pattern.md
-=======
-tags: [index, memories, user, wiki]
-created: 2026-05-11
-updated: 2026-07-20
-qmd: "Memories Index index index memories user wiki user module documentation"
-issues:
-  - "https://github.com/laraxot/module_user_fila5/issues/23"
-discussions:
-  - "https://github.com/laraxot/module_user_fila5/discussions/24"
-related:
-  - phpstan-belongstomany-covariance-.deprecated.md
-  - phpstan-belongstomany-covariance-2026-07-06.deprecated.md
-  - phpstan-belongstomany-covariance.md
-  - ../AGENTS.md
-  - ../README.md
-  - ../SCHEMA.md
->>>>>>> origin/dev
 ---
 
 # Memories Index
@@ -60,4 +42,3 @@ Le Memories progettuali vivono qui, nel wiki del Module **User**, e vengono cari
 2. Aggiungi la voce in `../rules/00-TRIGGER_MAP.md`
 3. Aggiorna questo indice se la Memories e' ricorrente
 4. Committa: `docs: add memories <nome>`
-

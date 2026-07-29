@@ -1,27 +1,7 @@
 ---
-<<<<<<< HEAD
 module: theme
 topic: filament-namespace
 canonical: ../../../../Themes/docs/shared-components/filament-namespace-rules.md
-=======
-title: "Filament Namespace"
-type: concept
-tags: [best-practices, filament, namespace, user]
-created: 2026-07-20
-updated: 2026-07-20
-qmd: "Filament Namespace concept best-practices filament namespace user user module documentation"
-issues:
-  - "https://github.com/laraxot/module_user_fila5/issues/23"
-discussions:
-  - "https://github.com/laraxot/module_user_fila5/discussions/24"
-related:
-  - auth-components-best-practices.md
-  - auth-widget-rules.md
-  - auth-widget.md
-  - case-sensitivity-rules.md
-  - case-sensitivity.md
-  - component-verification-rules.md
->>>>>>> origin/dev
 ---
 
 See canonical documentation: ../../../../Themes/docs/shared-components/filament-namespace-rules.md

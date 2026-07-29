@@ -2,18 +2,12 @@
 type: overview
 module: User
 sources:
-<<<<<<< HEAD
   - ../../../docs/models.md
   - ../../../docs/permissions.md
   - ../../../docs/architecture.md
   - ../../../docs/structure.md
 confidence: high
 updated: 2026-04-15
-=======
-confidence: high
-updated: 2026-04-15
-related:
->>>>>>> origin/dev
 ---
 
 # User Module — Overview

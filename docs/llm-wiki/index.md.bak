@@ -1,26 +1,3 @@
-<<<<<<< HEAD
-=======
----
-title: "User Module Wiki Index"
-type: concept
-tags: [index, llm-wiki, user]
-created: 2026-07-14
-updated: 2026-07-20
-qmd: "User Module Wiki Index concept index llm-wiki user user module documentation"
-issues:
-  - "https://github.com/laraxot/module_user_fila5/issues/23"
-discussions:
-  - "https://github.com/laraxot/module_user_fila5/discussions/24"
-related:
-  - AGENTS.md
-  - agents.md
-  - log.md
-  - ../00-index-1.md
-  - ../00-index.md
-  - ../2025-12-01-teams-migration-laraxot-compliance.deprecated.md
----
-
->>>>>>> origin/dev
 # User Module Wiki Index
 
 > **Module**: User

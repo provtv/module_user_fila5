@@ -1,30 +1,12 @@
 ---
 title: "Rules Index"
 type: index
-<<<<<<< HEAD
 created: 2026-05-11
 updated: 2026-07-08
 tags: [rules, index, on-demand]
 related:
   - ../rules/00-TRIGGER_MAP.md
   - ../rules/on-demand-pattern.md
-=======
-tags: [index, rules, user, wiki]
-created: 2026-05-11
-updated: 2026-07-20
-qmd: "Rules Index index index rules user wiki user module documentation"
-issues:
-  - "https://github.com/laraxot/module_user_fila5/issues/23"
-discussions:
-  - "https://github.com/laraxot/module_user_fila5/discussions/24"
-related:
-  - agent-confidence-protocol.md
-  - can-comment-retired-wrong-placement.md
-  - frontend-stack-canonical.md
-  - header-auth-flow.md
-  - header-design-colors.md
-  - module-commit-push-after-change.md
->>>>>>> origin/dev
 ---
 
 # Rules Index
@@ -66,4 +48,3 @@ Le Rules progettuali vivono qui, nel wiki del Module **User**, e vengono caricat
 2. Aggiungi la voce in `../rules/00-TRIGGER_MAP.md`
 3. Aggiorna questo indice se la Rules e' ricorrente
 4. Committa: `docs: add rules <nome>`
-

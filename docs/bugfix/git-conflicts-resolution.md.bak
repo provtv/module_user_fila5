@@ -1,26 +1,3 @@
-<<<<<<< HEAD
-=======
----
-title: "Git Conflicts Resolution - 16 Dicembre 2025"
-type: concept
-tags: [bugfix, conflicts, git, resolution, user]
-created: 2026-07-14
-updated: 2026-07-20
-qmd: "Git Conflicts Resolution - 16 Dicembre 2025 concept bugfix conflicts git resolution user user module documentation"
-issues:
-  - "https://github.com/laraxot/module_user_fila5/issues/23"
-discussions:
-  - "https://github.com/laraxot/module_user_fila5/discussions/24"
-related:
-  - deviceuser-hasxotfactory-fix.md
-  - deviceuser-hasxotfactory.md
-  - gits-resolution.md
-  - multiple-bugs-resolution.md
-  - ../00-index-1.md
-  - ../00-index.md
----
-
->>>>>>> origin/dev
 # Git Conflicts Resolution - 16 Dicembre 2025
 
 **Data Fix**: 16 Dicembre 2025

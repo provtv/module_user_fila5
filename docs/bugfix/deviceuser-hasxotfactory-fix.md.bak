@@ -1,26 +1,3 @@
-<<<<<<< HEAD
-=======
----
-title: "Bugfix: DeviceUser e HasXotFactory"
-type: concept
-tags: [bugfix, deviceuser, fix, hasxotfactory, user]
-created: 2026-07-14
-updated: 2026-07-20
-qmd: "Bugfix: DeviceUser e HasXotFactory concept bugfix deviceuser fix hasxotfactory user user module documentation"
-issues:
-  - "https://github.com/laraxot/module_user_fila5/issues/23"
-discussions:
-  - "https://github.com/laraxot/module_user_fila5/discussions/24"
-related:
-  - deviceuser-hasxotfactory.md
-  - git-conflicts-resolution.md
-  - gits-resolution.md
-  - multiple-bugs-resolution.md
-  - ../00-index-1.md
-  - ../00-index.md
----
-
->>>>>>> origin/dev
 # Bugfix: DeviceUser e HasXotFactory
 
 ## Contesto
@@ -113,8 +90,3 @@ php artisan tinker
 **Stato**: ✅ RISOLTO  
 **Modulo**: User  
 **File Modificati**: `Modules/User/app/Models/BasePivot.php`
-
-
-
-
-

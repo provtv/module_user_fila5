@@ -1,26 +1,3 @@
-<<<<<<< HEAD
-=======
----
-title: "User Module - Architecture Documentation"
-type: index
-tags: [architecture, readme, user]
-created: 2026-07-20
-updated: 2026-07-20
-qmd: "User Module - Architecture Documentation index architecture readme user user module documentation"
-issues:
-  - "https://github.com/laraxot/module_user_fila5/issues/23"
-discussions:
-  - "https://github.com/laraxot/module_user_fila5/discussions/24"
-related:
-  - architecture-rules.md
-  - architecture.md
-  - auth-blade-structure.md
-  - component-registration.md
-  - readme.md
-  - structure.md
----
-
->>>>>>> origin/dev
 # User Module - Architecture Documentation
 
 Architettura tecnica del modulo User, inclusi pattern, componenti e integrazioni.

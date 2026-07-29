@@ -1,26 +1,3 @@
-<<<<<<< HEAD
-=======
----
-title: "Task: Audit Completo Dipendenze User"
-type: concept
-tags: [audit, dipendenze, user]
-created: 2026-07-14
-updated: 2026-07-14
-qmd: "audit-dipendenze-user task: audit completo dipendenze user"
-issues: ["https://github.com/provtv/base_ptv_fila5/issues/124"]
-discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
-related:
-  - "./001-user-management-system.md"
-  - "./auditipendenze-user.md"
-  - "./aumentare-copertura-test-user.md"
-  - "./fix-doc-merge-markers.md"
-  - "./fixoc-merge-kers.md"
-  - "./query-optimization-user.md"
-  - "./spostamento-widget-violante.md"
-  - "./tasks-index.md"
----
-
->>>>>>> origin/dev
 # Task: Audit Completo Dipendenze User
 
 **Modulo**: User  

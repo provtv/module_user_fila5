@@ -3,18 +3,6 @@ title: frontend stack canonico — user module stub
 type: rule
 module: User
 updated: 2026-06-03
-<<<<<<< HEAD
-=======
-related:
-  - "./agent-confidence-protocol.md"
-  - "./can-comment-retired-wrong-placement.md"
-  - "./header-auth-flow.md"
-  - "./header-design-colors.md"
-  - "./module-commit-push-after-change.md"
-  - "./navigation-properties.md"
-  - "./no-filament-labels.md"
-  - "./no-notifications-migration-in-user-module.md"
->>>>>>> origin/dev
 ---
 
 # Stack frontend — modulo User
