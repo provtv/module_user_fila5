@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\User\Console\Commands;
 
+use Modules\Xot\Actions\Cast\SafeStringCastAction;
+
 use Filament\Support\Contracts\HasLabel;
 use Illuminate\Console\Command;
 use Illuminate\Contracts\Support\Htmlable;
@@ -89,9 +91,9 @@ class ChangeTypeCommand extends Command
                 $value = app(SafeObjectCastAction::class)
                     ->getStringProperty($item, 'value', '');
                 $label = $item->getLabel();
-                $options[$value] = is_string($label) ? $label : (string) $label;
+                $options[$value] = SafeStringCastAction::cast($label);
             } else {
-                $options[is_string($key) ? $key : (string) $key] = 'Unknown';
+                $options[is_string($key) ? $key : SafeStringCastAction::cast($key)] = 'Unknown';
             }
         }
 

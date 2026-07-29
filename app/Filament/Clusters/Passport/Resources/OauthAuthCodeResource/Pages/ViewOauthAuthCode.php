@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\User\Filament\Clusters\Passport\Resources\OauthAuthCodeResource\Pages;
 
+use Modules\Xot\Actions\Cast\SafeStringCastAction;
+
 use Filament\Infolists\Components\IconEntry;
 use Filament\Infolists\Components\TextEntry;
 use Filament\Schemas\Components\Component;
@@ -33,7 +35,7 @@ class ViewOauthAuthCode extends XotBaseViewRecord
                     'code_grid' => Grid::make(2)
                         ->schema([
                             'id' => TextEntry::make('id')
-                                ->formatStateUsing(fn (mixed $state): string => Str::limit(is_string($state) ? $state : (string) $state, 15, '...')),
+                                ->formatStateUsing(fn (mixed $state): string => Str::limit(SafeStringCastAction::cast($state), 15, '...')),
                             'client_name' => TextEntry::make('client.name')
                                 ->url(function (mixed $state, $record): ?string {
                                     if (! $record instanceof Model) {
@@ -74,12 +76,12 @@ class ViewOauthAuthCode extends XotBaseViewRecord
                             if (is_array($state)) {
                                 /* @var array<int|string, mixed> $state */
                                 return implode(', ', array_map(
-                                    fn (mixed $item): string => is_string($item) ? $item : (string) $item,
+                                    fn (mixed $item): string => SafeStringCastAction::cast($item),
                                     $state
                                 ));
                             }
 
-                            return is_string($state) ? $state : (string) $state;
+                            return SafeStringCastAction::cast($state);
                         })
                         ->columnSpanFull(),
                 ])->columns(1),

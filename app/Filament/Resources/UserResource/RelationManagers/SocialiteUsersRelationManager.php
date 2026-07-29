@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\User\Filament\Resources\UserResource\RelationManagers;
 
+use Modules\Xot\Actions\Cast\SafeStringCastAction;
+
 use Filament\Actions\Action;
 use Filament\Actions\DeleteAction;
 use Filament\Actions\EditAction;
@@ -38,7 +40,7 @@ class SocialiteUsersRelationManager extends XotBaseRelationManager
                         /** @phpstan-var view-string $viewString */
                         $viewString = 'filament.components.avatar';
 
-                        return view($viewString, ['url' => (string) $state])->render();
+                        return view($viewString, ['url' => SafeStringCastAction::cast($state)])->render();
                     }
 
                     return 'No Avatar';

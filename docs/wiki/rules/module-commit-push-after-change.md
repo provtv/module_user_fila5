@@ -36,7 +36,6 @@ Quando modifichi file dentro `laravel/Modules/User/` devi:
 | Errore | Azione |
 |--------|--------|
 | `non-fast-forward` | `git fetch laraxot dev && git pull --rebase laraxot dev` poi ripeti push |
-| LFS / object mancante | Vedi [git-push-lfs-missing-objects](../troubleshooting/git-push-lfs-missing-objects.md) |
 
 ## Post-edit obbligatorio
 

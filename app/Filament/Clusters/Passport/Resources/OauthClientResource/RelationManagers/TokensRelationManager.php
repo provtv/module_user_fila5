@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\User\Filament\Clusters\Passport\Resources\OauthClientResource\RelationManagers;
 
+use Modules\Xot\Actions\Cast\SafeStringCastAction;
+
 use Filament\Actions\Action;
 use Filament\Actions\DeleteAction;
 use Filament\Notifications\Notification;
@@ -55,10 +57,10 @@ class TokensRelationManager extends XotBaseRelationManager
                 })
                 ->formatStateUsing(function (mixed $state): string {
                     if (is_array($state)) {
-                        return implode(', ', array_map(fn (mixed $s): string => (string) $s, $state));
+                        return implode(', ', array_map(fn (mixed $s): string => SafeStringCastAction::cast($s), $state));
                     }
 
-                    return (string) ($state ?? '');
+                    return SafeStringCastAction::cast($state);
                 }),
             'revoked' => IconColumn::make('revoked')
                 ->boolean()

@@ -21,6 +21,8 @@ declare(strict_types=1);
 
 namespace Modules\User\Http\Controllers\Api;
 
+use Modules\Xot\Actions\Cast\SafeStringCastAction;
+
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
@@ -55,7 +57,7 @@ class RegisterController extends XotBaseController
 
         /** @var array<string, mixed> $input */
         $input = $request->all();
-        $input['password'] = bcrypt((string) $input['password']);
+        $input['password'] = bcrypt(SafeStringCastAction::cast($input['password'] ?? null));
         $user_class = XotData::make()->getUserClass();
         /** @var UserContract */
         $user = $user_class::create($input);

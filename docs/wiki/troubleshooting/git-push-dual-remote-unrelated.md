@@ -11,10 +11,8 @@ issues:
 discussions:
   - https://github.com/provtv/base_ptv_fila5/discussions/204
 related:
-  - "./git-push-lfs-missing-objects.md"
   - "../../multi-org-sync-laraxot-provtv.md"
   - "../../git-multi-org-sync-handoff.md"
-  - "../../../../UI/docs/wiki/troubleshooting/git-push-lfs-missing-objects.md"
   - "../../../../Activity/docs/wiki/troubleshooting/git-push-dual-remote.md"
 ---
 
@@ -48,7 +46,6 @@ git rev-list --max-parents=0 HEAD
 git rev-list --max-parents=0 provtv/dev                # root diversi
 ```
 
-Diff tip↔tip: **centinaia di file** (non un semplice gap di commit). Tip locale include squash LFS (`3ea7273a` — SVG non più puntatori LFS orfani).
 
 ### Cosa fare / non fare
 
@@ -57,11 +54,9 @@ Diff tip↔tip: **centinaia di file** (non un semplice gap di commit). Tip local
 | Solo `laraxot` da pubblicare | `git -c pack.useSparse=false push --no-thin laraxot HEAD:dev` |
 | `provtv` unrelated | **Niente** merge/rebase/force finché un umano non sceglie la storia autoritativa |
 | Serve unificare | Decisione umana: (A) `provtv` adotta tip `laraxot` con force esplicito, oppure (B) cherry-pick selettivo commit utili da `provtv` su tip `laraxot` (forward-only) |
-| GH008 / LFS | [git-push-lfs-missing-objects.md](./git-push-lfs-missing-objects.md) · playbook UI sibling |
 
 **Vietato agenti:** `push --force`, `merge --allow-unrelated-histories` cieco, `reset`/`restore` per “aggiustare”.
 
 ## Relazione con altri playbook
 
 - Divergenza **con** merge-base (Activity): [Activity git-push-dual-remote](../../../../Activity/docs/wiki/troubleshooting/git-push-dual-remote.md)
-- LFS / `--no-thin` (UI): [UI git-push-lfs-missing-objects](../../../../UI/docs/wiki/troubleshooting/git-push-lfs-missing-objects.md)

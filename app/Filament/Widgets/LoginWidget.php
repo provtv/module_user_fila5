@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\User\Filament\Widgets;
 
+use Modules\Xot\Actions\Cast\SafeStringCastAction;
+
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
 use Filament\Notifications\Notification;
@@ -122,7 +124,7 @@ class LoginWidget extends XotBaseSchemaWidget
                 }
 
                 /* @var array<int, string> $messages */
-                $this->addError($field, implode(' ', array_map(static fn (mixed $v): string => (string) $v, $messages)));
+                $this->addError($field, implode(' ', array_map(static fn (mixed $v): string => SafeStringCastAction::cast($v), $messages)));
             }
         } catch (\Exception $e) {
             report($e);

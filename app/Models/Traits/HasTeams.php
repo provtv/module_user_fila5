@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\User\Models\Traits;
 
+use Modules\Xot\Actions\Cast\SafeStringCastAction;
+
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
@@ -369,7 +371,7 @@ trait HasTeams
             $permissionsCollection = $role->permissions;
             /** @var list<string> $rolePermissionNames */
             $rolePermissionNames = array_values(array_map(
-                static fn (mixed $name): string => is_string($name) ? $name : (string) $name,
+                static fn (mixed $name): string => SafeStringCastAction::cast($name),
                 $permissionsCollection->pluck('name')->all(),
             ));
 

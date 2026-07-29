@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\User\Models;
 
+use Modules\Xot\Actions\Cast\SafeStringCastAction;
+
 use Filament\Models\Contracts\FilamentUser;
 use Filament\Models\Contracts\HasName;
 use Filament\Models\Contracts\HasTenants;
@@ -232,7 +234,10 @@ abstract class BaseUser extends Authenticatable implements FilamentUser, HasAuth
 
     public function getProviderName(): string
     {
-        return (string) ($this->getAttribute('provider') ?? config('auth.guards.api.provider', 'users'));
+        $providerVal = $this->getAttribute('provider') ?? config('auth.guards.api.provider', 'users');
+        $provider = SafeStringCastAction::cast($providerVal);
+
+        return $provider;
     }
 
     /*
@@ -248,15 +253,20 @@ abstract class BaseUser extends Authenticatable implements FilamentUser, HasAuth
      */
     public function getFilamentName(): string
     {
-        $name = (string) ($this->getAttribute('name') ?? '');
-        $firstName = (string) ($this->getAttribute('first_name') ?? '');
-        $lastName = (string) ($this->getAttribute('last_name') ?? '');
+        $nameVal = $this->getAttribute('name') ?? '';
+        $firstNameVal = $this->getAttribute('first_name') ?? '';
+        $lastNameVal = $this->getAttribute('last_name') ?? '';
+
+        $name = SafeStringCastAction::cast($nameVal);
+        $firstName = SafeStringCastAction::cast($firstNameVal);
+        $lastName = SafeStringCastAction::cast($lastNameVal);
 
         $fullName = trim(\sprintf('%s %s %s', $name, $firstName, $lastName));
 
         // Ensure we always return a non-empty string
         if (empty($fullName)) {
-            $email = (string) ($this->getAttribute('email') ?? '');
+            $emailVal = $this->getAttribute('email') ?? '';
+            $email = SafeStringCastAction::cast($emailVal);
 
             return ! empty($email) ? $email : 'User';
         }

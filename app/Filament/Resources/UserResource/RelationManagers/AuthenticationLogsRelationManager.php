@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\User\Filament\Resources\UserResource\RelationManagers;
 
+use Modules\Xot\Actions\Cast\SafeStringCastAction;
+
 use Filament\Actions\Action;
 use Filament\Actions\DeleteAction;
 use Filament\Actions\EditAction;
@@ -46,7 +48,7 @@ class AuthenticationLogsRelationManager extends XotBaseRelationManager
                 ->formatStateUsing(function ($state) {
                     if (is_array($state)) {
                         return collect($state)
-                            ->map(fn ($value, $key): string => (string) $key.': '.(string) $value)
+                            ->map(fn ($value, $key): string => SafeStringCastAction::cast($key).': '.SafeStringCastAction::cast($value))
                             ->join(', ');
                     }
 

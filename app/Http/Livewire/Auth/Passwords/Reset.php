@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\User\Http\Livewire\Auth\Passwords;
 
+use Modules\Xot\Actions\Cast\SafeStringCastAction;
+
 use Illuminate\Auth\Events\PasswordReset;
 use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Contracts\Auth\PasswordBroker;
@@ -70,7 +72,7 @@ class Reset extends Component
             },
         );
 
-        Assert::string($response_lang = trans((string) $response));
+        Assert::string($response_lang = trans(SafeStringCastAction::cast($response)));
 
         if (Password::PASSWORD_RESET === $response) {
             session()->flash($response_lang);

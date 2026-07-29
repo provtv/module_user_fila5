@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\User\Filament\Resources\SocialProviderResource\Pages;
 
+use Modules\Xot\Actions\Cast\SafeStringCastAction;
+
 use Filament\Infolists\Components\TextEntry;
 use Filament\Schemas\Components\Component;
 use Filament\Schemas\Components\Section;
@@ -31,14 +33,14 @@ class ViewSocialProvider extends XotBaseViewRecord
                         return json_encode($state);
                     }
 
-                    return is_string($state) ? $state : ((string) $state);
+                    return SafeStringCastAction::cast($state);
                 }),
                 'parameters' => TextEntry::make('parameters')->formatStateUsing(function ($state): string {
                     if (is_array($state)) {
                         return json_encode($state);
                     }
 
-                    return is_string($state) ? $state : ((string) $state);
+                    return SafeStringCastAction::cast($state);
                 }),
                 'stateless' => TextEntry::make('stateless')->badge()->color(fn (bool $state): string => $state ? 'success' : 'danger'),
                 'active' => TextEntry::make('active')->badge()->color(fn (bool $state): string => $state ? 'success' : 'danger'),

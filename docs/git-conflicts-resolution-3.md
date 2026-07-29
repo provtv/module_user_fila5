@@ -27,7 +27,6 @@ related:
 Documentazione della risoluzione dei conflitti Git nel modulo User, inclusi i file modificati e le decisioni prese per migliorare la stabilità del sistema.
 
 ## Collegamenti correlati
-<<<<<<< HEAD:docs/git-conflicts-resolution-3.md
 - [Indice documentazione User](/laravel/modules/user/docs/index.md)
 - [README User](/laravel/modules/user/docs/readme.md)
 - [Auth Components Best Practices](/laravel/modules/user/docs/auth-components-best-practices.md)
@@ -328,6 +327,4 @@ La risoluzione dei conflitti Git ha migliorato significativamente la stabilità 
 - [ ] Aggiornare esempi in documentazione
 - [ ] Creare test di regressione per prevenire conflitti futuri
 
-=======
->>>>>>> e42ab4a0 (.):docs/git_conflicts_resolution_2025_01_27.md.bak
 --- 

@@ -83,7 +83,6 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 $this->redirect(LaravelLocalization::getLocalizedURL(LaravelLocalization::getCurrentLocale(), route('home')));
 ```
 
-<<<<<<< HEAD:docs/auth-logout-implementation-3.md
 Questo garantisce che l'utente venga reindirizzato alla versione localizzata della home page dopo il logout, rispettando le convenzioni di healthcare_app per la gestione della localizzazione.
 
 ## Componenti Filament
@@ -246,6 +245,3 @@ mount(function() {
     @endvolt
 </x-filament::layouts.card>
 ```
-=======
-```
->>>>>>> e42ab4a0 (.):docs/auth_logout_implementation.md.bak

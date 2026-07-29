@@ -28,14 +28,7 @@ Procedura operativa:
 10. Chiusura corretta:
    - rev-list HEAD...<remote>/dev = 0 0 per ogni remote raggiungibile;
    - git status --short --branch pulito;
-   - git lfs fsck --pointers OK se il repo usa LFS.
 
-Caso LFS, se il push fallisce:
-1. Leggi l'OID esatto dall'errore Git LFS.
-2. Prova git lfs fetch <remote-sibling> --all.
-3. Se non basta, cerca l'OID esatto nella cache LFS del monorepo root.
-4. Copia solo oggetti con SHA/OID coincidente nella cache LFS del modulo.
-5. Esegui git lfs push <remote> dev, poi git push <remote> dev.
 
 Documentazione da aggiornare:
 - docs/git-multi-org-sync-handoff.md con remote, conteggi e risultato;
@@ -53,8 +46,6 @@ Risultato reale 2026-07-29 (versione corrente):
 - Fetch da tutti i remote: laraxot/dev raggiungibile (28 commit indietro)
 - Merge forward-only: laraxot/dev integrato in HEAD (28 commit + 1 merge commit)
   - Conflitti risolti mantenendo HEAD (versione recente/corretta)
-  - Immagini binarie: LFS objects copiati da cache monorepo root
-- Push LFS: ✅ OK verso provtv (663 KB, 2 oggetti)
 - Push git: ✅ OK verso provtv (7eae7708, 0 0 sync)
 - Push git: ❌ FAILED verso laraxot (error: did not receive expected object — corrupted repo)
 
@@ -80,8 +71,6 @@ Risultato reale 2026-07-29 (versione corrente):
 
 Lezioni apprese (2026-07-29):
 
-1. **LFS objects on merge:** Quando si integra un remote con file LFS, gli pointer vengono copiati
-   ma gli oggetti LFS effettivi no. Soluzione: verificare nella cache .git/lfs/objects del
    monorepo root e copiarli nel modulo prima di push.
 
 2. **Unrelated histories:** Due branch git con storie divergenti non possono fare merge semplice.

@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\User\Filament\Clusters\Passport\Resources;
 
+use Modules\Xot\Actions\Cast\SafeStringCastAction;
+
 use Filament\Actions\Action;
 use Filament\Actions\ActionGroup;
 use Filament\Actions\BulkAction;
@@ -129,7 +131,7 @@ class OauthAccessTokenResource extends XotBaseResource
                     ->action(function (mixed $record): void {
                         if ($record instanceof Model) {
                             $key = $record->getKey();
-                            $keyString = is_string($key) ? $key : (string) $key;
+                            $keyString = is_string($key) ? $key : SafeStringCastAction::cast($key);
                             if (app(RevokeTokenAction::class)->execute($keyString)) {
                                 Notification::make()
                                     ->title(static::trans('actions.revoke.success'))
@@ -151,7 +153,7 @@ class OauthAccessTokenResource extends XotBaseResource
                         $count = 0;
                         foreach ($users as $userId) {
                             if (is_string($userId) || is_int($userId)) {
-                                $count += app(RevokeAllUserTokensAction::class)->execute((string) $userId);
+                                $count += app(RevokeAllUserTokensAction::class)->execute(SafeStringCastAction::cast($userId));
                             }
                         }
                         Notification::make()
@@ -268,7 +270,7 @@ class OauthAccessTokenResource extends XotBaseResource
                 ->requiresConfirmation()
                 ->action(function (mixed $record): void {
                     if ($record instanceof Model) {
-                        if (app(RevokeTokenAction::class)->execute((string) $record->getKey())) {
+                        if (app(RevokeTokenAction::class)->execute(SafeStringCastAction::cast($record->getKey()))) {
                             Notification::make()
                                 ->title(static::trans('actions.revoke.success'))
                                 ->success()
@@ -296,7 +298,7 @@ class OauthAccessTokenResource extends XotBaseResource
                     $count = 0;
                     foreach ($users as $userId) {
                         if (is_string($userId) || is_int($userId)) {
-                            $count += app(RevokeAllUserTokensAction::class)->execute((string) $userId);
+                            $count += app(RevokeAllUserTokensAction::class)->execute(SafeStringCastAction::cast($userId));
                         }
                     }
                     Notification::make()

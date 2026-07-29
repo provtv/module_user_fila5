@@ -10,7 +10,6 @@ discussions: ["https://github.com/provtv/base_ptv_fila5/discussions/1"]
 related:
   - "./git-merge-conflict-inventory-1.md"
   - "./git-merge-conflict-inventory.md"
-  - "./git-push-lfs-missing-objects.md"
   - "./phpstan-module-analysis-memory.md"
   - "./phpstan-widget-property-types-1.md"
   - "./phpstan-widget-property-types.md"

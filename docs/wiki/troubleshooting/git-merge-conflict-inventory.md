@@ -9,7 +9,6 @@ qmd: "git merge conflict markers User docs inventory rebase"
 related:
   - "./filament-user-creation-pty-error.md"
   - "./git-merge-conflict-inventory-1.md"
-  - "./git-push-lfs-missing-objects.md"
   - "./phpstan-module-analysis-memory.md"
   - "./phpstan-widget-property-types-1.md"
   - "./phpstan-widget-property-types.md"
@@ -20,9 +19,7 @@ related:
 
 ## Stato 2026-07-08
 
-- **Rebase abortito** su `dev` (328 pick, 623 file `AA`) — causa: tentativo rebase sopra `laraxot/dev` con storico LFS corrotto.
 - Dopo `git rebase --abort`: **0** marker `<<<<<<<` nei `.md` tracciati (`git grep`).
-- Push risolto con squash → [git-push-lfs-missing-objects](./git-push-lfs-missing-objects.md).
 
 ## Inventario storico (2026-04-28)
 
