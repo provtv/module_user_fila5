@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\User\Tests\Unit;
 
+use PHPUnit\Framework\Assert;
+
 use function Safe\file_get_contents;
 
 test('it does not reference the comment module anywhere under user app', function (): void {
@@ -14,7 +16,7 @@ test('it does not reference the comment module anywhere under user app', functio
 
     /** @var \SplFileInfo $file */
     foreach ($iterator as $file) {
-        if (! $file->isFile() || 'php' !== $file->getExtension()) {
+        if (! $file->isFile() || $file->getExtension() !== 'php') {
             continue;
         }
 
@@ -24,10 +26,9 @@ test('it does not reference the comment module anywhere under user app', functio
 
         $contents = file_get_contents($file->getPathname());
 
-        expect($contents)
-            ->not->toContain('Modules\\Comment\\')
-            ->not->toContain('InteractsWithComments')
-            ->not->toContain('HasCommentatorRelations');
+        Assert::assertStringNotContainsString('Modules\\Comment\\', $contents);
+        Assert::assertStringNotContainsString('InteractsWithComments', $contents);
+        Assert::assertStringNotContainsString('HasCommentatorRelations', $contents);
     }
 });
 
@@ -35,8 +36,7 @@ test('base user model does not use comment traits', function (): void {
     $baseUserPath = dirname(__DIR__, 2).'/app/Models/BaseUser.php';
     $contents = file_get_contents($baseUserPath);
 
-    expect($contents)
-        ->not->toContain('HasCommentatorRelations')
-        ->not->toContain('CanComment')
-        ->not->toContain('InteractsWithComments');
+    Assert::assertStringNotContainsString('HasCommentatorRelations', $contents);
+    Assert::assertStringNotContainsString('CanComment', $contents);
+    Assert::assertStringNotContainsString('InteractsWithComments', $contents);
 });

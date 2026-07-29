@@ -120,12 +120,12 @@ function skipUnlessUserTable(string $table, string $reason = ''): void
 
 function permissionRolePivotTable(): string
 {
-    return (string) config('permission.table_names.model_has_roles', 'model_has_role');
+    return config('permission.table_names.model_has_roles', 'model_has_role');
 }
 
 function permissionPivotTable(): string
 {
-    return (string) config('permission.table_names.model_has_permissions', 'model_has_permission');
+    return config('permission.table_names.model_has_permissions', 'model_has_permission');
 }
 
 function skipUnlessUsersTableReady(string $reason = ''): void

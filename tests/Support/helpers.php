@@ -117,12 +117,12 @@ function skipUnlessUserTable(string $table, string $reason = ''): void
 
 function permissionRolePivotTable(): string
 {
-    return (string) config('permission.table_names.model_has_roles', 'model_has_role');
+    return config('permission.table_names.model_has_roles', 'model_has_role');
 }
 
 function permissionPivotTable(): string
 {
-    return (string) config('permission.table_names.model_has_permissions', 'model_has_permission');
+    return config('permission.table_names.model_has_permissions', 'model_has_permission');
 }
 
 function skipUnlessUsersTableReady(string $reason = ''): void
@@ -410,7 +410,7 @@ function hasTeamsCurrentCreateTeam(User $user, array $attributes = []): Team
 function enableTwoFactorForUser(User $user, Google2FA $google2fa, array $attributes = []): array
 {
     $secret = (string) $google2fa->generateSecretKey();
-    $qrCode = $google2fa->getQRCodeUrl((string) config('app.name'), $user->email, $secret);
+    $qrCode = $google2fa->getQRCodeUrl(config('app.name'), $user->email, $secret);
 
     $recoveryCodes = array_map(
         static fn (): string => substr(str_shuffle('0123456789ABCDEF'), 0, 10).'-'.substr(str_shuffle('0123456789ABCDEF'), 0, 10),
