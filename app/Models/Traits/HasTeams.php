@@ -189,7 +189,8 @@ trait HasTeams
      * @phpstan-return Collection<int, User>
      */
     public function allTeamUsers(): Collection
-    {/** @var Collection<int, TeamContract> $teams */
+    {
+        /** @var Collection<int, TeamContract> $teams */
         $teams = $this->membershipTeams;
         /** @var Collection<int, User> $result */
         $result = $teams->flatMap(
