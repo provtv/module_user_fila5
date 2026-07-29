@@ -24,6 +24,7 @@ related:
 - [README modulo User](./README.md)
 - [Best Practices Chiavi di Traduzione](/laravel/Modules/Lang/docs/TRANSLATION_KEYS_BEST_PRACTICES.md)
 - [Utilizzo di Laravel Localization](/laravel/Modules/Lang/docs/LARAVEL_LOCALIZATION_USAGE.md)
+<<<<<<< HEAD:docs/auth-components-best-practices-3.md
 - [README modulo User](./readme.md)
 - [Best Practices Chiavi di Traduzione](/laravel/modules/lang/docs/translation_keys_best_practices.md)
 - [Utilizzo di Laravel Localization](/laravel/modules/lang/docs/laravel_localization_usage.md)
@@ -214,3 +215,6 @@ Prima di implementare nuovi componenti di autenticazione o modificare quelli esi
 - [Documentazione Laravel Localization](https://github.com/mcamara/laravel-localization)
 - [Documentazione Livewire](https://livewire.laravel.com/)
 - [Documentazione Laravel Folio](https://laravel.com/docs/10.x/folio)
+=======
+- [Documentazione Laravel Folio](https://laravel.com/docs/10.x/folio)
+>>>>>>> e42ab4a0 (.):docs/auth_components_best_practices.md.bak

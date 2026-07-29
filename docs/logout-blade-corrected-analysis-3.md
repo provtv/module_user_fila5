@@ -21,6 +21,7 @@ related:
 # Analisi Corretta del File logout.blade.php
 
 ## Collegamenti correlati
+<<<<<<< HEAD:docs/logout-blade-corrected-analysis-3.md
 - [README modulo User](./readme.md)
 - [Volt Folio Logout](./volt-folio-logout-2.md)
 - [Auth Pages Implementation](./auth-pages-implementation.md)
@@ -255,3 +256,6 @@ return redirect()->to('/' . $locale);
 - [Documentazione Laravel Authentication](https://laravel.com/docs/10.x/authentication)
 - [Documentazione Folio](https://laravel.com/docs/10.x/folio)
 - [Documentazione Filament](https://filamentphp.com/docs)
+=======
+- [Documentazione Filament](https://filamentphp.com/docs)
+>>>>>>> e42ab4a0 (.):docs/logout_blade_corrected_analysis.md.bak

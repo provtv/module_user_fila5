@@ -125,13 +125,23 @@ Prima di committare, verifica:
 
 ## Collegamenti
 
+<<<<<<< HEAD:docs/redundancy-fixes-january-2026.md
 - [Redundancy Rules](../../xot/docs/filament/redundancy-rules.md)
 - [Service Provider Architecture](./service-provider-architecture.md)
 - [XotBaseRelationManager Documentation](../../xot/docs/filament/relation-managers.md)
 
+=======
+>>>>>>> origin/dev
+>>>>>>> e42ab4a0 (.):docs/redundancy-fixes-january-2026.md.bak
 - [Redundancy Rules](../../Xot/docs/filament/redundancy-rules.md)
 - [Service Provider Architecture](./service-provider-architecture.md)
 - [XotBaseRelationManager Documentation](../../Xot/docs/filament/relation-managers.md)
 
 *Ultimo aggiornamento: Gennaio 2026*
+<<<<<<< HEAD:docs/redundancy-fixes-january-2026.md
 *Ultimo aggiornamento: Gennaio 2026*
+=======
+<<<<<<< HEAD
+*Ultimo aggiornamento: Gennaio 2026*
+=======
+>>>>>>> e42ab4a0 (.):docs/redundancy-fixes-january-2026.md.bak

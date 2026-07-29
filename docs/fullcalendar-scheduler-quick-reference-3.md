@@ -201,6 +201,7 @@ if (app()->environment('local') && empty($licenseKey)) {
 - [ ] Banner rosso rimosso
 - [ ] Funzionalità premium attive
 
+<<<<<<< HEAD:docs/fullcalendar-scheduler-quick-reference-3.md
 ## 🚀 healthcare_app Specifico
 
 ### Business Hours Sanitarie
@@ -231,3 +232,6 @@ selectConstraint: 'businessHours',
 eventConstraint: 'businessHours',
 slotDuration: '00:30:00', // 30 min slots
 ``` 
+=======
+``` 
+>>>>>>> e42ab4a0 (.):docs/fullcalendar_scheduler_quick_reference.md.bak
