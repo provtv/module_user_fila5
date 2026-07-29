@@ -1,16 +1,17 @@
 
 # LFS image placeholders (corrupted LFS objects removed 2026-07-28)
+# MODULE ROOT FORBIDDEN DIRS
+_docs
+archive/
+docs/**/*-[0-9].md
 docs/img/*.jpg
 docs/img/*.png
 docs/screenshots/*.png
-resources/img/*.png
-resources/favicon.png
-phpstan*
-
-# MODULE ROOT FORBIDDEN DIRS
-_docs
-workbench
-docs/**/*-[0-9].md
-resources/img/screenshots
-archive/
 legacy/
+phpmd.ruleset.xml
+phpmd.ruleset.xml.bak
+phpstan*
+resources/favicon.png
+resources/img/*.png
+resources/img/screenshots
+workbench
