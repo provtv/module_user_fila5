@@ -6,6 +6,7 @@ namespace Modules\User\Models\Traits;
 
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Modules\User\Models\SocialiteUser;
+use Webmozart\Assert\Assert;
 
 trait HasSocialite
 {
@@ -25,8 +26,9 @@ trait HasSocialite
         }
 
         $res = $socialiteUser->{$field};
+        Assert::string($res);
 
-        return (string) $res;
+        return $res;
     }
 
     public function canAccessSocialite(): bool
