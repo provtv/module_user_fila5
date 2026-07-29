@@ -1,1 +1,63 @@
 va nella cartella laravel/Modules/User e fa git push , capisci gli errori sistameli e documenta come hai risolto dentro laravel/Modules/User/docs ti ricordo che con git andiamo solo in avanti, percio' non puoi fare checkout revert rollback, ma puoi anzi devi studiare le vecchie versioni e ti ricordo che il tuo lavoro non e' finito finche' non supera anche il controllo di phpstan phpmd, phpinisghts tutta la cartella laravel/Modules/User
+
+
+Obiettivo: sincronizzare il modulo User su tutti i remote GitHub configurati e documentare il percorso.
+
+Contesto modulo:
+- cartella: laravel/Modules/User;
+- branch atteso: dev;
+- remote reali da git remote -v:
+  - laraxot -> git@github.com:laraxot/theme_one_fila5.git (remote configurato ma non raggiungibile in questa sessione: Repository not found);
+  - provtv -> git@github.com:provtv/theme_one_fila5.git.
+
+Procedura operativa:
+1. Vai in laravel/Modules/User.
+2. Esegui git remote -v e non assumere mai l'org.
+3. Esegui git fetch --all --prune; se un remote fallisce, fetcha separatamente quelli raggiungibili e documenta il remote non raggiungibile.
+4. Controlla il dirty tree con git status --short --branch.
+5. Se ci sono modifiche locali, committale prima del merge: non usare stash/reset/restore.
+6. Confronta HEAD con ogni remote dev raggiungibile:
+   - git rev-list --left-right --count HEAD...provtv/dev;
+   - git rev-list --left-right --count HEAD...laraxot/dev, solo se il remote branch esiste.
+7. Interpreta i numeri:
+   - primo > 0 e secondo = 0: push fast-forward consentito;
+   - secondo > 0: integra con merge forward-only, poi ricontrolla;
+   - 0 0: remoto gia' allineato.
+8. Non usare mai force push, reset, restore, checkout, switch o revert.
+9. Fai push separati verso ogni remote raggiungibile.
+10. Chiusura corretta:
+   - rev-list HEAD...<remote>/dev = 0 0 per ogni remote raggiungibile;
+   - git status --short --branch pulito;
+   - git lfs fsck --pointers OK se il repo usa LFS.
+
+Caso LFS, se il push fallisce:
+1. Leggi l'OID esatto dall'errore Git LFS.
+2. Prova git lfs fetch <remote-sibling> --all.
+3. Se non basta, cerca l'OID esatto nella cache LFS del monorepo root.
+4. Copia solo oggetti con SHA/OID coincidente nella cache LFS del modulo.
+5. Esegui git lfs push <remote> dev, poi git push <remote> dev.
+
+Documentazione da aggiornare:
+- docs/git-multi-org-sync-handoff.md con remote, conteggi e risultato;
+- docs/second-brain.md con regole riusabili emerse;
+- docs/prompts/push.txt con eventuali casi reali nuovi.
+
+Output finale richiesto:
+- remote sincronizzati e remote saltati con motivo;
+- commit finale;
+- verifiche 0 0;
+- stato clean.
+
+Risultato reale 2026-07-29:
+- commit sync locale pubblicato su provtv: 3a6a348;
+- provtv/dev verificato: HEAD...provtv/dev = 0 0;
+- laraxot/theme_one_fila5 configurato ma non sincronizzabile: GitHub risponde Repository not found anche su push;
+- working tree pulito dopo commit/push;
+- non sono stati usati reset, restore, checkout, switch, revert o force push.
+
+
+
+prima di fare le cose devi sempre capire il perche' e lo scopo, mettere tutto in discussione, discutere con gli altri agent ai
+
+
+poi migliora/correggi/documenta laravel/Modules/User/docs/prompts/push.txt
