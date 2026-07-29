@@ -15,3 +15,7 @@ resources/favicon.png
 resources/img/*.png
 resources/img/screenshots
 workbench
+
+# Root quality tool configs forbidden in module root
+rector.php
+phpmd*
