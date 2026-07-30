@@ -6,11 +6,13 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 use Mockery\MockInterface;
+use Modules\User\Actions\Socialite\IsUserAllowedAction;
 use Modules\User\Database\Factories\TeamFactory;
 use Modules\User\Database\Factories\UserFactory;
 use Modules\User\Models\Profile;
 use Modules\User\Models\Team;
 use Modules\User\Models\User;
+use Modules\User\Providers\Filament\AdminPanelProvider;
 use PHPUnit\Framework\Assert;
 use PragmaRX\Google2FA\Google2FA;
 
@@ -226,7 +228,7 @@ function setupFilamentAdminPanel(): void
     try {
         $panel = $filament::getPanel('user::admin');
     } catch (Throwable) {
-        $panelProvider = new Modules\User\Providers\Filament\AdminPanelProvider(app());
+        $panelProvider = new AdminPanelProvider(app());
         $panel = $panelProvider->panel(Filament\Panel::make());
         $filament::registerPanel($panel);
     }
@@ -301,9 +303,9 @@ function fakeSocialiteUser(string $email): Laravel\Socialite\Contracts\User
     });
 }
 
-function makeIsUserAllowedAction(): Modules\User\Actions\Socialite\IsUserAllowedAction
+function makeIsUserAllowedAction(): IsUserAllowedAction
 {
-    return new Modules\User\Actions\Socialite\IsUserAllowedAction();
+    return new IsUserAllowedAction();
 }
 
 /**
@@ -403,11 +405,9 @@ function hasTeamsCurrentCreateTeam(User $user, array $attributes = []): Team
 }
 
 /**
- * @param array<string, mixed> $attributes
- *
  * @return array{secret: string, qr_code: string, recovery_codes: array<int, string>}
  */
-function enableTwoFactorForUser(User $user, Google2FA $google2fa, array $attributes = []): array
+function enableTwoFactorForUser(User $user, Google2FA $google2fa): array
 {
     $secret = (string) $google2fa->generateSecretKey();
     $qrCode = $google2fa->getQRCodeUrl(config('app.name'), $user->email, $secret);
@@ -470,7 +470,7 @@ function verifyTwoFactorRecoveryCode(User $user, string $code): bool
         return false;
     }
 
-    $codes = array_values(array_filter($codes, static fn ($c): bool => $c !== $code));
+    $codes = array_values(array_filter($codes, static fn ($storedCode): bool => $storedCode !== $code));
     $user->two_factor_recovery_codes = encrypt(json_encode($codes));
     $user->save();
 

@@ -284,11 +284,9 @@ function hasTeamsCurrentCreateTeam(User $user, array $attributes = []): Team
 }
 
 /**
- * @param array<string, mixed> $attributes
- *
  * @return array{secret: string, qr_code: string, recovery_codes: array<int, string>}
  */
-function enableTwoFactorForUser(User $user, Google2FA $google2fa, array $attributes = []): array
+function enableTwoFactorForUser(User $user, Google2FA $google2fa): array
 {
     $secret = (string) $google2fa->generateSecretKey();
     $qrCode = $google2fa->getQRCodeUrl(config('app.name'), $user->email, $secret);
@@ -351,7 +349,7 @@ function verifyTwoFactorRecoveryCode(User $user, string $code): bool
         return false;
     }
 
-    $codes = array_values(array_filter($codes, static fn ($c): bool => $c !== $code));
+    $codes = array_values(array_filter($codes, static fn ($storedCode): bool => $storedCode !== $code));
     $user->two_factor_recovery_codes = encrypt(json_encode($codes));
     $user->save();
 

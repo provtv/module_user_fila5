@@ -20,6 +20,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Str;
+use InvalidArgumentException;
 use Modules\User\Filament\Resources\UserResource\Pages\CreateUser;
 use Modules\User\Filament\Resources\UserResource\Pages\ListUsers;
 use Modules\User\Filament\Widgets\LoginWidget;
@@ -34,7 +35,6 @@ use Modules\User\Providers\UserServiceProvider;
 use Modules\Xot\Tests\XotBaseTestCase;
 use PHPUnit\Framework\Assert;
 use PragmaRX\Google2FA\Google2FA;
-
 use function Safe\json_encode;
 
 /**
@@ -72,7 +72,7 @@ abstract class TestCase extends XotBaseTestCase
     protected function getPackageProviders(mixed $app): array
     {
         if (! $app instanceof Application) {
-            throw new \InvalidArgumentException('Expected Illuminate\Foundation\Application.');
+            throw new InvalidArgumentException('Expected Illuminate\Foundation\Application.');
         }
 
         return [
