@@ -1,0 +1,20 @@
+
+# MODULE ROOT FORBIDDEN DIRS
+_docs
+archive/
+docs/**/*-[0-9].md
+docs/img/*.jpg
+docs/img/*.png
+docs/screenshots/*.png
+legacy/
+phpmd.ruleset.xml
+phpmd.ruleset.xml.bak
+phpstan*
+resources/favicon.png
+resources/img/*.png
+resources/img/screenshots
+workbench
+
+# Root quality tool configs forbidden in module root
+rector.php
+phpmd*
