@@ -1,0 +1,190 @@
+# FullCalendar Scheduler License - Troubleshooting e Configurazione Avanzata
+
+## Panoramica
+
+Questa documentazione fornisce una guida completa per la risoluzione dei problemi relativi alle licenze FullCalendar Scheduler, basata sulla documentazione ufficiale e sui problemi comuni riscontrati nella community.
+
+## Tipi di Licenza FullCalendar
+
+### FullCalendar Standard (MIT License)
+- **Gratuito** per uso commerciale e non commerciale
+- Include i plugin base (dayGrid, timeGrid, list, interaction)
+- **NON** include funzionalità premium come resource views e timeline
+
+### FullCalendar Premium (Scheduler)
+- **Richiede licenza commerciale** per uso in produzione
+- Include resource views, timeline, e funzionalità avanzate
+- Diversi tipi di licenza disponibili
+
+## Tipi di Licenza Premium
+
+### 1. Licenza Commerciale
+```javascript
+var calendar = new Calendar(calendarEl, {
+  schedulerLicenseKey: 'XXXXXXXXXX-XXX-XXXXXXXXXX', // Formato tipico
+  plugins: [resourceTimelinePlugin],
+  initialView: 'resourceTimelineWeek'
+});
+```
+
+**Caratteristiche:**
+- Per aziende e uso commerciale
+- Permette modifiche al codice sorgente
+- NON permette redistribuzione delle modifiche
+- Acquisto necessario da [FullCalendar Pricing](https://fullcalendar.io/pricing/)
+
+### 2. Licenza Non-Commerciale
+```javascript
+var calendar = new Calendar(calendarEl, {
+  schedulerLicenseKey: 'CC-Attribution-NonCommercial-NoDerivatives',
+  plugins: [resourceTimelinePlugin],
+  initialView: 'resourceTimelineWeek'
+});
+```
+
+**Caratteristiche:**
+- **Gratuita** per organizzazioni non-profit registrate
+- NON copre enti governativi e università
+- NON permette modifiche al codice sorgente
+
+### 3. Licenza GPLv3 Open Source
+```javascript
+var calendar = new Calendar(calendarEl, {
+  schedulerLicenseKey: 'GPL-My-Project-Is-Open-Source',
+  plugins: [resourceTimelinePlugin],
+  initialView: 'resourceTimelineWeek'
+});
+```
+
+**Caratteristiche:**
+- **Gratuita** per progetti completamente GPLv3-compliant
+- Richiede che tutto il progetto sia open source sotto GPLv3
+
+## Problemi Comuni e Soluzioni
+
+### 1. "Unknown option 'schedulerLicenseKey'" Error
+
+**Problema:** L'opzione `schedulerLicenseKey` non viene riconosciuta.
+
+**Cause Possibili:**
+- Plugin premium non importato correttamente
+- Versione FullCalendar incompatibile
+- Bug noto nelle versioni 5.x e 6.x
+
+**Soluzioni:**
+
+#### Soluzione A: Verificare Import Plugin Premium
+```javascript
+// Assicurarsi di importare almeno un plugin premium
+import resourceTimelinePlugin from '@fullcalendar/resource-timeline';
+import resourceDayGridPlugin from '@fullcalendar/resource-daygrid';
+
+var calendar = new Calendar(calendarEl, {
+  schedulerLicenseKey: 'YOUR-LICENSE-KEY',
+  plugins: [resourceTimelinePlugin, resourceDayGridPlugin], // Plugin premium richiesto
+  initialView: 'resourceTimelineWeek'
+});
+```
+
+#### Soluzione B: Workaround per TypeScript/Angular (v5.x-6.x)
+```typescript
+import { BASE_OPTION_REFINERS } from '@fullcalendar/core';
+
+// Workaround per bug noto
+(BASE_OPTION_REFINERS as any).schedulerLicenseKey = String;
+
+// Poi configurare normalmente
+const calendarOptions = {
+  schedulerLicenseKey: 'YOUR-LICENSE-KEY',
+  // altre opzioni...
+};
+```
+
+#### Soluzione C: Per React/TypeScript (v6.x)
+```typescript
+// Se BASE_OPTION_DEFAULTS non è disponibile, usare ignore
+/* @ts-ignore */
+const calendarOptions = {
+  schedulerLicenseKey: 'YOUR-LICENSE-KEY',
+  plugins: [resourceTimelinePlugin],
+  // altre opzioni...
+};
+```
+
+### 2. "Invalid License String" Error
+
+**Problema:** La chiave di licenza non viene riconosciuta come valida.
+
+**Cause:**
+- Chiave copiata incorrettamente
+- Caratteri extra o mancanti
+- Confusione con altri tipi di chiavi (customer key, support key)
+
+**Soluzioni:**
+1. **Verificare formato:** La chiave deve essere nel formato `XXXXXXXXXX-XXX-XXXXXXXXXX`
+2. **Copiare esattamente:** Copiare la chiave esattamente come ricevuta via email
+3. **Controllare spazi:** Rimuovere spazi iniziali/finali
+4. **Verificare source:** Assicurarsi di usare la license key, non il customer number
+
+### 3. "Evaluation Period Has Expired" Error
+
+**Problema:** Il periodo di valutazione è scaduto.
+
+**Soluzioni:**
+1. **Acquistare licenza:** Visitare [FullCalendar Pricing](https://fullcalendar.io/pricing/)
+2. **Contattare support:** Email a `sales@fullcalendar.io` per rinnovo
+3. **Licenza offline:** Richiedere chiave offline se necessario
+
+### 4. "Outdated License Key" Warning
+
+**Problema:** Chiave valida ma obsoleta per la versione corrente.
+
+**Cause:**
+- Aggiornamento FullCalendar oltre il periodo di upgrade gratuito (1 anno)
+- Licenza acquistata per versione precedente
+
+**Soluzioni:**
+1. **Downgrade:** Usare versione FullCalendar compatibile con la licenza
+2. **Upgrade licenza:** Acquistare anno aggiuntivo di supporto
+3. **Contattare sales:** Email a `sales@fullcalendar.io` per rinnovo
+
+## Configurazione in Laravel/Filament
+
+### 1. Variabili Ambiente (.env)
+```env
+# Licenza FullCalendar Scheduler
+FULLCALENDAR_SCHEDULER_LICENSE_KEY=XXXXXXXXXX-XXX-XXXXXXXXXX
+
+# Configurazioni aggiuntive
+FULLCALENDAR_CACHE_TTL=300
+FULLCALENDAR_MAX_EVENTS=100
+```
+
+### 2. Configurazione (config/fullcalendar.php)
+```php
+<?php
+
+return [
+    // Licenza Scheduler
+    'scheduler_license_key' => env('FULLCALENDAR_SCHEDULER_LICENSE_KEY'),
+    
+    // Validazione licenza
+    'validate_license' => env('APP_ENV') === 'production',
+    
+    // Fallback per sviluppo
+    'development_mode' => env('APP_ENV') !== 'production',
+    
+    // Plugin premium abilitati
+    'premium_plugins' => [
+        'resource-timeline',
+        'resource-daygrid',
+        'resource-timegrid',
+    ],
+];
+```
+
+### 3. AdminPanelProvider (Filament)
+```php
+<?php
+
+5. **Monitoring e logging** per troubleshooting proattivo 
